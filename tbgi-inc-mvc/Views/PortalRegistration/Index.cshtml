@@ -1,0 +1,139 @@
+﻿
+@{
+    ViewBag.Title = "PortalRegistration";
+}
+@section styles {
+    @Styles.Render("~/Content/portal-registration.css")
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+}
+
+<div class="page">
+    <div class="left-side" id="leftside">
+        <img class="side-img" src="@Url.Content("~/Content/Registration/Satellite.png")">
+    </div>
+    <div class="right-side" id="rightside">
+        <h1 class="registerHead">Registration</h1>
+        <div class="container">
+            <div class="steps">
+                <span class="circle active">1</span>
+                <span class="circle">2</span>
+                <span class="circle">3</span>
+                <div class="progress-bar">
+                    <span class="indicator"></span>
+                </div>
+            </div>
+        </div>
+        <form class="subForm" id="regForm" method="post" action="@Url.Action("Index","LoginA")">
+            <div class="full-grid">
+                <div class="grid-col">
+                    <section id="section1">
+                        <div class="col">
+                            <label>First Name</label><span class="req-symbol">*</span><p></p>
+                            <input class="regbox" type="text" id="fname" placeholder="Enter your first name" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <label>Last Name</label><span class="req-symbol">*</span><p></p>
+                            <input class="regbox" type="text" id="lname" placeholder="Enter your last name" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <label>Gender</label><span class="req-symbol">*</span><p></p>
+                            <select class="form-control" id="gender">
+                                <option disabled selected value="">Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="noSay">Prefer not to say</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>Birthdate</label><span class="req-symbol">*</span><p></p>
+                            <input class="regbox" type="date" id="bday" placeholder="MM/DD/YYYY" autocomplete="off">
+                        </div>
+                    </section>
+                    <section id="section2">
+                        <div class="col">
+                            <label>Mobile Number</label><span class="req-symbol">*</span><p></p>
+                            <input class="regbox" type="text" id="mnum" placeholder="Enter your mobile number" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <label>Home Address</label><span class="req-symbol">*</span><p></p>
+                            <input class="regbox" type="text" id="address" placeholder="Enter your current address" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <label>Source of Funds</label><span class="req-symbol">*</span><p></p>
+                            <select class="form-control" id="sourcesel" name="sourceOfFundSelect">
+                                <option disabled selected value="">Source of Funds</option>
+                                <option value="Self-Employed">Self-Employed</option>
+                                <option value="Employed">Employed</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>Nature of Work</label><span class="req-symbol">*</span><p></p>
+                            <select class="form-control" id="naturesel" name="natureOfWorkSelect">
+                                <option disabled selected value="">Nature of Work</option>
+                                <option value="CGOVT">Central Government</option>
+                                <option value="CHARITY">Charitable and Voluntary</option>
+                                <option value="JUSTICE">Criminal Justice</option>
+                                <option value="EDUCATION">Education and Childcare</option>
+                                <option value="FINANCE">Finance, Insurance, and Credit</option>
+                                <option value="HEALTH">Health</option>
+                                <option value="PROPERTY">Land or Property Services</option>
+                                <option value="LEGAL">Legal</option>
+                                <option value="LGOVT">Local Government</option>
+                                <option value="MEDIA">Media</option>
+                                <option value="ASSOC">Membership Association</option>
+                                <option value="REGULATOR">Regulators</option>
+                                <option value="RELIGIOUS">Religious</option>
+                                <option value="RETAIL">Retail and Manufacturing</option>
+                                <option value="SOCIALCARE">Social Care</option>
+                                <option value="POLITICAL">Political</option>
+                                <option value="TELECOM">Telecoms and Internet Service Provider</option>
+                                <option value="TRAVEL">Travel and Leisure</option>
+                            </select>
+                        </div>
+                    </section>
+                    <section id="section3">
+                        <div class="col">
+                            <label>Email</label><span class="req-symbol">*</span><p></p>
+                            <input class="regbox" type="text" id="email" placeholder="Enter your email" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <label>Username</label><span class="req-symbol">*</span><p></p>
+                            <input class="regbox" type="text" id="uname" placeholder="Enter your username" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <label>Password</label><span class="req-symbol">*</span><p></p>
+                            <div class="input-container">
+                                <input class="regbox" type="password" id="pword" placeholder="Enter your password" autocomplete="off">
+                                <i class="fa-solid fa-eye" id="passEye"></i>
+                                <div class="passVerticalLine" id="line1"></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>Confirm Password</label><span class="req-symbol">*</span><p></p>
+                            <div class="input-container">
+                                <input class="regbox" type="password" id="reppword" placeholder="Re-enter your password" autocomplete="off">
+                                <i class="fa-solid fa-eye" id="repassEye"></i>
+                                <div class="passVerticalLine" id="line2"></div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+        </form>
+        <div class="container">
+            <div class="buttons">
+                <button id="prev" onclick="prevButton()" disabled>Prev</button>
+                <button id="next" onclick="nextButton()">Next</button>
+            </div>
+        </div>
+        <div class="long-col">
+            <button class="button1" onclick="submitForm()" id="subButton">Submit</button>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="@Url.Content("~/Scripts/registration.js")"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+}

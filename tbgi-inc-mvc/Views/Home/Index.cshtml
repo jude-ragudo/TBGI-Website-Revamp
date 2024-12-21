@@ -1,0 +1,375 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+@section styles {
+    @Styles.Render("~/Content/home.css")
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+}
+
+<section id="heroSection">
+    <div class="islandContainer">
+        <img class="heroBackground" src="@Url.Content("~/Content/Home/HomePageBg2.png")" alt="islands">
+        <div class="islandTextOverlay">
+            <h1> THE FUTURE OF SATELLITE INTERNET IS HERE</h1>
+            <h3> Affordable High Speed Internet for All</h3>
+            <button class="inquireBtn">Inquire Now ⇀</button>
+        </div>
+    </div>
+</section>
+
+<section id="access">
+    <div class="accessContainer">
+        <div class="accessTextContainer">
+            <p>ACCESS THAT KEEPS PACE.</p><br>
+            <p>STAY CONNECTED WITH OUR TOP-UP PLANS FOR THE GIGABYTE PLANS<p>
+        </div>
+        <button class="btn -gByte">GET IT WITH GBYTE ⇀</button>
+    </div>
+</section>
+
+<section id="accessPlans">
+    <div class="accessPlansContainer">
+        <div class="APcolumn">
+            <img src="@Url.Content("~/Content/Home/Access1.jpeg")" id="phone">
+        </div>
+
+        <div class="APcolumn" id="residentialPlan">
+            <p> Residential <br>Unlimited Plans</p>
+            <p>We provide a reliable internet connection allows you to maximize the most value in <br>our package perfect for <br>everyday usage.</p>
+            <button class="btn -residential">Learn More</button>
+        </div>
+
+        <div class="APcolumn">
+            <img src="@Url.Content("~/Content/Home/Access2.jpg")" id="laptop">
+        </div>
+        <div class="APcolumn" id="enterprisePlan">
+            <p>Enterprise Plans</p>
+            <p>Get more for your business with High-Speed Internet connection through our products and solutions geared towards small to medium enterprises. </p>
+            <button class="btn -enterprise">Learn More</button>
+        </div>
+    </div>
+</section>
+
+<section id="vision">
+    <div id="visionContainer">
+        <div id="visionTextContainer">
+            <div class="line"></div>
+            <p>VISION</p>
+            <p>Changing The <br>Way People <br>Thinks About Satellite Internet</p>
+            <p><br>Kacific Broadband Satellites Group is a next-generation broadband satellite operator that provides universal access at an affordable cost using proven satellite technologies.</p>
+        </div>
+        <div class="swiper swiper-vision">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" id="slide3">
+                    <div class="sliderTextContainer">
+                        <p>Fast Internet Connectivity</p>
+                        <p>
+                            High-speed Internet bandwidth from 30 Mbps to 100 Mbps
+                        </p>
+                    </div>
+                    <video autoplay loop muted>
+                        <source src="@Url.Content("~/Content/Home/vr.mp4")" />
+                    </video>
+                </div>
+                <div class="swiper-slide" id="slide1">
+                    <div class="sliderTextContainer">
+                        <p>No Yearly Lock-Up Period, Minimum 1 Month Contract Only</p>
+                        <p>Flexible bandwidth service, can be upgraded and downgraded in advance on a monthly basis</p>
+                    </div>
+                    <img src="@Url.Content("~/Content/Home/vision1.png")" alt="handshake">
+                </div>
+                <div class="swiper-slide" id="slide2">
+                    <div class="sliderTextContainer">
+                        <p>Easy and Low-cost Installation</p>
+                        <p>Terminal Installation and transportation cost is excluded and subject to delivery to a specific area. </p>
+                    </div>
+                    <img src="@Url.Content("~/Content/Home/vision2.png")" alt="fastinternet">
+                </div>>
+            </div>
+            <div class="swiper-pagination swiper-vision-pagination"></div>
+            <div class="swiper-button-prev swiper-vision-button-prev"></div>
+            <div class="swiper-button-next swiper-vision-button-next"></div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="servicesContainer">
+        <div class="servicesText">
+            <div class="servicesTextWrapper">
+                <p>SERVICES</p>
+                <p>We Deliver Exceptional Satellite Internet Services In Underserved Regions</p>
+                <div class="line servicesLine"></div>
+            </div>
+        </div>
+        <div class="servicesTabs">
+            <div class="tab">
+                <button class="tablinks" onclick="switchTab(event, 'plan1')">Unlimited Data Plans</button>
+                <button class="tablinks" onclick="switchTab(event, 'plan2')">Monthly Data Capped Plans</button>
+                <button class="tablinks" onclick="switchTab(event, 'plan3')">Top-Up Plans</button>
+            </div>
+
+            <!-- Tab content -->
+            <div id="plan1" class="tabcontent">
+                <img src="@Url.Content("~/Content/Home/Services-UnlimitedPlans.png")" alt="">
+                <div class="dataPlansText">
+                    <div class="dataPlansTextWrapper">
+                        <p>New Unlimited Plan Options</p>
+                        <p>Secure smooth connection to online classes and meetings, and experience better business transactions through our affordable broadband solutions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="plan2" class="tabcontent">
+                <img src="@Url.Content("~/Content/Home/Services-Monthly DataCapped.png")" alt="">
+                <div class="dataPlansText">
+                    <div class="dataPlansTextWrapper">
+                        <p>New Data Cap Plans Available</p>
+                        <p>Instant access, anywhere you want to go.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="plan3" class="tabcontent">
+                <img src="@Url.Content("~/Content/Home/Services-TopUpPlans.png")" alt="">
+                <div class="dataPlansText">
+                    <div class="dataPlansTextWrapper">
+                        <p>Top-Up Plans for Gigabyte Plans</p>
+                        <p>Be On-The-Go. We bring the internet to you..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="products">
+    <div class="productsBackground">
+        <div class="productsContainer">
+            <div class="item">
+                <img src="@Url.Content("~/Content/Products/KaBandAntenna.png")">
+                <h3>KA Band Antenna</h3>
+                <p>
+                    Managed shared bandwidth services and dedicated bandwidth pooling services are offered on 75cm to 1.2m
+                    Very Small Aperture Terminals (VSAT). These small terminals offer speeds up to 200Mbps with low dc power consumption,
+                    which means they can be operated on low-cost solar power systems. They are small enough to be transported by car, local boats,
+                    small aircraft and even on foot. <br> Traffic for our highest bandwidth products, such as trunking and enterprise connectivity,
+                    is accessed by antennas from 2.4m to 4.5m in diameter.
+                </p>
+                <div class="inquireButtons">
+                    <button class="inquire-btn">INQUIRE NOW</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="@Url.Content("~/Content/Products/Tranceiver.png")">
+                <h3>Tranceiver</h3>
+                <p>
+                    iLNB transceiver is an entry level product that significantly lowers the price of Kacific’s consumer-oriented
+                    terminals without compromising performance.
+                    It is capable of speeds of up to 50Mbps down and 10Mbps up, further reinforcing the total cost-effectiveness of the
+                    Kacific broadband plans for consumer and SME end-users.
+                </p>
+                <h1 class="invisibleSpace"> &nbsp; </h1>
+                <div class="inquireButtons">
+                    <button class="inquire-btn">INQUIRE NOW</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="@Url.Content("~/Content/Products/Modem.png")">
+                <h3>Modem</h3>
+                <p>
+                    A high throughput modem supporting a wide range of IP services like Internet/intranet access, VoIP and multi-casting services.
+                    Its easy point and play -installation
+                    and high-performance modulation techniques allow Kacific to offer fast broadband services more cost-effectively over
+                    its Ka-band network.
+                    The compact, lightweight modem is more affordable, easier to set up than existing modems, and can be configured
+                    from a web browser. It has a small profile, low power consumption and is suitable for all weather conditions.
+                </p>
+                <div class="inquireButtons">
+                    <button class="inquire-btn">INQUIRE NOW</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="@Url.Content("~/Content/Products/CommsBox.png")">
+                <h3>Commsbox</h3>
+                <p>
+                    Kacific CommsBox is an emergency communication product that can be instantly activated to establish connectivity.
+                    This box can be stored at remote sites or even airdropped into the emergency zones.
+                    The satellite dish inside connects to our powerful satellite,
+                    which offers widespread coverage including islands, mountainous regions and other remote areas.
+                </p>
+                <h1 class="invisibleSpace2"> &nbsp; </h1>
+                <div class="inquireButtons">
+                    <button class="inquire-btn">INQUIRE NOW</button>
+                </div>
+            </div>
+            <div class="inquireButtonsDesktop">
+                <button class="inquire-btn">INQUIRE NOW</button>
+            </div>
+            <div class="inquireButtonsDesktop">
+                <button class="inquire-btn">INQUIRE NOW</button>
+            </div>
+            <div class="inquireButtonsDesktop">
+                <button class="inquire-btn">INQUIRE NOW</button>
+            </div>
+            <div class="inquireButtonsDesktop">
+                <button class="inquire-btn">INQUIRE NOW</button>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="growing">
+    <div class="growingContainer">
+        <div class="textCol">
+            <div id="textWrapper">
+                <h1>GROWING <br />PRESENCE IN THE <br />PHILIPPINES</h1><br>
+                <p>We direct <br>capacity to the <br>places where it’s <br>most needed</p>
+            </div>
+        </div>
+        <img src="@Url.Content("~/Content/Home/GrowingPresence.png")" alt="map" class="map">
+    </div>
+</section>
+
+<section id="swiper2">
+    <div class="swiper swiper-services">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-services-slide">
+                <div class="servicesTextContainer">
+                    <p>FAST INTERNET FOR <br>ENTERPRISES</p>
+                </div>
+                <img src="@Url.Content("~/Content/Home/FastInternet.png")" alt="fastinternet">
+            </div>
+            <div class="swiper-slide swiper-services-slide">
+                <div class="servicesTextContainer">
+                    <p>GOVERNMENT SERVICES</p>
+                </div>
+                <img src="@Url.Content("~/Content/Home/Government.png")" alt="Government">
+            </div>
+            <div class="swiper-slide swiper-services-slide">
+                <div class="servicesTextContainer">
+                    <p>NETWORK SOLUTIONS FOR TELCOS</p>
+                </div>
+                <img src="@Url.Content("~/Content/Home/Network.png")" alt="network">
+            </div>
+            <div class="swiper-slide swiper-services-slide">
+                <div class="servicesTextContainer">
+                    <p>SATELLITE BANDWIDTH FOR ISPS AND DISTRIBUTORS</p>
+                </div>
+                <img src="@Url.Content("~/Content/Home/Satellite.png")" alt="Satellite">
+            </div>
+            <div class="swiper-slide swiper-services-slide">
+                <div class="servicesTextContainer">
+                    <p>MARITIME & OFFSHORE CONNECTIVITY SERVICES</p>
+                </div>
+                <img src="@Url.Content("~/Content/Home/Maritime.png")" alt="Maritime">
+            </div>
+        </div>
+        <div class="swiper-pagination swiper-services-pagination"></div>
+        <div class="swiper-button-prev swiper-services-button-prev"></div>
+        <div class="swiper-button-next swiper-services-button-next"></div>
+    </div>
+</section>
+
+<section id="rtPayment">
+    <div class="rtcontainer">
+        <img src="@Url.Content("~/Content/Home/RealtimePayment.gif")" alt="Phone gifs" class="gif">
+        <div class="rtcol">
+            <h1>REAL-TIME <br> PAYMENT</h1>
+            <p>Monitor your account and pay your bills with our all-in-one website.</p>
+            <button class="btn2 -readMore1">Read More</button>
+        </div>
+    </div>
+</section>
+
+<section id="tgbi">
+    <div class="parallax">
+        <div id="tgbiTextContainer">
+            <div id="tgbiWrapper">
+                <p>WHY TBGI?</p>
+                <p>Changing the way you connect</p><br>
+                <p>TBGI is the only satellite internet reseller company that owns & operates its own satellite communication facility. The site is located in the 1.1 hectare area of the former U.S. Air Force Satellite Communication Facility. Also, TBGI is the only satellite company to operate under a Congressional Franchise under Republic Act 8657 granted by the 13th congress of the Repubilc of Philippines.</p>
+
+                <div class="line -tgbiline"></div>
+            </div>
+
+            <button class="btn2 -readMore2">Read More</button>
+        </div>
+    </div>
+</section>
+
+<section id="WhatSetsTGBIApart">
+    <div class="whatSetsContainer">
+        <img src="@Url.Content("~/Content/Home/WhatSetsTBGI.png")" alt="money">
+        <div class="grid-container">
+            <div class="item1">
+                <p>What Sets TBGI Apart</p>
+            </div>
+            <div class="item2">
+                <p><br><br>NATIONWIDE PRESENCE, 81 PROVINCES</p><br>
+                <hr class="hLine">
+            </div>
+            <div class="item3">
+                <p>
+                    OVER 50+ ACCREDITED NATIONWIDE DISTRIBUTORS AND GROWING
+                </p><br>
+                <hr class="hLine">
+            </div>
+            <div class="item4">
+                <p>24/7 DEDICATED AFTERSALES SUPPORT</p><br>
+                <hr class="hLine">
+            </div>
+            <div class="item5">
+                <p>
+                    CUTTING-EDGE SATELLITE PRODUCTS
+                </p><br>
+                <hr class="hLine">
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts {
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="@Url.Content("~/Scripts/home.js")"></script>
+    <script>
+        //Register
+        const inquireBtns = document.querySelectorAll(".inquire-btn");
+        const heroInquireBtn = document.querySelector(".inquireBtn");
+        const buyNow = document.querySelector('.buy-btn');
+        //Pricing and Plans
+        const accessPlanBtns = document.querySelectorAll('.btn');
+        //Login
+        const rtPaymentBtn = document.querySelector('.-readMore1');
+        //Products
+        const parallaxBtn = document.querySelector('.-readMore2');
+        //INQUIRE BTNS
+        inquireBtns.forEach(function (button) {
+            button.addEventListener("click", function () {
+                 window.location.href = '@Url.Action("Index","PortalRegistration")';
+            });
+        });
+        heroInquireBtn.addEventListener("click", function () {
+                window.location.href = '@Url.Action("Index","PortalRegistration")';
+        });
+        //END INQUIRE BTNS
+        //Link to pricing and Plans
+        accessPlanBtns.forEach(function (button) {
+            button.addEventListener("click", function () {
+                 window.location.href = '@Url.Action("Index","PricingAndPlans")';
+            });
+        });
+        //End Pricing and plans
+        //Link to Login
+        rtPaymentBtn.addEventListener("click", function () {
+                window.location.href = '@Url.Action("Index","LoginA")';
+        });
+        //End login
+        //Link to products
+        parallaxBtn.addEventListener("click", function () {
+                window.location.href = '@Url.Action("Products","Home")';
+        });
+        //end products
+    </script>
+}

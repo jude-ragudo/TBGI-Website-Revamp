@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Technology";
+}
+@section styles {
+    @Styles.Render("~/Content/technology.css")
+}
+
+<div class="page-flex">
+    <!-- First Section -->
+    <div class="space">
+        <h1 class="first-h1">KA-BAND TECHNOLOGY</h1>
+        <p class="first-p">Kacific1 uses high-frequency Kaband spectrum and technology. The concentrated spot beams are high power, resulting in availabilities between 99.1% and 99.9</p>
+    </div>
+
+    <!-- Second Section -->
+    <div class="blue-through" id="section2">
+        <div class="verticalthin2"></div>
+        <div class="verticalthick2"></div>
+        <img class="satellite" src="@Url.Content("~/Content/Technology/Satellite.png")" alt="Satellite">
+        <div>
+            <h1 class="second-h1 hi-thru">HIGH THROUGHPUT</h1>
+            <p class="second-p">Kacific1 is a High Throughput Satellite (HTS) which reuses the same spectrum (frequencies) multiple times in 56 spot beams. Total HTS throughput is much higher than traditional FSS satellites, which can use the spectrum only once. This results in greater spectral efficiency and therefore lower cost per bandwidth.</p>
+        </div>
+    </div>
+
+    <!-- Third Section -->
+    <div class="freq dark-blue1">
+        <img class="spec" src="@Url.Content("~/Content/Technology/ka-band.png")" alt="Ka-Band">
+    </div>
+
+    <!-- Fourth Section -->
+    <div class="blue-geo">
+        <div class="verticalthin4"></div>
+        <div class="verticalthick4"></div>
+        <img class="geostat" src="@Url.Content("~/Content/Technology/GeoStationary.png")" alt="GeoStationary">
+        <h1 class="fourth-h1 words">GEOSTATIONARY</h1>
+        <p class="fourth-p words2">Satellites placed in geostationary orbit offer a very stable and consistent service and user experience. The signal only requires a simple antenna, with no moving parts for reception and transmission. Geostationary satellite latency is suitable for nearly all regular internet usage, such as video streaming, voice calls over IP, general browsing and even for distribution via 3G or 4G networks.</p>
+    </div>
+
+    <!-- Fifth Section -->
+    <div class="dark-blue2">
+        <h1 class="fifth-h1">TECHNICAL SPECIFICATIONS</h1>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="@Url.Content("~/Content/Technology/Icon7.png")" alt="Icon 7" class="center">
+                <span class="label fifth-p">Designed and Manufactured by Boeing</span>
+            </div>
+            <div class="grid-item">
+                <img src="@Url.Content("~/Content/Technology/Icon1.png")" alt="Icon 1" class="center">
+                <span class="label fifth-p">56 High Throughput Spot Beams</span>
+            </div>
+            <div class="grid-item">
+                <img src="@Url.Content("~/Content/Technology/Icon2.png")" alt="Icon 2" class="center">
+                <span class="label fifth-p">Delivering up to 60 Gbps of Broadband Capacity</span>
+            </div>
+            <div class="grid-item">
+                <img src="@Url.Content("~/Content/Technology/Icon3.png")" alt="Icon 3" class="center">
+                <span class="label fifth-p">550 to 600 MS Latency</span>
+            </div>
+        </div>
+        <div class="second-grid-container">
+            <div class="grid-item">
+                <img src="@Url.Content("~/Content/Technology/Icon4.png")" alt="Icon 4" class="center">
+                <span class="label fifth-p">Ka-Band System</span>
+            </div>
+            <div class="grid-item">
+                <img src="@Url.Content("~/Content/Technology/Icon5.png")" alt="Icon 5" class="center">
+                <span class="label fifth-p">Geostationary orbit 35,786 km above equator</span>
+            </div>
+            <div class="grid-item grid-item-span-2">
+                <img src="@Url.Content("~/Content/Technology/Icon6.png")" alt="Icon 6" class="center">
+                <span class="label fifth-p">13 kw of Electric Power</span>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts {
+    <script src="@Url.Content("~/Scripts/technology.js")"></script>
+}

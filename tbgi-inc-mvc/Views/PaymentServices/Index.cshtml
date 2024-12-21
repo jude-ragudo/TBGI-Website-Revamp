@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "PaymentServices";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+@section styles {
+    @Styles.Render("~/Content/payment-services.css")
+}
+<div class="payment-container">
+    <div class="payment-details-container">
+        <form id="servicesForm" method="post" action="@Url.Action("Index","Dashboard")">
+            <div class="pay-text-container">
+                <p>Services</p>
+            </div>
+            <div class="pay-input-container">
+                <div class="pay-input-row">
+                    <div class="label-col">
+                        <label for="name">Name <span class="required"> *</span></label>
+                    </div>
+                    <div class="input-col">
+                        <input type="text" class="payment-box" oninput="lettersOnly(this)" id="name" required/><br />
+                    </div>
+                </div>
+                <div class="pay-input-row">
+                    <div class="label-col">
+                        <label for="cardType">Card Type <span class="required"> *</span></label>
+                    </div>
+                    <div class="input-col">
+                        <select class="payment-box" id="cardType" required>
+                            <option value="" style="display:none"> </option>
+                            <option value="credit">Credit</option>
+                            <option value="debit">Debit</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pay-input-row">
+                    <div class="label-col">
+                        <label for="cardNumber">Card Number <span class="required"> *</span></label>
+                    </div>
+                    <div class="input-col">
+                        <input type="text" class="payment-box" oninput="numberOnly(this)" id="cardNumber" maxlength="16" required/><br />
+                    </div>
+                </div>
+                <div class="pay-input-row">
+                    <div class="label-col">
+                        <label for="amount">Amount <span class="required"> *</span></label>
+                    </div>
+                    <div class="input-col">
+                        <input type="number" class="payment-box" id="amount" placeholder="0.00" required /><br />
+                    </div>
+                </div>
+                <div class="pay-input-row">
+                    <div class="label-col">
+                        <label for="message">Message (Optional)</label>
+                    </div>
+                    <div class="input-col">
+                        <textarea class="message" id="message" placeholder="Message..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="button-container">
+            <button onclick="checkInput()" class="btn submit-btn">Submit</button>
+            @*Return to Dashboard *@
+            @Html.ActionLink("Cancel", "Index", "Dashboard", null, new { @class = "btn cancel-btn" })
+        </div>
+    </div>
+
+    <div class="payment-balance">
+        <p>Total Balance:</p>
+        <p><span class="currency">₱</span> 123,456,789.10</p>
+    </div>
+</div>
+@section scripts{
+    <script src="@Url.Content("~/Scripts/payment-services.js")"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+}

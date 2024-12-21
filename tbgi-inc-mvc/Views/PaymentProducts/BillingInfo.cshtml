@@ -1,0 +1,139 @@
+﻿
+@{
+    ViewBag.Title = "BillingInfo";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+@section styles{
+    @Styles.Render("~/Content/billing-info.css")
+}
+
+<div class="payment-container">
+    <form id="productsForm" method="post" action="@Url.Action("Index","Dashboard")">
+        <div class="billing-info-container">
+            <div class="text-container">
+                <p>Billing Information</p>
+            </div>
+            <div class="pay-input-container">
+                <div class="pay-input-row">
+                    <div class="label-col">
+                        <label for="fname">First Name <span class="required"> *</span></label>
+                    </div>
+                    <div class="input-col">
+                        <input type="text" class="payment-box" oninput="lettersOnly(this)" id="fname" required /><br />
+                    </div>
+                </div>
+                <div class="pay-input-row">
+                    <div class="label-col">
+                        <label for="lname">Last Name <span class="required"> *</span></label>
+                    </div>
+                    <div class="input-col">
+                        <input type="text" class="payment-box" oninput="lettersOnly(this)" id ="lname" required /><br />
+                    </div>
+                </div>
+                <div class="pay-input-row">
+                    <div class="label-col">
+                        <label for="ba1">Billing Address 1 <span class="required"> *</span></label>
+                    </div>
+                    <div class="input-col">
+                        <input type="text" class="payment-box" id="ba1" required /><br />
+                    </div>
+                </div>
+                <div class="pay-input-row">
+                    <div class="label-col">
+                        <label for="ba2">Billing Address 2 <span class="required"> *</span></label>
+                    </div>
+                    <div class="input-col">
+                        <input type="text" class="payment-box" id="ba2" required /><br />
+                    </div>
+                </div>
+                <div class="pay-input-row">
+                    <div class="label-col">
+                        <label for="city">City <span class="required"> *</span></label>
+                    </div>
+                    <div class="input-col">
+                        <select class="payment-box" id="city" required>
+                            <option value="" style="display:none"> </option>
+                            <option value="city1">City 1</option>
+                            <option value="city2">City 2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pay-input-row">
+                    <div class="label-col">
+                        <label for="country">Country/Region <span class="required"> *</span></label>
+                    </div>
+                    <div class="input-col">
+                        <input type="text" class="payment-box" oninput="lettersOnly(this)" id="country" required /><br />
+                    </div>
+                </div>
+                <div class="pay-input-row">
+                    <div class="label-col">
+                        <label for="email">Email <span class="required"> *</span></label>
+                    </div>
+                    <div class="input-col">
+                        <input type="email" class="payment-box" id="email" required /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="payment-details-container">
+            <div class="text-container">
+                <p>Card Information</p>
+            </div>
+            <div class="pay-input-container">
+                <div class="pay-input-row">
+                    <div class="label-col">
+                        <label for="cardType">Card Type <span class="required"> *</span></label>
+                    </div>
+                    <div class="input-col">
+                        <select class="payment-box" id="cardType" required>
+                            <option value="" style="display:none"> </option>
+                            <option value="1">Credit</option>
+                            <option value="2">Debit</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pay-input-row">
+                    <div class="label-col">
+                        <label for="cardNumber">Card Number <span class="required"> *</span></label>
+                    </div>
+                    <div class="input-col">
+                        <input type="text" class="payment-box" id="cardNumber" oninput="numberOnly(this)" maxlength="16" required /><br />
+                    </div>
+                </div>
+                <div class="pay-input-row">
+                    <div class="label-col">
+                        <label for="cvv">CVV <span class="required"> *</span></label>
+                    </div>
+                    <div class="input-col">
+                        <input type="password" class="payment-box" id="cvv" oninput="numberOnly(this)" maxlength="3" required/><br />
+                    </div>
+                </div>
+                <div class="pay-input-row">
+                    <div class="label-col">
+                        <label for="expiry">Expiry Date <span class="required"> *</span></label>
+                    </div>
+                    <div class="date-wrapper">
+                        <div class="input-col" id="monthWrapper">
+                            <input type="text" class="payment-box" id="month" oninput="numberOnly(this)" placeholder="mm" maxlength="2" required/><br />
+                        </div>
+                        <span class="date-divider"> // </span>
+                        <div class="input-col" id="yearWrapper">
+                            <input type="text" class="payment-box" id="year" placeholder="yy" oninput="numberOnly(this)" maxlength="2" required/><br />
+                        </div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button type="button" onclick="checkInput()" class="submit-btn">Submit</button>
+                    @Html.ActionLink("Cancel", "Index", "PaymentProducts", null, new { @class = "cancel-btn" })
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section scripts{
+    <script src="@Url.Content("~/Scripts/billing-info.js")"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+}
