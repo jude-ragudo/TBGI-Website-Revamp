@@ -1,0 +1,111 @@
+﻿
+@{
+    ViewBag.Title = "Distribution Network";
+}
+@section styles {
+    @Styles.Render("~/Content/distribution-network.css")
+}
+<section class="satellite-image">
+    <div class="tbgi-container">
+        <img src="@Url.Content("~/Content/DistributionNetwork/TBGI_BG.jpg")" id="TBGI_BG">
+        <div class="join-text-overlay">
+            <h1>JOIN TBGI'S KACIFIC AUTHORIZED DISTRIBUTOR FAMILY</h1>
+        </div>
+        <div class="enjoy-text-overlay">
+            <p>Enjoy Terminal-Sales Incentives and Marketing Freebies</p>
+        </div>
+    </div>
+</section>
+
+<section class="onboard">
+    <div class="onboard-container">
+        <div class="onboard-line1"></div>
+        <div class="onboard-line2"></div>
+        <div class="onboard-text">
+            <h3>ONBOARD WITH US TODAY</h3>
+            <p>
+                Apply to be a Kacific Authorised Distributor today and get all the support you need to
+                provide affordable, high-speed internet that makes a difference in people’s lives.
+            </p>
+        </div>
+        <div class=" onboard-items">
+            <div class="item1">
+                <img src="@Url.Content("~/Content/DistributionNetwork/Icon5.png")" id="Money">
+                <h4>Earn Excellent <br> Commissions</h4>
+            </div>
+            <div class="item2">
+                <img src="@Url.Content("~/Content/DistributionNetwork/Icon6.png")" id="Tools">
+                <h4>Receive <br> Dedicated <br> Technical <br> Support</h4>
+            </div>
+            <div class="item3">
+                <img src="@Url.Content("~/Content/DistributionNetwork/Icon2.png")" id="Router">
+                <h4>Access A <br> Range Of <br> Cutting Edge <br> Products</h4>
+            </div>
+            <div class="item4">
+                <img src="@Url.Content("~/Content/DistributionNetwork/Icon4.png")" id="Headphones">
+                <h4>Enjoy <br> Marketing And <br> Sales Support</h4>
+            </div>
+            <div class="item5">
+                <img src="@Url.Content("~/Content/DistributionNetwork/Icon3.png")" id="Satellite">
+                <h4>Tap Into Our <br> Regional <br> Inventories Of <br> Satellite <br> Antennas</h4>
+            </div>
+            <div class="item6">
+                <img src="@Url.Content("~/Content/DistributionNetwork/Icon1.png")" id="Handshake">
+                <h4>Make A <br> Difference To <br> Your <br> Community</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="career-oppurtunities">
+    <div class="career-container">
+        <div class="career-line1"></div>
+        <div class="career-line2"></div>
+        <div class="career-text-overlay">
+            <h3>CAREER OPPORTUNITIES</h3>
+            <p>Changing the future of satellite internet means thinking differently.</p>
+        </div>
+        <button class="inquire-button">INQUIRE NOW</button>
+        <button class="arrow-btn">&#8594;</button>
+        <div class="career-images">
+            <img src="@Url.Content("~/Content/DistributionNetwork/PersonBG.png")" id="PersonBG">
+            <img src="@Url.Content("~/Content/DistributionNetwork/Person.png")" id="Person">
+        </div>
+    </div>
+</section>
+
+<section class="application">
+    <div class="application-container">
+        <img src="@Url.Content("~/Content/DistributionNetwork/KADBg.png")" id="KADBg">
+        <div class="box1">
+            <h4>KAD Application Document Requirements </h4>
+            <p>To be a distributor / reseller, we need the following documents:</p>
+            <ol>
+                <li>DTI or SEC registration</li>
+                <li>Valid Mayor's permit</li>
+                <li>Barangay permit</li>
+                <li>BIR 2303</li>
+                <li>Two (2) valid government-issued ID's of the signatory</li>
+            </ol>
+        </div>
+        <div class="box2">
+            <p>
+                Interested in applying as our KAD? <br>
+                Send us your company profile.
+            </p>
+            <button class="submit-button">Submit</button>
+            <button class="arrow-btn2">&#8594;</button>
+        </div>
+    </div>
+</section>
+@section scripts {
+    <script src="@Url.Content("~/Scripts/distribution-network.js")"></script>
+    <script>
+
+        const inquireBtn = document.querySelector(".inquire-button");
+        //INQUIRE BTNS
+        inquireBtn.addEventListener("click", function () {
+                window.location.href = '@Url.Action("Index","PortalRegistration")';
+        });
+    </script>
+}
