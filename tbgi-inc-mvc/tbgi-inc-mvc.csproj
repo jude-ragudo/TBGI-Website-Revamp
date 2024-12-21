@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C33D8A0F-3817-4F8F-A3AB-E03B421F4731}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>tbgi_inc_mvc</RootNamespace>
+    <AssemblyName>tbgi-inc-mvc</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44385</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PaymentProductsController.cs" />
+    <Compile Include="Controllers\PaymentServicesController.cs" />
+    <Compile Include="Controllers\LoginBController.cs" />
+    <Compile Include="Controllers\LoginAController.cs" />
+    <Compile Include="Controllers\PortalRegistrationController.cs" />
+    <Compile Include="Controllers\PricingAndPlansController.cs" />
+    <Compile Include="Controllers\UpdatePasswordController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\billing-info.css" />
+    <Content Include="Content\Dashboard-layout.css" />
+    <Content Include="Content\Dashboard.css" />
+    <Content Include="Content\Dashboard\chip.png" />
+    <Content Include="Content\Dashboard\tbgi.png" />
+    <Content Include="Content\distribution-network.css" />
+    <Content Include="Content\DistributionNetwork\Icon1.png" />
+    <Content Include="Content\DistributionNetwork\Icon2.png" />
+    <Content Include="Content\DistributionNetwork\Icon3.png" />
+    <Content Include="Content\DistributionNetwork\Icon4.png" />
+    <Content Include="Content\DistributionNetwork\Icon5.png" />
+    <Content Include="Content\DistributionNetwork\Icon6.png" />
+    <Content Include="Content\DistributionNetwork\KADBg.png" />
+    <Content Include="Content\DistributionNetwork\Person.png" />
+    <Content Include="Content\DistributionNetwork\PersonBG.png" />
+    <Content Include="Content\DistributionNetwork\TBGI_BG.jpg" />
+    <Content Include="Content\home.css" />
+    <Content Include="Content\Home\Access1.jpeg" />
+    <Content Include="Content\Home\Access1.png" />
+    <Content Include="Content\Home\Access2.jpg" />
+    <Content Include="Content\Home\Access2.png" />
+    <Content Include="Content\Home\CommsBox.png" />
+    <Content Include="Content\Home\FastInternet.png" />
+    <Content Include="Content\Home\Government.png" />
+    <Content Include="Content\Home\GrowingPresence.png" />
+    <Content Include="Content\Home\HomePageBg.png" />
+    <Content Include="Content\Home\HomePageBg2.png" />
+    <Content Include="Content\Home\KaBandAntenna.png" />
+    <Content Include="Content\Home\Logo.png" />
+    <Content Include="Content\Home\Maritime.png" />
+    <Content Include="Content\Home\Modem.png" />
+    <Content Include="Content\Home\Network.png" />
+    <Content Include="Content\Home\RealtimePayment.gif" />
+    <Content Include="Content\Home\Satellite.png" />
+    <Content Include="Content\Home\Services-Monthly DataCapped.png" />
+    <Content Include="Content\Home\Services-TopUpPlans.png" />
+    <Content Include="Content\Home\Services-UnlimitedPlans.png" />
+    <Content Include="Content\Home\TBGI_BG.jpg" />
+    <Content Include="Content\Home\Tranceiver.png" />
+    <Content Include="Content\Home\vision1.png" />
+    <Content Include="Content\Home\vision2.png" />
+    <Content Include="Content\Home\vision3.gif" />
+    <Content Include="Content\Home\vr.mp4" />
+    <Content Include="Content\Home\WhatSetsTBGI.png" />
+    <Content Include="Content\layout.css" />
+    <Content Include="Content\payment-products.css" />
+    <Content Include="Content\payment-services.css" />
+    <Content Include="Content\login-b.css" />
+    <Content Include="Content\login-a.css" />
+    <Content Include="Content\LoginB\main-bg.jpg" />
+    <Content Include="Content\LoginB\website-logo.jpg" />
+    <Content Include="Content\LoginA\half-bg.png" />
+    <Content Include="Content\LoginA\website-logo.jpg" />
+    <Content Include="Content\portal-registration.css" />
+    <Content Include="Content\PricingAndPlans\Fup.png" />
+    <Content Include="Content\PricingAndPlans\Slide1.mp4" />
+    <Content Include="Content\PricingAndPlans\Slide2.jpg" />
+    <Content Include="Content\PricingAndPlans\Slide3.jpg" />
+    <Content Include="Content\pricing-and-plans.css" />
+    <Content Include="Content\products.css" />
+    <Content Include="Content\Products\BG.jpg" />
+    <Content Include="Content\Products\Clientele1.png" />
+    <Content Include="Content\Products\Clientele2.jpg" />
+    <Content Include="Content\Products\Clientele2.png" />
+    <Content Include="Content\Products\Clientele3.png" />
+    <Content Include="Content\Products\Clientele4.jpg" />
+    <Content Include="Content\Products\CommsBox.png" />
+    <Content Include="Content\Products\DataPlan.png" />
+    <Content Include="Content\Products\FirstPic.jpg" />
+    <Content Include="Content\Products\KaBandAntenna.png" />
+    <Content Include="Content\Products\Modem.png" />
+    <Content Include="Content\Products\Offers.png" />
+    <Content Include="Content\Products\offshore.jpeg" />
+    <Content Include="Content\Products\Tranceiver.png" />
+    <Content Include="Content\Registration\Logo.png" />
+    <Content Include="Content\Registration\Satellite.png" />
+    <Content Include="Content\reset.css" />
+    <Content Include="Content\services.css" />
+    <Content Include="Content\Services\BG1.jpg" />
+    <Content Include="Content\Services\Cctv.png" />
+    <Content Include="Content\Services\CommBox.jpg" />
+    <Content Include="Content\Services\ComWifi.jpg" />
+    <Content Include="Content\Services\GigStarter.jpg" />
+    <Content Include="Content\Services\GigWifi.jpg" />
+    <Content Include="Content\Services\InternetThings.jpg" />
+    <Content Include="Content\Services\Maritime.jpeg" />
+    <Content Include="Content\Services\Plan.png" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\technology.css" />
+    <Content Include="Content\Technology\BG-Kaband.png" />
+    <Content Include="Content\Technology\Bg1.jpg" />
+    <Content Include="Content\Technology\Bg2.jpg" />
+    <Content Include="Content\Technology\GeoStationary.png" />
+    <Content Include="Content\Technology\Icon1.png" />
+    <Content Include="Content\Technology\Icon2.png" />
+    <Content Include="Content\Technology\Icon3.png" />
+    <Content Include="Content\Technology\Icon4.png" />
+    <Content Include="Content\Technology\Icon5.png" />
+    <Content Include="Content\Technology\Icon6.png" />
+    <Content Include="Content\Technology\Icon7.png" />
+    <Content Include="Content\Technology\ka-band.png" />
+    <Content Include="Content\Technology\Satellite.png" />
+    <Content Include="Content\transaction-history.css" />
+    <Content Include="Content\update-password.css" />
+    <Content Include="Content\UpdatePassword\Boat.png" />
+    <Content Include="Content\UpdatePassword\WebsiteLogo.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\billing-info.js" />
+    <Content Include="Scripts\Dashboard.js" />
+    <Content Include="Scripts\distribution-network.js" />
+    <Content Include="Scripts\home.js" />
+    <Content Include="Scripts\payment-products.js" />
+    <Content Include="Scripts\payment-services.js" />
+    <Content Include="Scripts\products.js" />
+    <Content Include="Scripts\products.js" />
+    <Content Include="Scripts\login-b.js" />
+    <Content Include="Scripts\login-a.js" />
+    <Content Include="Scripts\pricing-and-plans.js" />
+    <Content Include="Scripts\registration.js" />
+    <Content Include="Scripts\technology.js" />
+    <Content Include="Scripts\transaction-history.js" />
+    <Content Include="Scripts\update-password.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Fonts\Montserrat-Black.ttf" />
+    <Content Include="Content\Fonts\Montserrat-BlackItalic.ttf" />
+    <Content Include="Content\Fonts\Montserrat-Bold.ttf" />
+    <Content Include="Content\Fonts\Montserrat-BoldItalic.ttf" />
+    <Content Include="Content\Fonts\Montserrat-ExtraBold.ttf" />
+    <Content Include="Content\Fonts\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="Content\Fonts\Montserrat-ExtraLight.ttf" />
+    <Content Include="Content\Fonts\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="Content\Fonts\Montserrat-Italic.ttf" />
+    <Content Include="Content\Fonts\Montserrat-Light.ttf" />
+    <Content Include="Content\Fonts\Montserrat-LightItalic.ttf" />
+    <Content Include="Content\Fonts\Montserrat-Medium.ttf" />
+    <Content Include="Content\Fonts\Montserrat-MediumItalic.ttf" />
+    <Content Include="Content\Fonts\Montserrat-Regular.ttf" />
+    <Content Include="Content\Fonts\Montserrat-SemiBold.ttf" />
+    <Content Include="Content\Fonts\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="Content\Fonts\Montserrat-Thin.ttf" />
+    <Content Include="Content\Fonts\Montserrat-ThinItalic.ttf" />
+    <None Include="packages.config" />
+    <Content Include="Views\Home\Technology.cshtml" />
+    <Content Include="Views\Home\Products.cshtml" />
+    <Content Include="Views\PortalRegistration\Index.cshtml" />
+    <Content Include="Views\Home\DistributionNetwork.cshtml" />
+    <Content Include="Views\Home\Service.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Shared\_DashboardLayout.cshtml" />
+    <Content Include="Views\PaymentServices\Index.cshtml" />
+    <Content Include="Views\PaymentProducts\BillingInfo.cshtml" />
+    <Content Include="Views\PaymentProducts\Index.cshtml" />
+    <Content Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\PricingAndPlans\Index.cshtml" />
+    <Content Include="Views\LoginA\Index.cshtml" />
+    <Content Include="Views\LoginB\Index.cshtml" />
+    <Content Include="Views\Home\TransactionHistory.cshtml" />
+    <Content Include="Views\UpdatePassword\Index.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55107</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44385/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
