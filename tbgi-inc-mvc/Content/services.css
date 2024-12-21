@@ -1,0 +1,883 @@
+﻿﻿ /* Start of the Header */
+.image-container {
+    position: relative;
+    object-fit: contain;
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+}
+
+.imageHeader {
+    position: static;
+    width: 100%;
+    height: 200px;
+    min-height: auto;
+}
+
+.image-text {
+    position: absolute;
+    z-index: 1;
+    top: 12%;
+    padding-right: 10px;
+    font-family: montserrat, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    text-align: right !important;
+    text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+    color: #fafafa;
+    line-height: 1.8em;
+    letter-spacing: 0.05em;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    outline: 0;
+    vertical-align: baseline;
+    --bg-overlay-color: rgb(var(--color_11));
+    --bg-gradient: none;
+    --fill-layer-image-opacity: 1;
+}
+
+/* End of Header */
+
+/* Polaroid */
+
+.grid-container {
+    display: grid;
+    border: 10px solid #ffffff;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+.grid-item {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.polaroid {
+    align-items: center;
+    background: #ffffff;
+    display: inline-block;
+    margin: 0px;
+    padding: 15px 15px 65px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 1px 4px 6px rgba(0, 0, 0, .3);
+    box-shadow: 7px 1px 10px rgba(37, 36, 36, 0.3);
+    z-index: 0;
+    position: relative;
+    width: 100%;
+}
+
+    .polaroid img {
+        display: block;
+        width: 100%;
+        height: 200px;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+.imagePolaroid {
+    width: 100%;
+}
+
+h1 {
+    font-family: montserrat,sans-serif;
+    font-size: 16px;
+    text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px, rgba(0, 0, 0, 0.6) -1px -1px 1px;
+    background: transparent;
+    vertical-align: baseline;
+    letter-spacing: 0em;
+    line-height: 42px;
+    padding-left: 10px;
+}
+
+.details {
+    font-family: montserrat,sans-serif;
+    font-size: 13px;
+    letter-spacing: 0em;
+    line-height: 1.8em;
+    text-align: justify;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.line-height-title {
+    line-height: 17px;
+    margin-bottom: 25px;
+}
+
+line-height-title-2 {
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+
+line-height-title-3 {
+    line-height: 10px;
+    margin-bottom: 25px;
+}
+
+
+.break-line {
+    margin-bottom: 30px;
+}
+
+.break-line2 {
+    margin-bottom: 30px;
+}
+
+.break-line3 {
+    margin-bottom: 30px;
+}
+
+
+
+
+/*End of Polaroid*/
+
+/*Start of Last Section */
+
+.lastcontainer {
+    position: relative;
+    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 0;
+    height: 240px;
+}
+
+.flex-container {
+    display: flex;
+    z-index: 2;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-item-inquire {
+    position: absolute;
+    margin-bottom: 180px;
+    margin: auto;
+    background-color: #D0D0D0;
+    z-index: 3;
+    height: 68px;
+    z-index: 3;
+    width: 100%;
+    top: 10px;
+}
+
+.flex-item-button {
+    top: 255%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    z-index: 3;
+}
+
+.flex-item-pen {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+}
+
+.pen {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+
+.button1 {
+    width: 152px;
+    height: 34px;
+    font-size: 30px;
+    transition-duration: 0.2s;
+    font-family: avenir-lt-w01_35-light1475496, sans-serif;
+    background-color: white;
+    border-color: black;
+}
+
+    .button1:hover {
+        background-color: #607980;
+        color: white;
+        border: 2px solid #607980;
+    }
+
+.container {
+    font-size: 8px;
+    font-family: avenir-lt-w01_35-light1475496, sans-serif;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.blackbox {
+    width: 100%;
+    height: 240px;
+    background-color: rgb(39, 42, 51);
+    z-index: 1;
+    position: relative;
+}
+
+
+.text-plan {
+    font-family: montserrat,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center !important;
+    line-height: normal;
+    padding-top: 15px;
+}
+
+/*End of Last Section*/
+
+/*Imported Fonts*/
+
+@font-face {
+    font-family: montserrat;
+    src: url("Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: avenir-lt-w01_35-light1475496;
+    src: url("Avenir LT W01 35 Light.ttf");
+}
+
+/*End of Imported Fonts*/
+
+/* Mobile M Resolution */
+
+@media only screen and (min-width: 375px) {
+
+    /* Header Part */
+
+    .image-container {
+        position: relative;
+        object-fit: contain;
+        width: 100%;
+        height: 200px;
+        z-index: -1;
+    }
+
+    .image-text {
+        position: absolute;
+        z-index: 1;
+        top: 13%;
+        padding-right: 10px;
+        font-family: montserrat, sans-serif;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: normal;
+        text-align: right !important;
+        text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+        color: #fafafa;
+        line-height: 1.8em;
+        letter-spacing: 0.05em;
+        background: transparent;
+        border: 0;
+        margin: 0;
+        outline: 0;
+        vertical-align: baseline;
+        --bg-overlay-color: rgb(var(--color_11));
+        --bg-gradient: none;
+        --fill-layer-image-opacity: 1;
+        padding-left: 85px;
+    }
+
+    /* Header Part */
+
+    /*Polaroid Part */
+
+    .polaroid {
+        align-items: center;
+        background: #ffffff;
+        display: inline-block;
+        margin: 0px;
+        padding: 15px 15px 65px;
+        text-align: center;
+        text-decoration: none;
+        -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+        -moz-box-shadow: 1px 4px 6px rgba(0, 0, 0, .3);
+        box-shadow: 7px 1px 10px rgba(37, 36, 36, 0.3);
+        z-index: 0;
+        position: relative;
+        width: 100%;
+    }
+
+    .details {
+        font-family: montserrat,sans-serif;
+        font-size: 13px;
+        letter-spacing: 0em;
+        line-height: 1.8em;
+        text-align: justify;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    /* End of Polaroid */
+
+    /* Start */
+
+    lastcontainer {
+        position: relative;
+        margin: 0 auto;
+        max-width: 100%;
+        margin-bottom: 0;
+        height: 130px;
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        align-content: flex-end;
+        position: relative;
+        z-index: 2;
+        height: auto;
+    }
+
+    .flex-item-pen {
+        top: -195px;
+        z-index: 1;
+        position: relative;
+        width: 100%;
+    }
+
+    .pen {
+        width: 100%;
+        height: 175px;
+        object-fit: cover;
+    }
+
+    .blackbox {
+        width: 100%;
+        height: 240px;
+        background-color: rgb(39, 42, 51);
+        z-index: 1;
+        position: relative;
+    }
+
+    .flex-item-inquire {
+        position: absolute;
+        top: -232px;
+        left: 0;
+        right: 0;
+        margin-bottom: 180px;
+        margin: auto;
+        background-color: #D0D0D0;
+        z-index: 3;
+        height: 68px;
+        width: 100%;
+        z-index: 3;
+    }
+}
+
+/* End of Mobile M Resolution */
+
+/* Start of Mobile L Resolution */
+
+@media only screen and (min-width: 425px) {
+
+    /* Header Part */
+
+    .image-container {
+        position: relative;
+        object-fit: contain;
+        width: 100%;
+        height: 200px;
+        z-index: -1;
+    }
+
+    .image-text {
+        position: absolute;
+        z-index: 1;
+        top: 13%;
+        padding-right: 10px;
+        font-family: montserrat, sans-serif;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: normal;
+        text-align: right !important;
+        text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+        color: #fafafa;
+        line-height: 1.8em;
+        letter-spacing: 0.05em;
+        background: transparent;
+        border: 0;
+        margin: 0;
+        outline: 0;
+        vertical-align: baseline;
+        --bg-overlay-color: rgb(var(--color_11));
+        --bg-gradient: none;
+        --fill-layer-image-opacity: 1;
+        width: 100%;
+        padding-left: 85px;
+    }
+
+    /* Polaroid */
+    .grid-container {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    /* Last Part */
+
+    .text-plan {
+        font-size: 17px;
+    }
+
+    .button1 {
+        width: 175px;
+        height: 34px;
+        font-size: 30px;
+        transition-duration: 0.2s;
+        font-family: avenir-lt-w01_35-light1475496, sans-serif;
+        background-color: white;
+        border-color: black;
+    }
+
+    .container {
+        font-size: 9px;
+        font-family: avenir-lt-w01_35-light1475496, sans-serif;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+}
+/*Resolution for Tablet */
+
+@media only screen and (min-width: 768px) {
+
+    /* Header Part */
+
+    .image-container {
+        position: relative;
+        object-fit: contain;
+        width: 100%;
+        height: 200px;
+        z-index: -1;
+    }
+
+    .image-text {
+        position: absolute;
+        z-index: 1;
+        top: 23%;
+        font-family: montserrat, sans-serif;
+        font-size: 20px;
+        font-style: italic;
+        font-weight: normal;
+        text-align: left !important;
+        text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+        color: #fafafa;
+        line-height: 1.8em;
+        letter-spacing: 0.05em;
+        background: transparent;
+        border: 0;
+        margin: 0;
+        outline: 0;
+        vertical-align: baseline;
+        --bg-overlay-color: rgb(var(--color_11));
+        --bg-gradient: none;
+        --fill-layer-image-opacity: 1;
+        width: 100%;
+        padding-left: 70px;
+    }
+
+    /* Polaroid */
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto auto;
+        grid-gap: 25px;
+        align-content: center;
+        position: relative;
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+
+    h1 {
+        font-family: montserrat,sans-serif;
+        font-size: 23px;
+        text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px, rgba(0, 0, 0, 0.6) -1px -1px 1px;
+        background: transparent;
+        vertical-align: baseline;
+        letter-spacing: 0em;
+        line-height: 42px;
+        padding-left: 10px;
+    }
+
+    .details {
+        font-family: montserrat,sans-serif;
+        font-size: 16px;
+        letter-spacing: 0em;
+        line-height: 1.8em;
+        text-align: justify;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .line-height-title-2 {
+        line-height: 35px;
+        margin-bottom: 25px;
+    }
+
+    .line-height-title-3 {
+        line-height: 35px;
+        margin-bottom: 25px;
+    }
+
+    .invisibleSpace {
+        margin-bottom: 29px;
+    }
+
+    /*Last Section*/
+
+    .flex-container {
+        display: flex;
+        height: auto;
+        flex-flow: row nowrap;
+        top: 0;
+        position: absolute;
+    }
+
+    .flex-item-pen {
+        width: 100%;
+        top: 0;
+    }
+
+    .flex-item-inquire {
+        width: 100%;
+        position: relative;
+        margin: 0;
+        height: 212px;
+        top: 0;
+    }
+
+    .flex-item-button {
+        top: 80%;
+    }
+
+    .pen {
+        height: 212px;
+    }
+
+    .blackbox {
+        padding-top: 13px;
+    }
+
+    .text-plan {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .image-container {
+        height: 300px;
+    }
+
+    .imageHeader {
+        width: 100%;
+        height: 300px;
+    }
+
+    .image-text {
+        top: 36%;
+    }
+
+    .grid-container {
+        margin-right: 80px;
+        margin-left: 80px;
+    }
+
+
+    .blackbox {
+        padding-top: 40px;
+        height: 190px;
+    }
+
+    .container {
+        font-size: 12px;
+        margin-top: 6px;
+    }
+
+    .text-plan {
+        font-size: 35px;
+    }
+
+    .lastcontainer {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+
+
+    /* First Section */
+
+    .image-container {
+        height: 400px;
+    }
+
+    .imageHeader {
+        width: 100%;
+        height: 400px;
+    }
+
+    .image-text {
+        top: 48%;
+        font-size: 24px;
+    }
+
+    /* Polaroid */
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto auto;
+        grid-gap: 25px;
+        align-content: center;
+        position: relative;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .line-height-title {
+        line-height: 69px;
+    }
+
+    .invisibleSpace {
+        margin-bottom: -24px;
+    }
+
+    .lastcontainer {
+        height: 100%;
+    }
+
+
+
+    /* Last Section */
+
+    .button1 {
+        width: 234px;
+        height: 34px;
+    }
+
+    .flex-item-button {
+        width: 234px;
+        height: 34px;
+        left: 25%;
+    }
+
+    .flex-container {
+        padding-top: 0;
+        position: relative;
+    }
+
+    .text-plan {
+        font-size: 45px;
+        text-align: left !important;
+        padding-left: 51px;
+        padding-right: 300px;
+    }
+
+    .blackbox {
+        width: 65%;
+        height: 40px;
+        margin-top: 0;
+    }
+
+    .pen {
+        height: 350px;
+    }
+
+    .flex-item-inquire {
+        height: 350px;
+    }
+
+    .lastcontainer {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+
+    .image-container {
+        height: 534px;
+    }
+
+    .imageHeader {
+        width: 100%;
+        height: 534px;
+    }
+
+    .image-text {
+        top: 49%;
+        font-size: 30px;
+        padding-left: 197px;
+    }
+
+
+    /* Polaroid */
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+        grid-gap: 25px;
+        align-content: center;
+        position: relative;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .line-height-title {
+        line-height: 69px;
+    }
+
+    .invisibleSpace {
+        margin-bottom: -24px;
+    }
+
+    .lastcontainer {
+        height: 100%;
+    }
+
+    .details {
+        font-size: 23px;
+    }
+
+
+    /* Last Section */
+
+    .pen {
+        height: 550px;
+    }
+
+    .flex-item-inquire {
+        height: 550px;
+    }
+
+    .text-plan {
+        font-size: 55px;
+        padding-left: 185px;
+        padding-right: 195px;
+        padding-top: 110px;
+    }
+
+    .button1 {
+        height: 57px;
+    }
+
+    .container {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .blackbox {
+        height: 80px;
+    }
+
+    .lastcontainer {
+        margin-left: 60px;
+        margin-right: 60px;
+
+    }
+
+
+}
+
+@media only screen and (min-width: 1920px) {
+
+    /* First Section */
+
+    .image-container {
+        height: 700px;
+
+    }
+
+    .imageHeader {
+        width: 100%;
+        height: 700px;
+    }
+
+    .image-text {
+        top: 49%;
+        font-size: 36px;
+        padding-left: 197px;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+
+    /* First Section */
+
+    .image-text {
+        top: 49%;
+        font-size: 42px;
+        padding-left: 197px;
+    }
+
+    .grid-container {
+        grid-column-gap: 50px;
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .grid-container {
+        margin-top: 85px;
+    }
+
+    .button1 {
+        height: 75px;
+        width: 340px;
+    }
+
+    .container {
+        font-size: 24px;
+    }
+
+    .text-plan {
+        font-size: 80px;
+    }
+
+    .pen {
+        height: 700px;
+    }
+
+    .flex-item-inquire {
+        height: 700px;
+    }
+}

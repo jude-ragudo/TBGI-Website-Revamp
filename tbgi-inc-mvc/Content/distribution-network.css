@@ -1,0 +1,1469 @@
+﻿:root {
+    --trans1: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Section 1 */
+.tbgi-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 189px;
+}
+
+#TBGI_BG {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    object-position: 0% 70%;
+}
+
+.join-text-overlay h1 {
+    position: absolute;
+    width: 300px;
+    top: 100px;
+    transform: translate(-50%, -75%);
+    color: rgb(232, 230, 230);
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 0.08em;
+    line-height: 1.5em;
+    text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+    overflow-wrap: break-word;
+}
+
+.enjoy-text-overlay p {
+    position: absolute;
+    width: 280px;
+    top: 150px;
+    transform: translate(-50%, -50%);
+    color: #F3F3F3;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    line-height: 1.8em;
+    text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+    overflow-wrap: break-word;
+}
+
+/* Section 1 End */
+
+/* Section 2 */
+.onboard-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1030px;
+}
+
+.onboard-line1 {
+    position: absolute;
+    border-left: 2px solid rgba(183,183,183,255);
+    height: 262px;
+    top: 15%;
+    transform: translate(0%, -43%);
+    left: 50px;
+}
+
+.onboard-line2 {
+    position: absolute;
+    border-left: 3px solid rgba(56,56,56,255);
+    height: 200px;
+    top: 17%;
+    left: 50px;
+    transition: transform 2s ease;
+}
+
+.move {
+    transform: translateY(-35%);
+}
+
+.onboard-text {
+    position: absolute;
+    left: 65px;
+    top: 10%;
+    transform: translate(0%, -30%);
+    width: 215px;
+    padding-left: 10px;
+}
+
+    .onboard-text h3 {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.16em;
+        line-height: normal;
+        overflow-wrap: break-word;
+        padding: 27px 0px 20px;
+    }
+
+    .onboard-text p {
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        line-height: 1.8em;
+        overflow-wrap: break-word;
+    }
+
+.onboard-items {
+    position: absolute;
+    top: 35%;
+    width: 320px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px 20px;
+}
+
+    .onboard-items img {
+        padding: 10px 40px;
+        align-items: center;
+    }
+
+    .onboard-items h4 {
+        font-size: 14px;
+        font-weight: normal;
+        text-align: center;
+        line-height: 1.4em;
+    }
+
+.item6 {
+    padding-top: 45px;
+}
+
+/* Section 2 End */
+
+/* Section 3 */
+
+.career-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    overflow: hidden;
+    height: 408px;
+}
+
+.career-line1 {
+    position: absolute;
+    border-left: 2px solid rgba(183,183,183,255);
+    height: 135px;
+    top: 10%;
+    left: 40px;
+}
+
+.career-line2 {
+    position: absolute;
+    border-left: 3px solid rgba(255,255,255,255);
+    height: 85px;
+    top: 30%;
+    left: 40px;
+    transition: transform 2s ease;
+}
+
+.move2 {
+    transform: translateY(-35%);
+}
+
+#PersonBG {
+    height: 199px;
+    width: 320px;
+    background-size: cover;
+    object-fit: cover;
+    transform: translate(0%, 55%);
+}
+
+#Person {
+    position: absolute;
+    width: 149px;
+    height: 211px;
+    transform: translate(5%, -51%);
+}
+
+.career-text-overlay {
+    position: absolute;
+    left: 50px;
+    top: 8%;
+    padding: 10px;
+    color: white;
+    text-align: start;
+}
+
+    .career-text-overlay h3 {
+        width: 209px;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0.16em;
+        line-height: normal;
+        padding-bottom: 25px;
+    }
+
+    .career-text-overlay p {
+        width: 215px;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        line-height: 1.8em;
+        overflow-wrap: break-word;
+    }
+
+.inquire-button {
+    position: absolute;
+    transform: translate(40%, 100%);
+    border-radius: 8px 0px 0px 8px;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 5px;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    z-index: 2;
+}
+
+    .inquire-button:hover {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        transition: var(--trans1, border-color .4s ease 0s,background-color .4s ease 0s);
+    }
+
+.arrow-btn {
+    position: absolute;
+    transform: translate(388%, 100%);
+    font-size: 18px;
+    border-radius: 0px 8px 8px 0px;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    width: 33px;
+    height: 33px;
+    z-index: 2;
+}
+/*.btn-container{
+    position:absolute;
+    display:flex;
+    width:100%;
+    justify-content: space-around;
+}*/
+/* Section 3 End */
+
+/* Section 4 */
+
+.application-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#KADBg {
+    height: 563px;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.box1 {
+    position: absolute;
+    transform: translate(0%, 10%);
+    left: 30px;
+    width: 270px;
+    height: 264px;
+    background-color: rgba(128,128,128,0.4);
+    border: 1px solid white;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: var(none,0 1px 4px rgba(0,0,0,.6));
+    padding: 20px;
+    color: white;
+    font-size: 14px;
+    text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+    text-align: start;
+}
+
+    .box1 h4 {
+        line-height: 1.4em;
+        font-weight: bolder;
+    }
+
+    .box1 p {
+        padding: 20px 0px 20px;
+    }
+
+    .box1 p, li {
+        letter-spacing: 0em;
+        line-height: 1.4em;
+    }
+
+    .box1 ol {
+        padding-left: 30px;
+    }
+
+.box2 {
+    position: absolute;
+    transform: translateY(160%);
+    left: 30px;
+    width: 270px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid black;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: var(none,0 1px 4px rgba(0,0,0,.6));
+    padding: 20px;
+    color: black;
+}
+
+    .box2 p {
+        padding: 10px 10px 25px;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        line-height: 1.8em;
+    }
+
+.submit-button {
+    position: absolute;
+    transform: translate(0%, -10%);
+    left: 30px;
+    border-radius: 8px 0px 0px 8px;
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    padding: 6px 10px;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+}
+
+    .submit-button:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        transition: var(--trans1, border-color .4s ease 0s,background-color .4s ease 0s);
+    }
+
+.arrow-btn2 {
+    position: absolute;
+    left: 110px;
+    transform: translateY(-10%);
+    font-size: 18px;
+    border-radius: 0px 8px 8px 0px;
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    width: 35px;
+    height: 35px;
+}
+/* Section 4 End */
+
+/* Media Query for resolutions */
+@media only screen and (min-width: 375px) {
+
+    /* Section 1 */
+    .tbgi-container {
+        height: 200px;
+    }
+
+    .join-text-overlay h1 {
+        font-size: 22px;
+        padding: 10px 0px;
+    }
+
+    .enjoy-text-overlay p {
+        font-size: 16px;
+        padding: 15px 0px;
+    }
+
+    /* Section 1 End */
+
+    /* Section 2 */
+
+    .onboard-container {
+        height: 1050px;
+    }
+
+    .onboard-line1 {
+        height: 295px;
+    }
+
+    .onboard-line2 {
+        height: 235px;
+    }
+
+    .move {
+        transform: translateY(-33%);
+    }
+
+    .onboard-text {
+        width: 245px;
+    }
+
+        .onboard-text h3 {
+            font-size: 18px;
+        }
+
+        .onboard-text p {
+            font-size: 16px;
+        }
+
+    .onboard-items {
+        left: 30px;
+    }
+
+        .onboard-items h4 {
+            font-size: 16px;
+        }
+
+    /* Section 2 End */
+
+    /* Section 3 */
+
+    .career-container {
+        height: 470px;
+    }
+
+    .career-line1 {
+        height: 145px;
+        top: 8%;
+    }
+
+    .career-line2 {
+        height: 95px;
+        top: 26%;
+    }
+
+    #PersonBG {
+        height: 250px;
+        width: 350px;
+        transform: translate(5%, 45%);
+    }
+
+    #Person {
+        width: 170px;
+        height: 240px;
+        transform: translate(0%, -55%);
+    }
+
+    .career-text-overlay {
+        top: 6%;
+    }
+
+        .career-text-overlay h3 {
+            width: 215px;
+            font-size: 16px;
+        }
+
+        .career-text-overlay p {
+            width: 230px;
+            font-size: 16px;
+        }
+
+    .inquire-button {
+        transform: translate(40%, 50%);
+    }
+
+    .arrow-btn {
+        /*left: 80%;*/
+        transform: translate(399%, 50%);
+    }
+    /* Section 3 End */
+
+    /* Section 4 */
+
+    .application-container {
+        height: 625px;
+    }
+
+    #KADBg {
+        height: 625px;
+    }
+
+    .box1 {
+        transform: translate(0%, 15%);
+        width: 310px;
+        height: 295px;
+        font-size: 16px;
+    }
+
+    .box2 {
+        transform: translateY(170%);
+        width: 310px;
+        height: 220px;
+    }
+
+        .box2 p {
+            font-size: 16px;
+        }
+
+    /* Section 4 End */
+
+}
+
+@media only screen and (min-width: 425px) {
+    /* Section 1 */
+
+    .tbgi-container {
+        height: 230px;
+    }
+
+    .join-text-overlay h1 {
+        width: 320px;
+        transform: translate(-50%, -65%);
+        font-size: 24px;
+        padding: 15px 0px;
+    }
+
+    .enjoy-text-overlay p {
+        width: 320px;
+        transform: translate(-50%, -30%);
+        font-size: 18px;
+        padding: 20px 0px;
+    }
+
+    /* Section 1 End */
+
+    /* Section 2 */
+
+    .onboard-container {
+        height: 1220px;
+    }
+
+    .onboard-line1 {
+        top: 15%;
+        height: 325px;
+    }
+
+    .onboard-line2 {
+        top: 16%;
+        height: 262px;
+    }
+
+    .onboard-text {
+        top: 10%;
+        width: 310px;
+    }
+
+        .onboard-text h3 {
+            font-size: 21px;
+            padding: 25px 0px 20px;
+        }
+
+        .onboard-text p {
+            font-size: 18px;
+        }
+
+    .onboard-items {
+        top: 33%;
+        left: 12%;
+    }
+
+        .onboard-items img {
+            padding: 15px 30px;
+        }
+
+        .onboard-items h4 {
+            font-size: 18px;
+        }
+
+    .item6 {
+        padding-top: 40px;
+    }
+
+    /* Section 2 End */
+
+    /* Section 3 */
+
+    .career-container {
+        height: 525px;
+    }
+
+    .career-line1 {
+        height: 165px;
+        top: 10%;
+    }
+
+    .career-line2 {
+        height: 110px;
+        top: 28%;
+    }
+
+    #PersonBG {
+        height: 290px;
+        width: 400px;
+        transform: translate(5%, 45%);
+    }
+
+    #Person {
+        width: 200px;
+        height: 275px;
+        transform: translate(5%, -58%);
+    }
+
+    .career-text-overlay {
+        top: 9%;
+    }
+
+        .career-text-overlay h3 {
+            font-size: 18px;
+        }
+
+        .career-text-overlay p {
+            width: 250px;
+            font-size: 18px;
+        }
+
+    .inquire-button {
+        padding: 10px 10px;
+        font-size: 16px;
+    }
+
+    .arrow-btn {
+        transform: translate(350%, 50%);
+        font-size: 25px;
+        width: 46px;
+        height: 46px;
+    }
+
+    /* Section 3 End */
+
+    /* Section 4 */
+
+    .application-container {
+        height: 725px;
+    }
+
+    #KADBg {
+        height: 725px;
+    }
+
+    .box1 {
+        transform: translate(0%, 15%);
+        width: 365px;
+        height: 330px;
+        font-size: 18px;
+    }
+
+    .box2 {
+        transform: translateY(170%);
+        width: 365px;
+        height: 250px;
+    }
+
+        .box2 p {
+            font-size: 19px;
+        }
+
+    .submit-button {
+        font-size: 16px;
+    }
+
+    .arrow-btn2 {
+        left: 118px;
+        font-size: 25px;
+        width: 38px;
+        height: 38px;
+    }
+
+    /* Section 4 End */
+
+}
+
+@media only screen and (min-width: 768px) {
+    
+    /* Section 1 */
+    .tbgi-container {
+        height: 400px;
+    }
+
+    .join-text-overlay h1 {
+        width: 600px;
+        transform: translate(-50%, -40%);
+        font-size: 45px;
+        padding: 50px 0px;
+    }
+
+    .enjoy-text-overlay p {
+        width: 600px;
+        transform: translate(-50%, 15%);
+        font-size: 30px;
+        padding: 65px 0px;
+    }
+
+    /* Section 1 End */
+
+    /* Section 2 */
+
+    .onboard-container {
+        height: 1800px;
+    }
+
+    .onboard-line1 {
+        top: 18%;
+        left: 130px;
+        height: 535px;
+    }
+
+    .onboard-line2 {
+        top: 20%;
+        left: 130px;
+        height: 425px;
+    }
+
+    .onboard-text {
+        left: 175px;
+        top: 14%;
+        width: 500px;
+    }
+
+        .onboard-text h3 {
+            font-size: 37px;
+            padding: 25px 0px 20px;
+        }
+
+        .onboard-text p {
+            font-size: 30px;
+        }
+
+    .onboard-items {
+        width: 500px;
+        top: 40%;
+        left: 16%;
+        gap: 30px 70px;
+    }
+
+        .onboard-items img {
+            padding: 15px 15px;
+            width: 180px;
+            height: 170px;
+            transform: translateX(13%);
+        }
+
+        .onboard-items h4 {
+            font-size: 25px;
+        }
+
+    .item6 {
+        padding-top: 0px;
+    }
+
+    /* Section 2 End */
+
+    /* Section 3 */
+
+    .career-container {
+        height: 900px;
+    }
+
+    .career-line1 {
+        height: 305px;
+        top: 10%;
+        left: 105px;
+    }
+
+    .career-line2 {
+        height: 215px;
+        top: 30%;
+        left: 105px;
+    }
+
+    #PersonBG {
+        height: 400px;
+        width: 768px;
+        transform: translate(5%, 62%);
+    }
+
+    #Person {
+        width: 375px;
+        height: 475px;
+        transform: translate(5%, -47%);
+    }
+
+    .career-text-overlay {
+        left: 145px;
+        top: 9%;
+    }
+
+        .career-text-overlay h3 {
+            font-size: 35px;
+            padding-bottom: 35px;
+        }
+
+        .career-text-overlay p {
+            width: 500px;
+            font-size: 35px;
+        }
+
+    .inquire-button {
+        transform: translate(40%, 50%);
+        padding: 15px 15px;
+        font-size: 25px;
+    }
+
+    .arrow-btn {
+        /*transform: translate(-20%, 50%);*/
+        font-size: 40px;
+        width: 70px;
+        height: 70px;
+    }
+
+    /* Section 3 End */
+
+    /* Section 4 */
+
+    .application-container {
+        height: 1200px;
+    }
+
+    #KADBg {
+        height: 1200px;
+    }
+
+    .box1 {
+        padding: 35px;
+        width: 700px;
+        height: 530px;
+        font-size: 28px;
+    }
+
+        .box1 p {
+            padding: 40px 0px 40px;
+        }
+
+    .box2 {
+        transform: translateY(130%);
+        padding: 35px;
+        width: 700px;
+        height: 500px;
+    }
+
+        .box2 p {
+            font-size: 38px;
+        }
+
+    .submit-button {
+        padding: 10px 20px;
+        font-size: 30px;
+        transform: translate(8%, 30%);
+    }
+
+    .arrow-btn2 {
+        left: 210px;
+        transform: translateY(30%);
+        font-size: 40px;
+        width: 67px;
+        height: 67px;
+    }
+
+    /* Section 4 End */
+
+}
+
+@media only screen and (min-width: 1024px) {
+    /* Section 1 */
+    .tbgi-container {
+        height: 594px;
+    }
+
+    .join-text-overlay h1 {
+        width: 980px;
+        transform: translate(-50%, -20%);
+        font-size: 64px;
+    }
+
+    .enjoy-text-overlay p {
+        width: 800px;
+        transform: translate(-50%, 75%);
+        font-size: 28px;
+    }
+
+    /* Section 1 End */
+
+    /* Section 2 */
+    .onboard-container {
+        height: 627px;
+    }
+
+    .onboard-line1 {
+        left: 30px;
+        top: 45%;
+        height: 292px;
+    }
+
+    .onboard-line2 {
+        left: 30px;
+        top: 47%;
+        height: 225px;
+    }
+
+    .onboard-text {
+        left: 55px;
+        top: 37%;
+        width: 400px;
+    }
+
+        .onboard-text h3 {
+            font-size: 20px;
+            padding: 25px 0px 40px;
+        }
+
+        .onboard-text p {
+            font-size: 20px;
+        }
+
+    .onboard-items {
+        top: 12%;
+        left: 47%;
+        grid-template-columns: auto auto auto;
+        gap: 30px 50px;
+    }
+
+        .onboard-items img {
+            padding: 15px 25px;
+            width: 130px;
+            height: 110px;
+            transform: translateX(0%);
+        }
+
+        .onboard-items h4 {
+            font-size: 16px;
+        }
+
+    /* Section 2 End */
+
+    /* Section 3 */
+    .career-container {
+        height: 609px;
+    }
+
+    .career-line1 {
+        height: 195px;
+        top: 22%;
+        left: 30px;
+    }
+
+    .career-line2 {
+        height: 129px;
+        top: 42%;
+        left: 30px;
+    }
+
+    #PersonBG {
+        height: 609px;
+        width: 952px;
+        transform: translate(30%, 0%);
+    }
+
+    #Person {
+        width: 375px;
+        height: 475px;
+        transform: translate(95%, -100%);
+    }
+
+    .career-text-overlay {
+        left: 55px;
+        top: 145px;
+        z-index: 2;
+    }
+
+        .career-text-overlay h3 {
+            width: 329px;
+            font-size: 20px;
+        }
+
+        .career-text-overlay p {
+            width: 364px;
+            font-size: 20px;
+        }
+
+    .inquire-button {
+        left: 30px;
+        bottom: 100px;
+        transform: translate(25%, -50%);
+        padding: 10px 5px;
+        font-size: 16px;
+    }
+
+    .arrow-btn {
+        left: 190px;
+        bottom: 150px;
+        transform: translate(45%, 58%);
+        font-size: 25px;
+        width: 46px;
+        height: 46px;
+    }
+
+    /* Section 3 End */
+
+    /* Section 4 */
+    .application-container {
+        height: 575px;
+    }
+
+    #KADBg {
+        height: 575px;
+    }
+
+    .box1 {
+        padding: 30px;
+        transform: translate(-5%, 12%);
+        left: 60px;
+        width: 420px;
+        height: 410px;
+        font-size: 20px;
+    }
+
+        .box1 p {
+            padding: 25px 0px 25px;
+        }
+
+    .box2 {
+        transform: translate(10%, 11%);
+        left: 50%;
+        width: 420px;
+        height: 360px;
+        padding: 30px;
+        margin: 10px;
+    }
+
+        .box2 p {
+            font-size: 20px;
+        }
+
+    .submit-button {
+        padding: 7px 33px;
+        font-size: 16px;
+        transform: translate(7%, 150%);
+    }
+
+    .arrow-btn2 {
+        left: 173px;
+        top: 233px;
+        transform: translateY(0%);
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Section 4 End */
+}
+
+@media only screen and (min-width: 1366px) {
+    /* Section 1 */
+    #TBGI_BG {
+        height: 594px;
+        object-fit: cover;
+        object-position: 0% 70%;
+    }
+    /* Section 1 End */
+
+    /* Section 2 */
+
+    .onboard-line1 {
+        left: 115px;
+    }
+
+    .onboard-line2 {
+        left: 115px;
+    }
+
+    .onboard-text {
+        left: 160px;
+    }
+
+    .onboard-items {
+        left: 55%;
+        gap: 30px 60px;
+    }
+
+        .onboard-items img {
+            padding: 15px 20px;
+        }
+
+    /* Section 2 End */
+
+    /* Section 3 */
+
+    .career-line1 {
+        left: 115px;
+    }
+
+    .career-line2 {
+        left: 115px;
+    }
+
+    #Person {
+        transform: translate(100%, -100%);
+    }
+
+    .career-text-overlay {
+        left: 160px;
+    }
+
+    .inquire-button {
+        transform: translate(95%, -50%);
+    }
+
+    .arrow-btn {
+        left: 312px;
+        transform: translate(0%, 58%);
+    }
+
+    /* Section 3 End */
+
+    /* Section 4 */
+
+    .box1 {
+        transform: translate(20%, 20%);
+    }
+
+        .box1 ol {
+            padding-left: 35px;
+        }
+
+    .box2 {
+        transform: translate(25%, 20%);
+        padding: 35px;
+    }
+
+    .arrow-btn2 {
+        top: 274px;
+    }
+
+    /* Section 4 End */
+}
+
+@media only screen and (min-width: 1440px) {
+
+    /* Section 2 */
+
+    .onboard-line1 {
+        left: 130px;
+    }
+
+    .onboard-line2 {
+        left: 130px;
+    }
+
+    .onboard-text {
+        left: 175px;
+    }
+
+    /* Section 2 End */
+
+    /* Section 3 */
+
+    .career-line1 {
+        left: 130px;
+    }
+
+    .career-line2 {
+        left: 130px;
+    }
+
+    .career-text-overlay {
+        left: 175px;
+    }
+
+    .inquire-button {
+        transform: translate(110%, -50%);
+    }
+
+    .arrow-btn {
+        left: 315px;
+        transform: translate(40%, 58%);
+    }
+
+    /* Section 3 End */
+
+    /* Section 4 */
+
+    .box1 {
+        transform: translate(22%, 20%);
+    }
+
+    .box2 {
+        transform: translate(33%, 20%);
+        padding: 35px;
+    }
+
+    /* Section 4 End */
+}
+
+@media only screen and (min-width: 1680px) {
+
+    /* Section 2 */
+
+    .onboard-line1 {
+        left: 190px;
+    }
+
+    .onboard-line2 {
+        left: 190px;
+    }
+
+    .onboard-text {
+        left: 240px;
+    }
+
+    .onboard-items {
+        left: 57%;
+        gap: 40px 70px;
+    }
+
+    /* Section 2 End */
+
+    /* Section 3 */
+
+    .career-line1 {
+        left: 190px;
+    }
+
+    .career-line2 {
+        left: 190px;
+    }
+
+    #PersonBG {
+        transform: translate(40%, 0%);
+    }
+
+    #Person {
+        transform: translate(125%, -100%);
+    }
+
+    .career-text-overlay {
+        left: 240px;
+    }
+
+    .inquire-button {
+        transform: translate(153%, -50%);
+    }
+
+    .arrow-btn {
+        left: 397px;
+        transform: translate(0%, 58%);
+    }
+
+    /* Section 3 End */
+
+    /* Section 4 */
+
+    .box1 {
+        transform: translate(35%, 20%);
+    }
+
+    .box2 {
+        transform: translate(47%, 20%);
+    }
+
+    /* Section 4 End */
+}
+
+@media only screen and (min-width: 1920px) {
+
+    /* Section 2 */
+
+    .onboard-line1 {
+        left: 240px;
+    }
+
+    .onboard-line2 {
+        left: 240px;
+    }
+
+    .onboard-text {
+        left: 290px;
+    }
+
+    .onboard-items {
+        left: 60%;
+        width: 525px;
+    }
+
+    /* Section 2 End */
+
+    /* Section 3 */
+
+    .career-line1 {
+        left: 240px;
+    }
+
+    .career-line2 {
+        left: 240px;
+    }
+
+    #PersonBG {
+        transform: translate(55%, 0%);
+    }
+
+    #Person {
+        transform: translate(145%, -100%);
+    }
+
+    .career-text-overlay {
+        left: 290px;
+    }
+
+    .inquire-button {
+        transform: translate(183%, -50%);
+    }
+
+    .arrow-btn {
+        left: 440px;
+    }
+
+    /* Section 3 End */
+
+    /* Section 4 */
+
+    .box1 {
+        transform: translate(50%, 20%);
+    }
+
+    .box2 {
+        transform: translate(62%, 20%);
+    }
+
+    /* Section 4 End */
+}
+
+@media only screen and (min-width: 2560px) {
+
+    /* Section 2 */
+
+    .onboard-line1 {
+        left: 320px;
+        height: 325px;
+    }
+
+    .onboard-line2 {
+        left: 320px;
+        height: 255px;
+    }
+
+    .onboard-text {
+        left: 370px;
+        top: 35%;
+        width: 490px;
+    }
+
+        .onboard-text h3 {
+            font-size: 25px;
+        }
+
+        .onboard-text p {
+            font-size: 24px;
+        }
+
+    .onboard-items {
+        top: 9%;
+        left: 63%;
+        width: 600px;
+        gap: 40px 80px;
+    }
+        .onboard-items img {
+            width: 140px;
+            height: 120px;
+        }
+
+        .onboard-items h4 {
+            font-size: 19px;
+        }
+
+    /* Section 2 End */
+
+    /* Section 3 */
+
+    .career-line1 {
+        left: 320px;
+    }
+
+    .career-line2 {
+        left: 320px;
+    }
+
+    #PersonBG {
+        height: 650px;
+        width: 1200px;
+        transform: translate(57%, -3%);
+    }
+
+    #Person {
+        width: 400px;
+        height: 500px;
+        transform: translate(165%, -103%);
+    }
+
+    .career-text-overlay {
+        left: 370px;
+        top: 130px;
+    }
+
+        .career-text-overlay h3 {
+            width: 420px;
+            font-size: 25px;
+        }
+
+        .career-text-overlay p {
+            width: 460px;
+            font-size: 25px;
+        }
+
+    .inquire-button {
+        transform: translate(195%, -50%);
+        padding: 12px 10px;
+        font-size: 19px;
+    }
+
+    .arrow-btn {
+        left: 560px;
+        bottom: 158px;
+        font-size: 27px;
+        width: 54px;
+        height: 54px;
+    }
+
+    /* Section 3 End */
+
+    /* Section 4 */
+
+    .box1 {
+        transform: translate(60%, 15%);
+        width: 480px;
+        height: 470px;
+        font-size: 25px;
+    }
+
+    .box2 {
+        transform: translate(65%, 15%);
+        width: 480px;
+        height: 410px;
+    }
+
+        .box2 p {
+            font-size: 25px;
+        }
+
+    .submit-button {
+        padding: 8px 33px;
+        font-size: 19px;
+        transform: translate(7%, 100%);
+    }
+
+    .arrow-btn2 {
+        left: 187px;
+        top: 295px;
+        transform: translateY(3%);
+        font-size: 27px;
+        width: 47px;
+        height: 47px;
+    }
+    /* Section 4 End */
+}
+ 

@@ -1,0 +1,1448 @@
+﻿/* Welcome component */
+#content main .box-info li .text .time {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--dark);
+    padding-bottom: 10px;
+}
+
+/* Welcome component end */
+
+/* Transaction History Table */
+.table-wrapper {
+    transform: translateY(-11px);
+    max-height: 400px;
+    width: 100%;
+    overflow-y: auto;
+    table-layout: fixed;
+    margin: 0 auto;
+}
+
+table, thead, tbody, th, td, tr {
+    display: block;
+}
+
+table {
+    font-size: 12px;
+}
+
+th {
+    display: none;
+    text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+}
+
+tr + tr {
+    margin-top: .3em;
+}
+
+tr {
+    display: block;
+}
+
+td {
+    display: flex;
+    border: none;
+    position: relative;
+    padding-left: 51%;
+    background-color: white;
+    text-align: left;
+}
+
+    td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        line-height: 1.5;
+        margin-left: -100%;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    td:nth-of-type(1):before {
+        content: "Transaction ID";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Date";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Merchant";
+    }
+
+    td:nth-of-type(4):before {
+        content: "Debit";
+    }
+
+    td:nth-of-type(5):before {
+        content: "Running Balance";
+    }
+
+    td:nth-of-type(6):before {
+        content: "Status";
+    }
+
+label {
+    text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+    font-weight: 600;
+}
+
+.completed-transaction, .pending-transaction, .failed-transaction {
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.completed-transaction {
+    background-color: lightgreen;
+    padding: 4px 8px;
+}
+
+.pending-transaction {
+    background-color: darkgrey;
+    padding: 4px 14px;
+}
+
+.failed-transaction {
+    background-color: lightcoral;
+    padding: 4px 20px;
+}
+
+.input-fields-container {
+    position: relative;
+    width: 220px;
+    height: 200px;
+    right: 10px;
+    border-radius: 17px 17px 0px 0px;
+    z-index: 999;
+    font-size: 14px;
+}
+
+#startdate, #enddate, #merchant {
+    position: relative;
+    background-color: whitesmoke;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 40px;
+    width: 110px;
+    cursor: text;
+}
+
+#startdate, #enddate {
+    padding: 3px;
+}
+
+#merchant {
+    bottom: 150px;
+    left: 53%;
+    transform: translate(15%, 10%);
+    padding: 10px;
+}
+
+    #merchant:focus {
+        border: 2px solid black;
+    }
+
+#filter {
+    bottom: 200px;
+    transform: translate(45%, -170%);
+    border-radius: 20px;
+    background-color: #ddd;
+    border: 1px solid black;
+    padding: 7px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+    #filter:active {
+        background-color: #b1d8f5;
+    }
+    #filter:hover {
+        background-color: #fff;
+        color: #345351;
+        cursor: pointer;
+    }
+    #filter:disabled {
+        opacity: 0.6; 
+        cursor: not-allowed; 
+    }
+/* Transaction History Table End */
+
+/* Cards component */
+.card-info {
+    font-size: 14px;
+}
+
+.chip {
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+#content main .table-data .todo {
+    margin-bottom: 75px;
+    flex-grow: 0.1;
+    flex-basis: 300px;
+}
+
+    #content main .table-data .todo .todo-list {
+        width: 100%;
+    }
+
+        #content main .table-data .todo .todo-list li {
+            width: 100%;
+            margin-bottom: 16px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+            #content main .table-data .todo .todo-list li p {
+                padding-top: 50px;
+                padding-right: 20px;
+                background-color: #70BCAB;
+                border-radius: 7px;
+                height: 166px;
+                width: 300px;
+                text-align: right;
+                font-family: montserrat;
+                font-weight: bold;
+            }
+
+            #content main .table-data .todo .todo-list li h2 {
+                font-weight: 600;
+            }
+
+            #content main .table-data .todo .todo-list li .bx {
+                cursor: pointer;
+            }
+
+            #content main .table-data .todo .todo-list li .fas {
+                margin-left:20px;
+                cursor: pointer;
+            }
+
+            #content main .table-data .todo .todo-list li:last-child {
+                margin-bottom: 0;
+            }
+/* Cards component end */
+
+
+/* Modal Styles */
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: montserrat;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto 60px;
+    width: 80%;
+    position: relative;
+    border-radius: 30px 30px 20px 20px;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    left: 0%;
+    top: 10%;
+}
+
+.my-swal-popup {
+    position: relative;
+    z-index: 30000;
+    left: 0%;
+    /*width: 100vw !important;
+    height: auto !important;*/
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #0E56B5;
+    border-radius: 30px 30px 0px 0px;
+    font-family: montserrat;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+    .modal-header h2 {
+        font-size: 10px;
+    }
+
+.modal-footer {
+    background-color: #0E56B5;
+    padding-top: 20px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.cardInfoContainer {
+    margin-top: -10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.pinContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0px;
+}
+
+.pinText {
+    font-weight: bold;
+    text-align: right;
+}
+
+.passwordPin {
+    margin-bottom: 20px;
+    margin-right: 15px;
+    padding-left: 15px;
+    padding-right: 45px;
+    border-radius: 20px;
+    border: 0px solid black;
+    width: 120px;
+    height: 20px;
+    font-size: 15px;
+    text-overflow: ellipsis;
+}
+
+.oldPinContainer {
+    position: relative;
+}
+
+.newPinContainer {
+    position: relative;
+}
+
+.confirmPinContainer {
+    position: relative;
+}
+
+.fa-eye {
+    transform: scale(0.8);
+    position: absolute;
+    top: 10%;
+    right: 14%;
+    cursor: pointer;
+}
+
+.fa-eye-slash {
+    transform: scale(0.8);
+    position: absolute;
+    top: 10%;
+    right: 14%;
+    cursor: pointer;
+}
+
+.pinVerticalLine {
+    position: absolute;
+    top: 2px;
+    right: 40px;
+    height: 20px;
+    width: 1px;
+    background-color: black;
+}
+
+.pinLabel {
+    padding-top: 5px;
+    font-size: 8px;
+    margin-bottom: 25px;
+    margin-left: -60px;
+    margin-right: 10px;
+}
+
+.pinInput {
+    text-align: left;
+}
+
+.updatePinContainer {
+    text-align: center;
+}
+
+
+.field-icon {xes to
+    float: right;
+    margin-left: -25px;
+    margin-top: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.updatePinBtn {
+    border: none;
+    background-color: #3D7ECE;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 2px solid #3D7ECE;
+    transition: background-color 0.3s ease;
+    font-size: 10px;
+}
+
+    .updatePinBtn:hover {
+        background-color: #fff;
+        color: #345351;
+        cursor: pointer;
+    }
+
+.leftBox {
+    margin-top: 10px;
+    padding-top: 15px;
+    background-color: white;
+    margin-right: 0px;
+    padding: 5px;
+    padding-left: 0px;
+    padding-right:10px;
+    text-align: right;
+    border-radius: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 7px;
+}
+
+.rightText {
+    margin-top: 5px;
+    padding: 10px;
+    line-height: 20px;
+    padding-left: 20px;
+    font-size: 7px;
+}
+
+.removeCardBtnContainer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.removeCardBtn {
+    border: none;
+    background-color: #3D7ECE;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 2px solid #3D7ECE;
+    transition: background-color 0.3s ease;
+    font-size: 10px;
+}
+
+    .removeCardBtn:hover {
+        background-color: #fff;
+        color: #345351;
+        cursor: pointer;
+    }
+
+
+.gray-box {
+    background-color: #f0f0f0;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+}
+
+.box-content {
+    margin-top: 20px;
+}
+
+
+.close-button {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    border: 2px solid #807F80;
+    background-color: #807F80;
+    color: white;
+    cursor: pointer;
+    font-size: 10px;
+    border-radius: 5px;
+    padding: 2px 15px;
+    margin-bottom: 28px;
+    margin-right: 20px;
+}
+
+    .close-button:hover {
+        background-color: #fff;
+        color: #345351;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+/* Tab Styles */
+.tab {
+    overflow: hidden;
+    padding-top: 10px;
+    font-family: 'Global User Interface';
+    font-weight: bold;
+    font-size: 10px;
+}
+
+    .tab button {
+        background-color: #f1f1f1;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 8px 16px;
+        transition: 0.3s;
+        border-radius: 10px;
+    }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+}
+
+/* Add this CSS to make unselected tab buttons transparent */
+.tab button {
+    background-color: transparent; /* Make all tab buttons transparent by default */
+}
+
+    .tab button.active {
+        background-color: #ccc; /* Set the background color for the active tab button */
+    }
+/* Modal Styles End*/
+
+@media screen and (min-width: 375px){
+    /* Table Media Query */
+    #content main .box-info li {
+        width: 327px;
+    }
+
+    /*.table-wrapper {
+        width: 275px;
+    }*/
+
+    table {
+        font-size: 14px;
+    }
+
+    label {
+        padding-left: 6px;
+    }
+
+    .input-fields-container {
+        width: 280px;
+        font-size: 16px;
+    }
+
+    #startdate, #enddate, #merchant {
+        width: 125px;
+    }
+
+    #startdate, #enddate {
+        left: 5px;
+    }
+
+    #merchant {
+        transform: translate(14%, -17%);
+    }
+
+    #filter {
+        transform: translate(65%, -168%);
+        padding: 7px 23px;
+    }
+
+    /* Card Component Media Query*/
+    .card-info {
+        font-size: 15px;
+    }
+
+    .chip {
+        margin-left: 130px;
+    }
+
+    /* Modal Media Query */
+    .modal-header h2{
+        font-size: 12px;
+    }
+
+    .leftBox {
+        font-size: 8px;
+        padding-left: 10px;
+    }
+
+    .rightText{
+        font-size: 8px;
+    }
+
+    .passwordPin{
+        width: 165px;
+    }
+
+    .fa-eye {
+        right: 12%
+    }
+
+    .fa-eye-slash {
+        right: 12%
+    }
+
+    .pinVerticalLine {
+        right: 45px;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    /* Table Media Query */
+    #content main .box-info li {
+        width: 377px;
+    }
+
+    /*.table-wrapper {
+        width: 325px;
+    }*/
+
+    table {
+        font-size: 15px;
+    }
+
+    label {
+        padding-left: 16px;
+    }
+
+    .input-fields-container {
+        width: 330px;
+    }
+
+    #startdate, #enddate, #merchant {
+        width: 130px;
+    }
+
+    #startdate, #enddate {
+        left: 16px;
+    }
+
+    #merchant {
+        transform: translate(22%, -17%);
+    }
+
+    #filter {
+        transform: translate(96%, -168%);
+        padding: 7px 25px;
+    }
+
+    /* Card Component Media Query*/
+    .card-info {
+        font-size: 16px;
+    }
+
+    .chip {
+        margin-left: 200px;
+    }
+
+    #content main .table-data .todo {
+        flex-basis: 400px;
+    }
+
+
+    /* Modal Media Query */
+    .modal-content {
+        max-width: 400px;
+    }
+
+    .leftBox {
+        font-size: 10px;
+        padding: 10px;
+        line-height: 25px;
+    }
+
+    .rightText {
+        font-size: 10px;
+        margin-top: 10px;
+        line-height: 25px;
+        padding-left: 25px;
+    }
+
+    .removeCardBtn {
+        margin-top: 10px;
+    }
+
+    .close-button {
+        right: 5px;
+    }
+
+    .pinLabel {
+        font-size: 10px;
+    }
+
+    .passwordPin {
+        width: 180px;
+        height: 25px;
+    }
+
+    .pinVerticalLine {
+        top: 0px;
+        height: 25px;
+    }
+
+    .fa-eye{
+        right: 11%;
+    }
+
+    .fa-eye-slash{
+        right: 11%;
+    }
+
+    .tab {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    /* Table Media Query*/
+    /*.table-wrapper {
+        width: 100%;
+    }*/
+
+    table {
+        font-size: 15px;
+    }
+
+    thead {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: #D9D9D9;
+        border-bottom: 3px solid black;
+    }
+
+    tr {
+        padding-left: 5px;
+    }
+
+        tr:nth-of-type(even) {
+            background: #D9D9D9;
+        }
+
+    th {
+        color: black;
+        font-weight: bold;
+        width: 15.5%;
+    }
+
+    td, th {
+        display: inline-table;
+    }
+
+    td {
+        background-color: transparent;
+        width: 16%;
+    }
+
+        td:before {
+            display: none;
+        }
+
+    .pending-transaction {
+        padding: 4px 17px;
+    }
+
+    .failed-transaction {
+        padding: 4px 24px;
+    }
+
+    label {
+        position: absolute;
+        padding-left: 16px;
+    }
+
+    .start {
+        transform: translate(15%, 160%);
+    }
+
+    .end {
+        left: 130px;
+        transform: translate(100%, 160%);
+    }
+
+    .input-fields-container {
+        width: 612px;
+        height: 100px;
+        display: flex;
+    }
+
+    #startdate, #enddate, #merchant {
+        position: absolute;
+        width: 140px;
+    }
+
+    #startdate {
+        transform: translate(5%, 160%);
+    }
+
+    #enddate {
+        left: 100px;
+        transform: translate(70%, 160%);
+    }
+
+    #merchant {
+        bottom: 70px;
+        transform: translate(35%, 185%);
+    }
+
+    #filter {
+        height: fit-content;
+        transform: translate(38%, 178%);
+        padding: 5px 27px;
+    }
+
+    /* Card Component Media Query*/
+
+    #content main .table-data .todo {
+        flex-grow: 1;
+    }
+
+    .todo-list{
+        display: flex;
+    }
+
+    #content main .table-data .todo .todo-list li p {
+        width: 265px;
+    }
+
+    #content main .table-data .todo .todo-list li:last-child {
+        margin-bottom: 16px;
+        margin-left: 10px;
+    }
+
+    .chip {
+        margin-left: 170px;
+    }
+
+
+    /* Modal Media Query */
+    .modal-content{
+        left: 5%;
+    }
+
+    .passwordPin{
+        width: 220px;
+    }
+
+    .fa-eye{
+        right: 9%;
+    }
+
+    .fa-eye-slash {
+        right: 9%;
+    }
+
+
+}
+
+@media screen and (min-width: 972px){
+    .end {
+        left: 110px;
+    }
+
+    .input-fields-container {
+        width: 100%;
+        left: -25px;
+    }
+
+    #startdate, #enddate {
+        left: 0px;
+    }
+
+    #startdate {
+        transform: translate(16%, 160%);
+    }
+
+    #enddate {
+        left: 80px;
+    }
+
+    #merchant {
+        transform: translate(32%, 185%);
+    }
+
+    #filter {
+        transform: translate(35%, 178%);
+    }
+
+
+    #content main .table-data .todo {
+        flex-grow: 0.1;
+        flex-basis: 300px;
+    }
+
+    .todo-list {
+        display: block;
+    }
+
+    #content main .table-data .todo .todo-list li p {
+        width: 265px;
+    }
+
+    #content main .table-data .todo .todo-list li:last-child {
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+
+    .chip {
+        margin-left: 130px;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    /* Table Media Query*/
+    table {
+        font-size: 14px;
+    }
+
+    .start {
+        transform: translate(-9%, 160%);
+    }
+
+    .end {
+        transform: translate(112%, 160%);
+    }
+
+    .input-fields-container {
+        left: -8px;
+    }
+
+    #startdate {
+        transform: translate(7%, 160%);
+    }
+
+    #enddate {
+        left: 100px;
+        transform: translate(60%, 160%);
+    }
+
+    #merchant {
+        transform: translate(12%, 185%);
+    }
+
+    #filter {
+        transform: translate(-15%, 175%);
+    }
+
+
+    /* Card Component Media Query*/
+
+    #content main .table-data .todo {
+        flex-grow: 1;
+    }
+
+    .todo-list {
+        display: flex;
+    }
+
+    #content main .table-data .todo .todo-list li p {
+        width: 265px;
+    }
+
+    #content main .table-data .todo .todo-list li:last-child {
+        margin-bottom: 16px;
+        margin-left: 10px;
+    }
+
+    .chip {
+        margin-left: 170px;
+    }
+
+
+    /* Modal Media Query */
+    .modal-content{
+        max-width: 500px;
+    }
+
+    .modal-header h2{
+        font-size: 18px;
+    }
+
+    .tab{
+        font-size: 18px;
+    }
+
+    .gray-box {
+        margin-bottom: 60px;
+    }
+
+    .leftBox {
+        font-size: 14px;
+        line-height: 30px;
+        padding-left: 35px;
+    }
+
+    .rightText {
+        font-size: 14px;
+        line-height: 30px;
+        padding-left: 35px;
+    }
+
+    .removeCardBtn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .close-button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .passwordPin {
+        margin-right: 65px;
+        width: 250px;
+        height: 30px;
+    }
+
+    .pinVerticalLine{
+        height: 30px;
+        right: 100px;
+    }
+
+    .fa-eye{
+        right: 24%;
+        transform: scale(1);
+    }
+
+    .fa-eye-slash {
+        right: 24%;
+        transform: scale(1);
+    }
+
+    .pinLabel{
+        font-size: 15px;
+        padding-top: 4px;
+    }
+
+    .updatePinBtn{
+        font-size: 14px;
+    }
+
+}
+
+
+@media screen and (min-width: 1152px){
+    .end {
+        transform: translate(12%, 160%);
+    }
+
+    .input-fields-container {
+        left: -8px;
+        font-size: 15px;
+    }
+
+    #startdate, #enddate, #merchant {
+        width: 110px;
+    }
+
+    #enddate {
+        transform: translate(29%, 160%);
+    }
+
+    #filter {
+        transform: translate(11%, 185%);
+    }
+
+    #content main .table-data .todo {
+        flex-grow: 0.1;
+        flex-basis: 300px;
+    }
+
+    .todo-list {
+        display: block;
+    }
+
+    #content main .table-data .todo .todo-list li p {
+        width: 265px;
+    }
+
+    #content main .table-data .todo .todo-list li:last-child {
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+
+    .chip {
+        margin-left: 130px;
+    }
+
+}
+
+@media screen and (min-width: 1366px){
+    /* Table Media Query*/
+    .table-wrapper {
+        max-height: 384px;
+    }
+
+    table {
+        font-size: 16px;
+    }
+
+    .input-fields-container {
+        height: 75px;
+    }
+
+    .start {
+        transform: translate(-8%, 90%);
+    }
+
+    .end {
+        transform: translate(118%, 90%);
+    }
+
+    #startdate, #enddate, #merchant {
+        width: 140px;
+    }
+
+    #startdate {
+        transform: translate(7%, 105%);
+    }
+
+    #enddate {
+        transform: translate(60%, 105%);
+    }
+
+    #merchant {
+        transform: translate(12%, 193%);
+    }
+
+    #filter {
+        transform: translate(-20%, 118%);
+    }
+
+    /* Card Component Media Query*/
+
+    #content main .table-data .todo {
+        flex-grow: 0.1;
+        flex-basis: 300px;
+    }
+
+    .todo-list {
+        display: block;
+    }
+
+    #content main .table-data .todo .todo-list li p {
+        width: 265px;
+    }
+
+    #content main .table-data .todo .todo-list li:last-child {
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+
+    .chip {
+        margin-left: 130px;
+    }
+
+
+    /* Modal Media Query */
+    .modal-content{
+        left: 0%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    /* Table Media Query*/
+    table {
+        font-size: 17px;
+    }
+
+    .completed-transaction {
+        padding: 8px;
+    }
+
+    .pending-transaction {
+        padding: 8px 17px;
+    }
+
+    .failed-transaction {
+        padding: 8px 25px;
+    }
+
+    .input-fields-container {
+        font-size: 16px;
+    }
+
+    #startdate, #enddate, #merchant {
+        width: 150px;
+    }
+
+    .start {
+        transform: translate(-8%, 75%);
+    }
+
+    .end {
+        transform: translate(145%, 75%);
+    }
+
+    #enddate {
+        transform: translate(67%, 105%);
+    }
+
+    #merchant {
+        transform: translate(9%, 193%);
+    }
+
+    #filter {
+        transform: translate(-5%, 113%);
+        padding: 5px 29px;
+    }
+
+}
+
+@media screen and (min-width: 1680px) {
+    /* Table Media Query*/
+    table {
+        font-size: 19px;
+    }
+
+    tr {
+        padding-left: 10px;
+    }
+
+    .completed-transaction {
+        padding: 8px 10px;
+    }
+
+    .pending-transaction {
+        padding: 8px 22px;
+    }
+
+    .failed-transaction {
+        padding: 8px 30px;
+    }
+
+    .input-fields-container {
+        font-size: 18px;
+    }
+
+    .start {
+        left: 60px;
+        transform: translate(415%, 20%);
+    }
+
+    .end {
+        left: 210px;
+        transform: translate(485%, 20%);
+    }
+
+    #startdate {
+        transform: translate(219%, 80%);
+    }
+
+    #enddate {
+        transform: translate(265%, 80%);
+    }
+
+    #merchant {
+        transform: translate(115%, 168%);
+    }
+
+    #filter {
+        position: relative;
+        top: 37%;
+        left: 57%;
+        transform: translate(8%, 4%);
+    }
+
+}
+
+@media screen and (min-width: 1920px) {
+    /* Table Media Query*/
+    table {
+        font-size: 20px;
+    }
+
+    th {
+        width: 16.1%;
+    }
+
+    td {
+        width: 16.6%;
+    }
+
+    tr {
+        padding-left: 20px;
+    }
+
+    .input-fields-container {
+        font-size: 20px;
+    }
+
+    .start {
+        left: 100px;
+        transform: translate(456%, 20%);
+    }
+
+    .end {
+        left: 248px;
+        transform: translate(572%, 20%);
+    }
+
+    #startdate, #enddate, #merchant {
+        width: 170px;
+    }
+
+    #startdate {
+        transform: translate(245%, 80%);
+    }
+
+    #enddate {
+        transform: translate(300%, 80%);
+    }
+
+    #merchant {
+        transform: translate(115%, 168%);
+    }
+
+    #filter {
+        padding: 5px 30px;
+    }
+
+    /* Card Component Media Query*/
+
+    #content main .table-data .todo .todo-list li p {
+        width: 295px;
+    }
+
+    .chip {
+        margin-left: 200px;
+    }
+
+
+}
+
+@media screen and (min-width: 2560px){
+    #content main .box-info li .text .time {
+        font-size: 15px;
+    }
+
+    /* Table Media Query*/
+    table {
+        font-size: 22px;
+    }
+
+    .input-fields-container {
+        font-size: 23px;
+    }
+
+    .start {
+        left: 95px;
+        transform: translate(455%, -15%);
+    }
+
+    .end {
+        left: 297px;
+        transform: translate(538%, -15%);
+    }
+
+    #startdate, #enddate, #merchant {
+        height: 50px;
+        width: 190px;
+    }
+
+    #startdate {
+        transform: translate(233%, 55%);
+    }
+
+    #enddate {
+        left: 180px;
+        transform: translate(260%, 55%);
+    }
+
+    #merchant {
+        transform: translate(130%, 145%);
+    }
+
+    /* Card Component Media Query*/
+
+    #content main .table-data .todo {
+        flex-grow: 0.5;
+        flex-basis: 400px;
+        height: 350px;
+    }
+
+    .todo-list {
+        display: flex;
+    }
+
+    #content main .table-data .todo .todo-list li p {
+        width: 335px;
+        height: 200px;
+        font-size: 20px;
+    }
+
+    #content main .table-data .todo .todo-list li:last-child {
+        margin-bottom: 16px;
+        margin-left: 10px;
+    }
+
+    .chip {
+        margin-left: 225px;
+        margin-top: 25px;
+        transform: scale(1.5);
+    }
+
+    /*Modal Media Query*/
+
+    .modal-content {
+        transform: scale(1.3);
+    }
+
+    
+}

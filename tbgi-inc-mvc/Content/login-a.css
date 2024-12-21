@@ -1,0 +1,1410 @@
+﻿/*=============== START OF MAIN CSS ===============*/ 
+*, *:after, *:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.order-left {
+    width: 50vw;
+    height: auto;
+}
+
+.order-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+    width: 50vw;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-overflow {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.form {
+    min-height: 100px;
+    min-width: 100px;
+    height: 100%;
+    margin-left: 65px;
+    position: relative;
+}
+
+input[type=text], input[type=password] {
+    width: 75%;
+    padding: 12px 16px;
+    margin: 16px 0;
+    display: block;
+    border: 1px solid #0E56B5;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #EAEAEA;
+    font-size: 22px;
+    color: #4F4659;
+    outline: none;
+    transition: box-shadow 0.25s ease-in-out, background-image 0.25s;
+}
+
+    input[type=text]:focus, input[type=password]:focus {
+        border-color: #fff;
+        background: #FAF8FD;
+        background: #FDFCFE;
+        box-shadow: 0 0 0 0.25rem #0E56B5;
+    }
+
+.input-container-login {
+    display: flex;
+    height: 90px;
+    position: relative;
+    justify-content: flex-end;
+    margin-top: 150px;
+}
+
+.input-container-2 {
+    margin-top: 20px;
+}
+
+.input-container-login input {
+    padding-left: 80px;
+    padding-right: 10%;
+    color: black;
+}
+
+#eye-container {
+    position: relative;
+    display: inline-block;
+}
+
+#eye, #eye-slash {
+    position: absolute;
+    top: 50%;
+    left: 83%;
+    transform: translate(-50%, -50%);
+}
+
+#eye-slash {
+    display: none;
+}
+
+.vertical-line {
+    position: absolute;
+    top: 12%;
+    right: 21%;
+    height: 76%;
+    width: 1px;
+    background-color: #0e56b5;
+}
+
+.login-button {
+    margin: 50px 208px 15px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    outline-color: #734E96;
+    width: 70%;
+    border: 2px solid white;
+    background-color: #3F6B85;
+    padding: 12px 60px;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+    .login-button:hover {
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+    }
+
+.label-text {
+    color: #867992;
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    margin-top: 32px;
+    margin-left: 170px;
+}
+
+.label-text-2 {
+    margin-left: 188px;
+}
+
+.img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.logo-cont {
+    margin-bottom: 12px;
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.registerHead {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    left: 50%;
+}
+
+.icon-cont {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 10%;
+    left: 210px;
+    transform: translateY(50%);
+}
+
+.icon-cont-2 {
+    left: 206px;
+    transform: translateY(45%);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: black;
+}
+
+.custom-sweetalert {
+    top: 0% !important;
+    left: 0% !important;
+    width: 100vw !important;
+    height: auto !important;
+}
+/*=============== END OF MAIN CSS ===============*/ 
+
+
+/*=============== MEDIA QUERIES ===============*/
+
+/*  START OF MOBILE RESOLUTIONS  */
+@media only screen and (min-width: 320px) {
+    .grid {
+        display: block;
+        height: 100vh;
+    }
+
+    .order-right {
+        width: 100vw;
+        height: 20vh;
+    }
+
+    .order-left {
+        width: 100vw;
+        height: auto;
+        padding: 0;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+    .no-overflow {
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+
+    .form {
+        width: 100%;
+        margin-left: 0;
+        /*margin-top: -46%;*/
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .logo-cont {
+        width: 100%;
+        padding-top: 5%;
+    }
+
+    .registerHead {
+        font-size: 25px;
+    }
+
+    .input-container-login {
+        justify-content: center;
+        margin-top: 7%;
+    }
+
+    .input-container-2 {
+        margin-top: -5%;
+    }
+
+    input[type=text], input[type=password] {
+        margin: 24px 0;
+        font-size: 15px;
+    }
+
+    .input-container-login input {
+        padding-left: 50px;
+        padding-right: 12%;
+    }
+
+    .icon-cont {
+        width: 22px;
+        height: 22px;
+        top: 25%;
+        left: 18%;
+    }
+
+    .icon-cont-2 {
+        left: 17.5%;
+    }
+
+    .login-button {
+        margin: 10% 15% 10%;
+        font-size: 15px;
+        padding: 10px 60px;
+        border-radius: 15px;
+    }
+
+    .label-text {
+        font-size: 15px;
+        margin-top: 10%;
+        margin-left: 0;
+    }
+
+    .label-text-2 {
+        margin-left: 0;
+    }
+
+    #eye, #eye-slash {
+        top: 50%;
+        left: 82%;
+        transform: translate(-50%, -50%);
+        width: 22px;
+        height: 22px;
+    }
+
+    .vertical-line {
+        top: 26%;
+        right: 23%;
+        height: 47%;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    .grid {
+        display: block;
+        height: 100vh;
+    }
+
+    .order-right {
+        width: 100vw;
+        /*height: 45%;*/
+    }
+
+    .order-left {
+        width: 100vw;
+        height: auto;
+        padding: 0;
+    }
+
+    .img {
+        width: 100%;
+        /*max-height: 55%;*/
+    }
+
+    .no-overflow {
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+
+    .form {
+        width: 100%;
+        margin-left: 0;
+        /*margin-top: -46%;*/
+        padding-top: 5%;
+        padding-bottom: 15%;
+    }
+
+    .logo-cont {
+        width: 100%;
+        padding-top: 10%;
+    }
+
+    .registerHead {
+        font-size: 28px;
+    }
+
+    .input-container-login {
+        justify-content: center;
+        margin-top: 7%;
+    }
+
+    .input-container-2 {
+        margin-top: -5%;
+    }
+
+    input[type=text], input[type=password] {
+        margin: 24px 0;
+        font-size: 15px;
+    }
+
+    .input-container-login input {
+        padding-left: 50px;
+        padding-right: 12%;
+    }
+
+    .icon-cont {
+        width: 22px;
+        height: 22px;
+        top: 25%;
+        left: 18%;
+    }
+
+    .icon-cont-2 {
+        left: 17.5%;
+    }
+
+    .login-button {
+        margin: 10% 15% 6%;
+        font-size: 15px;
+        padding: 10px 60px;
+        border-radius: 15px;
+    }
+
+    .label-text {
+        font-size: 15px;
+        margin-top: 6%;
+        margin-left: 0;
+    }
+
+    .label-text-2 {
+        margin-left: 0;
+    }
+
+    #eye, #eye-slash {
+        top: 50%;
+        left: 82%;
+        transform: translate(-50%, -50%);
+        width: 22px;
+        height: 22px;
+    }
+
+    .vertical-line {
+        top: 27%;
+        right: 23%;
+        height: 47%;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    .grid {
+        display: block;
+        height: 100vh;
+    }
+
+    .order-right {
+        width: 100vw;
+        /*height: 45%;*/
+    }
+
+    .order-left {
+        width: 100vw;
+        height: 9vh;
+        padding: 0;
+    }
+
+    .img {
+        width: 100%;
+        /*max-height: 55%;*/
+    }
+
+    .no-overflow {
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+
+    .form {
+        width: 100%;
+        margin-left: 0;
+        /*margin-top: -88%;*/
+        padding-top: 5%;
+        padding-bottom: 15%;
+    }
+
+    .logo-cont {
+        width: 100%;
+        height: auto;
+        padding-top: 10%;
+    }
+
+    .registerHead {
+        font-size: 28px;
+    }
+
+    .input-container-login {
+        justify-content: center;
+        margin-top: 7%;
+    }
+
+    .input-container-2 {
+        margin-top: -5%;
+    }
+
+    input[type=text], input[type=password] {
+        margin: 24px 0;
+        font-size: 15px;
+    }
+
+    .input-container-login input {
+        padding-left: 50px;
+        padding-right: 12%;
+    }
+
+    .icon-cont {
+        width: 22px;
+        height: 22px;
+        top: 25%;
+        left: 17%;
+    }
+
+    .icon-cont-2 {
+        left: 16.5%;
+    }
+
+    .login-button {
+        margin: 10% 15% 10%;
+        font-size: 15px;
+        padding: 10px 60px;
+        border-radius: 15px;
+    }
+
+    .label-text {
+        font-size: 15px;
+        margin-top: 7%;
+        margin-left: 0;
+    }
+
+    .label-text-2 {
+        margin-left: 0;
+    }
+
+    #eye, #eye-slash {
+        top: 50%;
+        left: 82%;
+        transform: translate(-50%, -50%);
+        width: 22px;
+        height: 22px;
+    }
+
+    .vertical-line {
+        top: 27%;
+        right: 23%;
+        height: 46%;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+/*  END OF MOBILE RESOLUTIONS */
+
+
+/*  START OF TABLET RESOLUTIONS  */
+@media only screen and (min-width: 768px) {
+    .grid {
+        display: block;
+        height: 100vh;
+    }
+
+    .order-right {
+        width: 100vw;
+        /*height: 45%;*/
+    }
+
+    .order-left {
+        width: 100vw;
+        height: auto;
+        padding: 0;
+    }
+
+    .img {
+        width: 100%;
+        /*max-height: 50%;*/
+    }
+
+    .no-overflow {
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+
+    .form {
+        width: 100%;
+        margin-left: 0;
+        /*margin-top: -26%;*/
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .logo-cont {
+        width: 100%;
+        padding-top: 2%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .registerHead {
+        font-size: 34px;
+    }
+
+    .input-container-login {
+        justify-content: center;
+        margin-top: 5%;
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    .input-container-2 {
+        margin-top: -1%;
+    }
+
+    input[type=text], input[type=password] {
+        margin: 21px 0;
+        font-size: 18px;
+        border-radius: 30px;
+    }
+
+    .input-container-login input {
+        padding-left: 9%;
+        padding-right: 12%;
+    }
+
+    .icon-cont {
+        width: 30px;
+        height: 30px;
+        top: 17%;
+        left: 16%;
+    }
+
+    .icon-cont-2 {
+        left: 15.5%;
+    }
+
+    .login-button {
+        margin: 4% 25% 4%;
+        font-size: 18px;
+        width: 50%;
+        padding: 15px 60px;
+        border-radius: 20px;
+    }
+
+    .label-text {
+        font-size: 16px;
+        margin-top: 3%;
+        margin-left: 0;
+    }
+
+    .label-text-2 {
+        margin-left: 0;
+    }
+
+    #eye, #eye-slash {
+        top: 50%;
+        left: 82%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+    }
+
+    .vertical-line {
+        top: 23%;
+        right: 23%;
+        height: 53%;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+    }
+
+    .order-left {
+        order: 1;
+        width: 100%;
+        height: auto;
+    }
+
+    .order-right {
+        order: 2;
+        width: 100%;
+        height: 100%;
+    }
+
+    .form {
+        width: 50vw;
+        height: auto;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    input[type=text], input[type=password] {
+        width: 75%;
+        margin: 16px 0;
+        font-size: 18px;
+        border-radius: 35px;
+    }
+
+    .input-container-login {
+        height: 80px;
+        margin-top: 8%;
+    }
+
+    .input-container-2 {
+        margin-top: 20px;
+    }
+
+    .input-container-login input {
+        padding-left: 60px;
+        padding-right: 12%;
+    }
+
+    .login-button {
+        margin: 71px 25% 36px;
+        font-size: 18px;
+        padding: 15px 60px;
+        border-radius: 25px;
+    }
+
+    .label-text {
+        font-size: 16px;
+        margin-top: 32px;
+        margin-left: 0;
+    }
+
+    .label-text-2 {
+        margin-left: 0;
+    }
+
+    .img {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+    }
+
+    .logo-cont {
+        width: 100%;
+        height: auto;
+    }
+
+    .registerHead {
+        font-size: 37px;
+        text-align: center;
+        margin-top: 4%;
+    }
+
+    .icon-cont {
+        width: 28px;
+        height: 28px;
+        top: 14%;
+        left: 16%;
+    }
+
+    .icon-cont-2 {
+        left: 15.5%;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    #eye, #eye-slash {
+        top: 50%;
+        left: 82%;
+        transform: translate(-50%, -50%);
+        width: 28px;
+        height: 28px;
+    }
+
+    .vertical-line {
+        top: 20%;
+        right: 23%;
+        height: 60%;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+/*  END OF TABLET RESOLUTIONS */
+
+
+/*  START OF LAPTOP/DESKTOP RESOLUTIONS  */
+@media only screen and (min-width: 1366px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+    }
+
+    .order-left {
+        order: 1;
+        width: 100%;
+        height: auto;
+    }
+
+    .order-right {
+        order: 2;
+        width: 100%;
+        height: 100%;
+    }
+
+    .form {
+        width: 50vw;
+        height: auto;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    input[type=text], input[type=password] {
+        width: 75%;
+        margin: 16px 0;
+        font-size: 18px;
+        border-radius: 35px;
+    }
+
+    .input-container-login {
+        height: 80px;
+        margin-top: 7%;
+        margin-left: 7.5%;
+        width: 85%;
+    }
+
+    .input-container-2 {
+        margin-top: 20px;
+    }
+
+    .input-container-login input {
+        padding-left: 60px;
+        padding-right: 12%;
+    }
+
+    .login-button {
+        margin: 71px 22.5% 36px;
+        width: 55%;
+        font-size: 18px;
+        padding: 15px 60px;
+        border-radius: 25px;
+    }
+
+    .label-text {
+        font-size: 16px;
+        margin-top: 32px;
+        margin-left: 0;
+    }
+
+    .label-text-2 {
+        margin-left: 0;
+    }
+
+    .img {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+    }
+
+    .logo-cont {
+        width: 100%;
+        height: auto;
+    }
+
+    .registerHead {
+        font-size: 40px;
+        margin-top: 5%;
+    }
+
+    .icon-cont {
+        width: 28px;
+        height: 28px;
+        top: 14%;
+        left: 16%;
+    }
+
+    .icon-cont-2 {
+        left: 15.5%;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    #eye, #eye-slash {
+        top: 50%;
+        left: 82%;
+        transform: translate(-50%, -50%);
+        width: 28px;
+        height: 28px;
+    }
+
+    .vertical-line {
+        top: 20%;
+        right: 23%;
+        height: 60%;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+    }
+
+    .order-left {
+        order: 1;
+        width: 100%;
+        height: auto;
+    }
+
+    .order-right {
+        order: 2;
+        width: 100%;
+        height: 100%;
+    }
+
+    .form {
+        width: 50vw;
+        height: auto;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    input[type=text], input[type=password] {
+        width: 75%;
+        margin: 14px 0;
+        font-size: 20px;
+        border-radius: 35px;
+    }
+
+    .input-container-login {
+        height: 80px;
+        margin-top: 7%;
+        margin-left: 8%;
+        width: 85%;
+    }
+
+    .input-container-2 {
+        margin-top: 20px;
+    }
+
+    .input-container-login input {
+        padding-left: 60px;
+        padding-right: 12%;
+    }
+
+    .login-button {
+        margin: 71px 22.5% 36px;
+        width: 55%;
+        font-size: 20px;
+        padding: 15px 60px;
+        border-radius: 25px;
+    }
+
+    .label-text {
+        font-size: 18px;
+        margin-top: 32px;
+        margin-left: 0;
+    }
+
+    .label-text-2 {
+        margin-left: 0;
+    }
+
+    .img {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+    }
+
+    .logo-cont {
+        width: 100%;
+        height: auto;
+    }
+
+    .registerHead {
+        font-size: 43px;
+        margin-top: 5%;
+    }
+
+    .icon-cont {
+        width: 28px;
+        height: 28px;
+        top: 14%;
+        left: 16%;
+    }
+
+    .icon-cont-2 {
+        left: 15.5%;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    #eye, #eye-slash {
+        top: 50%;
+        left: 82%;
+        transform: translate(-50%, -50%);
+        width: 28px;
+        height: 28px;
+    }
+
+    .vertical-line {
+        top: 17%;
+        right: 23%;
+        height: 65%;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+    }
+
+    .order-left {
+        order: 1;
+        width: 100%;
+        height: auto;
+    }
+
+    .order-right {
+        order: 2;
+        width: 100%;
+        height: 100%;
+    }
+
+    .form {
+        width: 50vw;
+        height: auto;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    input[type=text], input[type=password] {
+        width: 75%;
+        margin: 8px 0;
+        font-size: 24px;
+        border-radius: 35px;
+    }
+
+    .input-container-login {
+        height: 80px;
+        margin-top: 8%;
+        margin-left: 8%;
+        width: 85%;
+    }
+
+    .input-container-2 {
+        margin-top: 5%;
+    }
+
+    .input-container-login input {
+        padding-left: 65px;
+        padding-right: 12%;
+    }
+
+    .login-button {
+        margin: 71px 23% 36px;
+        width: 55%;
+        font-size: 24px;
+        padding: 18px 60px;
+    }
+
+    .label-text {
+        font-size: 20px;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+
+    .label-text-2 {
+        margin-left: 0;
+    }
+
+    .img {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+    }
+
+    .logo-cont {
+        width: 100%;
+        height: auto;
+    }
+
+    .registerHead {
+        font-size: 46px;
+        margin-top: 5%;
+    }
+
+    .icon-cont {
+        width: 32px;
+        height: 32px;
+        top: 10%;
+        left: 15.5%;
+    }
+
+    .icon-cont-2 {
+        left: 15%;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    #eye, #eye-slash {
+        top: 50%;
+        left: 82%;
+        transform: translate(-50%, -50%);
+        width: 32px;
+        height: 32px;
+    }
+
+    .vertical-line {
+        top: 10%;
+        right: 23%;
+        height: 80%;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+    }
+
+    .order-left {
+        order: 1;
+        width: 100%;
+        height: auto;
+    }
+
+    .order-right {
+        order: 2;
+        width: 100%;
+        height: 100%;
+    }
+
+    .form {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    input[type=text], input[type=password] {
+        width: 75%;
+        margin: 8px 0;
+        font-size: 24px;
+        border-radius: 40px;
+    }
+
+    .input-container-login {
+        height: 80px;
+        margin-top: 6%;
+        margin-left: 8%;
+        width: 85%;
+    }
+
+    .input-container-2 {
+        margin-top: 5%;
+    }
+
+    .input-container-login input {
+        padding-left: 68px;
+        padding-right: 12%;
+    }
+
+    .login-button {
+        margin: 71px 25% 36px;
+        width: 50%;
+        font-size: 24px;
+        padding: 18px 60px;
+    }
+
+    .label-text {
+        font-size: 20px;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+
+    .label-text-2 {
+        margin-left: 0;
+    }
+
+    .img {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+    }
+
+    .logo-cont {
+        width: 100%;
+        height: auto;
+    }
+
+    .registerHead {
+        font-size: 55px;
+        margin-top: 5%;
+    }
+
+    .icon-cont {
+        width: 32px;
+        height: 32px;
+        top: 10%;
+        left: 15.5%;
+    }
+
+    .icon-cont-2 {
+        left: 15%;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    #eye, #eye-slash {
+        top: 50%;
+        left: 82%;
+        transform: translate(-50%, -50%);
+        width: 32px;
+        height: 32px;
+    }
+
+    .vertical-line {
+        top: 10%;
+        right: 23%;
+        height: 80%;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+    }
+
+    .order-left {
+        order: 1;
+        width: 100%;
+        height: auto;
+    }
+
+    .order-right {
+        order: 2;
+        width: 100%;
+        height: 100%;
+    }
+
+    .form {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    input[type=text], input[type=password] {
+        width: 75%;
+        margin: 0px 0;
+        font-size: 36px;
+        border-radius: 40px;
+    }
+
+    .input-container-login {
+        height: 80px;
+        margin-top: 9%;
+        margin-left: 8%;
+        width: 85%;
+    }
+
+    .input-container-2 {
+        margin-top: 6%;
+    }
+
+    .input-container-login input {
+        padding-left: 96px;
+        padding-right: 12%;
+    }
+
+    .login-button {
+        margin: 132px 25% 66px;
+        width: 50%;
+        font-size: 36px;
+        padding: 18px 60px;
+    }
+
+    .label-text {
+        font-size: 30px;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+
+    .label-text-2 {
+        margin-left: 0;
+    }
+
+    .img {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+    }
+
+    .logo-cont {
+        width: 100%;
+        height: auto;
+    }
+
+    .registerHead {
+        font-size: 80px;
+        margin-top: 5%;
+    }
+
+    .icon-cont {
+        width: 50px;
+        height: 50px;
+        top: -14%;
+        left: 15.5%;
+    }
+
+    .icon-cont-2 {
+        left: 15%;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    #eye, #eye-slash {
+        top: 50%;
+        left: 82%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+    }
+
+    .vertical-line {
+        top: 0%;
+        right: 23%;
+        height: 100%;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+
+    .swal2-title {
+        font-size: 50px !important; 
+    }
+
+    .swal2-html-container {
+        font-size: 34px !important; 
+        padding: 20px; 
+    }
+
+    .swal2-styled.swal2-confirm {
+        font-size: 34px !important;
+    }
+
+    .swal2-popup {
+        width: 48em !important;
+    }
+}
+/*  END OF LAPTOP/DESKTOP RESOLUTIONS */
+
+/*=============== MEDIA QUERIES ===============*/

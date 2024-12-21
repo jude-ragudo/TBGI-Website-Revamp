@@ -1,0 +1,568 @@
+﻿.div-container {
+    height: fit-content !important; /*REMOVE DIV HEIGHT*/
+}
+a{
+    text-decoration: none;
+}
+
+/*HEADER DESKTOP*/
+.nav-link{
+    color:black;
+}
+/*Mobile links setup*/
+.mobile-sidebar a.nav-link{
+    display: flex;
+    width: 100%;
+}
+/*Desktop Links setup*/
+.nav-class a.nav-link{
+    display:flex;
+}
+
+.nav-class {
+    z-index: 999;
+    position: relative;
+    width: 100%;
+    border-bottom: 2px solid black;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+ul {
+    list-style-type: none; /*REMOVE BULLET POINTS*/
+    padding: 0;
+    margin: 0;
+}
+.desktop-nav ul { /*RESET STYLE*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-class li { /*LIST ALIGNMENT AND SPACING*/
+    display: flex;
+    align-items:center;
+    height:100%;
+}
+
+.nav-class li a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-class .nav-link {
+    height: 100%;
+    align-items: center;
+}
+
+.list-item {
+    font-size: 1.1rem;
+    padding: 0 0.9rem;
+}
+
+.dropsymbol {
+    position: absolute;
+    left: 72%; /*eto rin*/
+    bottom: 27%;
+    padding: 0% 13%;
+}
+
+.dropsymbol.rotated {
+    transform: rotate(180deg);
+}
+
+.menu-container{
+    display: flex;
+}
+.nav-button{
+    position:relative;
+}
+.nav-class .nav-button a{
+    transition: 0.3s ease;
+}
+.nav-class .nav-button a:hover { /*NAV LINKS CHANGE COLOR ON HOVER*/
+    color: #707070;
+} 
+
+/*SPECIFICS*/
+.navbar-btn {
+    width: 100%; /*Eto Binago*/
+    height: 2rem;
+    display: inline-block;
+    font-size: 0.8rem !important;
+    text-align: center;
+    padding: 5px;
+    font-weight: normal;
+    background-color: black;
+    color: white;
+    border-radius: .5rem;
+}
+
+.navbar-btn:hover {
+    background-color: white;
+    border: solid 1px black;
+    color: black !important;
+}
+.nav-img {
+    height: fit-content;
+    padding: 10px;
+    width: 325px;
+}
+.login-btn {
+    background-color: #30A2FF;
+}
+/*END OF HEADER*/
+
+
+/*FOOTER*/
+footer {
+    margin: 5rem auto;
+    width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+footer ul{
+    list-style: none;
+}
+.list-item-footer {
+    font-size: .8rem;
+    margin-top: 1rem;
+    letter-spacing: 0.2em;
+}
+/*SPECIFICS*/
+.hidden{
+    display:none;
+}
+.section-footer{
+    width: 90%;
+    height: fit-content;
+    
+}
+.section-footer ul{
+    font-size: .9rem;
+}
+.footer-header {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3rem;
+    width: fit-content;
+}
+.sec1{
+    font-size: 1rem;
+    width: 35%;
+}
+.sec2 {
+    width: 30%;
+    margin: 0 auto;
+}
+.input-container{
+    display: flex;
+}
+.input-label{
+    margin-top: 1rem;
+}
+/*FOOTER END*/
+
+/*MODAL*/
+.modal-header-container{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-icon-close{
+    position: absolute;
+    right:10px;
+    cursor: pointer;
+}
+.modal-header{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.modal-container {
+    position: absolute;
+    padding: .8rem;
+    background-color: #fafafa;
+    border-radius: 10px;
+    width: 25%;
+    margin: 0 auto;
+    z-index: 999;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.input-text-container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.icon-container{
+    width: 30%;
+    border: solid 1px black;
+}
+.input-textfield{
+    border: 1px solid black;
+    width: 80%;
+    border-radius: 3px;
+    padding: .3rem;
+}
+.modal-login-btn {
+    
+    background-color: #30A2FF;
+    color: white;
+    border:none;
+    border-radius: 5px;
+    width: 50%;
+    cursor: pointer;
+    margin: 1rem;
+    padding: .3rem;
+    font-weight: 600;
+}
+.modal-login-btn:hover {
+    border: 1px black solid;
+    background-color: white;
+    color: black;
+}
+.modal-loginlink{
+    margin-top: 1rem;
+    font-size: .9rem;
+}
+.login-link {
+    
+    text-decoration: none;
+    color: #30A2FF;
+    font-weight: 500;
+}
+.login-link:hover {
+    color: #374259;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    z-index: 999; /* Make sure the overlay is on top of other elements */
+}
+/*HIGHLIGHT ACTIVE PAGE SIDEBAR MOBILE*/
+.active {
+    background-color: #30A2FF;
+}
+.active a{
+    color:white;
+}
+.active svg {
+    fill: white;
+}
+/*END HIGHLIGHT*/
+/*SIDEBAR*/
+.mobile-sidebar{
+    display:flex;
+}
+@media only screen and (max-width:1023px){
+    #footerEmail{
+        width: 150px;
+        height: 30px;
+    }
+    footer {
+        flex-direction: column;
+    }
+
+        footer li {
+            margin-left: 0;
+        }
+
+    .section-footer {
+        margin: 1rem 30px;
+        width: 52%;
+    }
+/*Dropdown*/
+#price-nav-text {
+    font-size: 15px;
+    padding-left: 20%;
+    white-space: nowrap;
+}
+/*NAVBAR*/
+    .nav-mobile {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid black;
+    }
+    .nav-mobile i{
+        margin-left: 10px;
+    }
+    .nav-img-mobile {
+        width: 239px;
+        margin: 0 auto;
+    }
+/*END NAVBAR*/
+/*SIDEBAR*/
+    .nav-mobile {
+        padding: 15px;
+    }
+    .subscribe-btn{
+        margin-left: 10px
+    }
+    .reg-btn,.login-btn{
+        margin-top: 0px;
+    }
+    .mobile-sidebar ul {
+        margin-top: 24px;
+        width:100%;
+    }
+    .mobile-sidebar li, .mobile-sidebar li.list-item.nav-button{
+        padding: 5px 15px 5px 15px;
+    }
+        .mobile-sidebar .nav-button:hover,  .mobile-sidebar .nav-button a:hover{
+            background-color: #30A2FF;
+            color:white;
+        }
+    .mobile-sidebar {
+        background-color: white;
+        width: 75%;
+        left: -100%;
+        height: 100%;
+        padding: 0;
+        top: 0;
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        background-color: white;
+        z-index: 9999999;
+        transition: 0.4s ease;
+    }
+        .mobile-sidebar.show{
+            left:0;
+        }
+        .mobile-sidebar img {
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+        .mobile-sidebar .nav-button{
+            margin: 15px 0;
+            padding:0;
+        }
+    .sidebar-icon {
+        margin-top: 35px;
+        position: relative;
+        left: 85%;
+    }
+/*END SDEBAR*/
+
+}
+@media only screen and (min-width: 375px){
+    .nav-img-mobile {
+        width: 264px;
+    }
+}
+@media only screen and (min-width: 425px) {
+    .section-footer {
+        margin: 1rem 30px;
+        width: 80%;
+    }
+        
+    #footerEmail {
+        width: 200px;
+        height: 30px;
+    }
+
+    
+    .reg-btn, .login-btn{
+        width:100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .mobile-sidebar {
+        width: 60%;
+    }
+    .nav-link {
+        font-size: 25px;
+    }
+    .reg-btn, .login-btn {
+        height: 2.5rem;
+        font-size: 1.2rem !important;
+    }
+    .dropsymbol {
+        height: 55%;
+    }
+    #price-nav-text {
+        font-size: 20px;
+        padding-left: 20%;
+    }
+    footer {
+        align-items: center;
+    }
+    .nav-img-mobile {
+        width: 320px;
+    }
+}
+@media only screen and (max-width: 1023px){
+    .desktop-nav{
+        display:none;
+    }
+}
+@media only screen and (min-width:1024px){
+    .desktop-nav{
+        display:flex;
+    }
+    .nav-mobile, .mobile-sidebar{
+        display:none;
+    }
+
+    .nav-class {
+        justify-content: space-around;
+    }
+/*footer button*/
+    .navbar-btn {
+        width: 90px;
+    }
+/*Dropdown*/
+    .dropdown-nav {
+        width: 12rem;
+        display: none;
+        position: absolute;
+        border-radius: 20px;
+        border: 2px solid black;
+        top: 100%;
+        left: 0;
+        transform: translate(-22%,0);
+        background-color: white;
+        z-index: 1;
+        box-shadow: 0px 2px rgba(0,0,0,0.3);
+    }
+    .dropdown-nav .nav-link{
+        margin: 0 auto;
+    }
+    .dropdown-nav:hover{
+        display:flex;
+    }
+    .services-link:hover + .dropdown-nav{ 
+        display:flex;
+    }
+
+/*End Dropdown*/
+/*HEADER HIGHLIGHT*/
+    .active {
+        background-color:transparent;
+    }
+
+        .active a {
+            color: #30A2FF;
+        }
+/*END HIGHLIGHT*/
+/*HEADER*/
+    .nav-mobile {
+        display: none;
+    }
+    .nav-link {
+        font-size: 15px;
+    }
+    .reg-btn, .login-btn {
+        width: 4.5rem;
+        height: 2rem;
+        font-size: 0.8rem !important;
+    }
+    .login-btn{
+        margin-right: 10px;
+    }
+/*END HEADER*/
+/*FOOTER*/
+    .subscribe-btn{
+        margin-left: 10px;
+    }
+    footer{
+        align-items: start;
+    }
+    .footer-header {
+        font-size: 1.35rem;
+    }
+    .list-item-footer {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        letter-spacing: 0.2em;
+    }
+/*END FOOTER*/
+}
+@media only screen and (min-width: 1366px){
+    .reg-btn, .login-btn {
+        width: 5.5rem;
+        height: 2.7rem;
+        font-size: 1rem !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-link {
+        font-size: 20px;
+    }
+/*dropdown*/
+    .dropdown-nav {
+        transform: translate(-17%,0);
+    }
+}
+
+@media only screen and (min-width: 1680px){
+    .list-item {
+        padding: 0 2rem;
+    }
+
+/*dropdown*/
+    .dropdown-nav {
+        transform: translate(-8%,0);
+    }
+}
+
+@media only screen and (min-width: 2560px){
+    .nav-link {
+        font-size: 31px;
+    }
+    .list-item {
+        padding: 0 3rem;
+    }
+    .nav-class .nav-img {
+        width: 538px;
+        margin-right: 30px;
+    }
+    .reg-btn, .login-btn {
+        width: 8.5rem;
+        height: 3rem;
+        font-size: 1.5rem !important;
+    }
+    .nav-button::after {
+        border-bottom: 10px solid inherit;
+    }
+
+    /*dropdown*/
+    .dropdown-nav {
+        width: 19rem;
+        transform: translate(-10%,0);
+    }
+
+    /*footer*/
+    .footer-header {
+        font-size: 2.35rem;
+    }
+
+    .list-item-footer {
+        font-size: 1.2rem;
+    }
+
+    .section-footer {
+        font-size: 1.3rem;
+    }
+    #footerEmail {
+        width: 250px;
+        height: 49px;
+    }
+    .navbar-btn {
+        width: 175px;
+        font-size: 1.5rem !important;
+        height: 3rem;
+    }
+    
+}

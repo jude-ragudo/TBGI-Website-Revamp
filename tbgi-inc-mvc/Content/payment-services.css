@@ -1,0 +1,390 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.payment-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.payment-details-container, .payment-balance {
+    /*box-shadow: 11px 9px 8px rgba(0,0,0,0.6);*/
+    border-bottom: 2.5px #70BCAB solid;
+    background: var(--light);
+}
+
+.payment-details-container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 17px;
+}
+
+.pay-text-container {
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    padding: 25px;
+}
+
+.pay-input-container {
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.label-col {
+    display: inline-block;
+    padding: 5px 5px 5px 0;
+}
+
+.required{
+    color:red;
+}
+
+label {
+    text-shadow:none;
+    font-weight: 500;
+}
+
+.payment-box, #message {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    resize: none;
+    outline: none;
+}
+
+    .payment-box:focus, #message:focus {
+        border: 1px solid #3D7ECE;
+    }
+
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.pay-input-row {
+    margin-bottom: 10px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 5px 16px;
+    font-size: 14px;
+    border: 1px solid black;
+    transition: 0.3s all;
+}
+    .btn:hover {
+        cursor: pointer;
+    }
+.submit-btn {
+    background-color: black;
+    color: white;
+    margin-right: 20px;
+}
+    .submit-btn:hover {
+        background-color: #f5f5f5;
+        color: black;
+        border: 1px solid black;
+    }
+
+.cancel-btn {
+    background-color: #f5f5f5;
+    color:black;
+}
+
+.payment-balance {
+    display: inline-grid;
+    border-radius: 17px;
+    margin: 15px 0;
+    padding: 10px 25px;
+}
+
+    .payment-balance p:first-child {
+        font-size: 17px;
+        font-weight: normal;
+    }
+
+    .payment-balance p:nth-child(2) {
+        justify-self: end;
+        margin-top: 10px;
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+.currency {
+    font-size: 18px;
+    color:black;
+}
+/* ADD IN QUERY 25/75 ratio for desktop */
+/* .pay-input-row::after{
+    content:"";
+    display:table;
+    clear:both;
+} */
+
+@media only screen and (min-width: 425px) {
+    .payment-container {
+        align-items: center;
+    }
+
+    .payment-balance, .payment-details-container {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .payment-container {
+        height: 80%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .payment-balance, .payment-details-container {
+        width: 80%;
+    }
+
+    .payment-details-container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .payment-balance {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+        .payment-balance p:first-child {
+            font-size: 22px;
+        }
+
+        .payment-balance p:nth-child(2) {
+            font-size: 28px;
+        }
+
+    .pay-text-container {
+        font-size: 40px;
+        padding: 10px 0 30px 0;
+    }
+
+    .label-col, .input-col {
+        float: left;
+    }
+
+    .input-col {
+        width: 75%;
+    }
+
+    .payment-box, #message {
+        font-size: 14px;
+    }
+
+    .label-col {
+        width: 25%;
+    }
+
+    label {
+        display: inline-block;
+        font-size: 17px;
+    }
+
+    .pay-input-row::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .payment-container {
+        flex-direction: row;
+        align-items: start;
+        padding: 40px;
+    }
+
+    .payment-balance {
+        margin: 0 0 0 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 40%;
+    }
+
+        .payment-balance p:first-child {
+            font-size: 18px;
+        }
+
+        .payment-balance p:nth-child(2) {
+            font-size: 24px;
+        }
+    .input-col {
+        width: 65%;
+    }
+
+    .label-col {
+        width: 33%;
+    }
+    .swal2-container.swal2-center > .swal2-popup {
+        position: relative;
+        z-index: 30000;
+    }
+}
+
+@media only screen and (min-width:1366px) {
+    .payment-container {
+        height: 100%;
+        left: 9%;
+    }
+
+    label {
+        font-size: 24px;
+    }
+    textarea {
+        height: 140px;
+    }
+    .btn {
+        font-size: 16px;
+    }
+    .pay-text-container {
+        height: 6rem;
+        justify-content: start;
+        font-size: 34px;
+    }
+    .payment-details-container {
+        height: 100%;
+    }
+    .payment-box, #message {
+        font-size: 16px;
+    }
+    .swal2-container.swal2-center > .swal2-popup {
+        position: relative;
+        z-index: 30000;
+    }
+}
+
+@media only screen and (min-width:1440px) {
+    .payment-container {
+        left: 12%;
+    }
+
+    .pay-input-row {
+        margin-bottom: 25px;
+    }
+   
+    .payment-box, #message {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 5px 30px;
+    }
+    .input-col {
+        width: 67%;
+    }
+
+    .label-col {
+        width: 33%;
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .pay-input-container {
+        height: 100%;
+    }
+
+    input[type="text"], input[type="password"], select {
+        height: 40px;
+    }
+    .swal2-container.swal2-center > .swal2-popup {
+        position: relative;
+        z-index: 30000;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .payment-balance {
+        width: 30%;
+    }
+
+    .payment-details-container {
+        width: 48%;
+    }
+    select {
+        overflow: hidden;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    .pay-input-container {
+        justify-content: start;
+    }
+
+    .pay-text-container {
+        font-size: 58px;
+    }
+
+    label {
+        font-size: 32px;
+    }
+
+    input[type="text"], input[type="password"], select {
+        height: 45px;
+    }
+
+    textarea {
+        height: 250px;
+    }
+
+    .btn {
+        padding: 5px 30px;
+        font-size: 24px;
+    }
+
+    .payment-box, #message {
+        font-size: 25px;
+    }
+
+    .payment-balance {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+        .payment-balance p:first-child {
+            font-size: 28px;
+        }
+
+        .payment-balance p:nth-child(2) {
+            font-size: 34px;
+        }
+
+    .currency {
+        font-size: 28px;
+    }
+    .swal2-container.swal2-center > .swal2-popup {
+        position: relative;
+        z-index: 30000;
+        width: 30%;
+        height: 75%;
+        font-size: 25px;
+    }
+}

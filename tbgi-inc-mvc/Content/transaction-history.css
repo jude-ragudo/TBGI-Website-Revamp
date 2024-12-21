@@ -1,0 +1,583 @@
+﻿.main-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.main-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(63, 107, 133, 0.6);
+}
+
+.table {
+    position: relative;
+    z-index: 999;
+    width: 95%;
+    font-size: 14px;
+}
+
+.table-wrapper {
+    max-height: 500px; /* Adjust the max height as needed */
+    overflow-y: auto;
+    table-layout: fixed;
+    margin: 0 auto;
+}
+
+/*#dynamic-table {
+    border-collapse: collapse;
+}
+  
+    #dynamic-table th,
+    #dynamic-table td {
+        padding: 8px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        background-color: white;
+
+    }
+
+    #dynamic-table th {
+        position: sticky;
+        top: 0;
+        background-color: lightpink;*/ /* Set the desired background color */
+/*z-index: 1;
+    }*/
+
+table, thead, tbody, th, td, tr {
+    display: block;
+}
+
+th {
+    display: none;
+    text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+}
+
+tr + tr {
+    margin-top: .3em;
+}
+
+tr {
+    display: block;
+}
+
+td {
+    display: flex;
+    border: none;
+    position: relative;
+    padding-left: 51%;
+    background-color: white;
+    text-align: left;
+}
+
+    td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        line-height: 1.5;
+        margin-left: -100%;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    td:nth-of-type(1):before {
+        content: "Transaction ID";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Date";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Merchant";
+    }
+
+    td:nth-of-type(4):before {
+        content: "Debit";
+    }
+
+    td:nth-of-type(5):before {
+        content: "Running Balance";
+    }
+
+    td:nth-of-type(6):before {
+        content: "Status";
+    }
+
+label {
+    padding-left: 3px;
+    color: whitesmoke;
+    text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+}
+
+.input-fields-container {
+    position: relative;
+    background: #3F6B85;
+    width: 95%;
+    height: 200px;
+    padding: 10px;
+    border-radius: 17px 17px 0px 0px;
+    z-index: 999;
+}
+
+#startdate, #enddate, #merchant {
+    position: relative;
+    border-radius: 5px;
+    background-color: #b1d8f5;
+    border: 1px solid black;
+    outline: none;
+    height: 50px;
+    width: 130px;
+}
+
+#merchant {
+    bottom: 150px;
+    left: 53%;
+    transform: translate(0%, -46%);
+    padding: 10px;
+}
+
+    #merchant:focus {
+        border: 3px solid black;
+    }
+
+#filter {
+    bottom: 200px;
+    transform: translate(35%, -185%);
+    border-radius: 20px;
+    background-color: #ddd;
+    border: 1px solid black;
+    padding: 7px 25px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+    #filter:active {
+        background-color: #b1d8f5;
+    }
+
+@media only screen and (min-width: 375px) {
+    .table {
+        font-size: 15px;
+    }
+
+    #startdate, #enddate, #merchant {
+        width: 140px;
+    }
+
+    #startdate, #enddate {
+        padding: 3px;
+    }
+
+    #merchant {
+        left: 59%;
+    }
+
+    #filter {
+        transform: translate(83%, -190%);
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    .table {
+        font-size: 16px;
+    }
+
+    #startdate, #enddate, #merchant {
+        width: 160px;
+    }
+
+    #startdate, #enddate {
+        padding: 5px;
+    }
+
+    #merchant {
+        left: 58%;
+    }
+
+    #filter {
+        transform: translate(95%, -190%);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .main-container img {
+        display: flex;
+        object-position: 65% 0%;
+    }
+
+    .table {
+        font-size: 17px;
+    }
+
+    label {
+        padding-left: 5px;
+        width: 60px;
+    }
+
+    .end {
+        transform: translateX(-50%);
+    }
+
+    .input-fields-container {
+        display: inline-flex;
+        justify-content: space-between;
+        height: 100px;
+    }
+
+    #startdate, #enddate, #merchant {
+        top: 25px;
+        width: 165px;
+    }
+
+    #startdate {
+        padding: 7px;
+        transform: translateX(-36%);
+    }
+
+    #enddate {
+        padding: 7px;
+        transform: translateX(-54%);
+    }
+
+    #merchant {
+        bottom: 150px;
+        left: 0%;
+        transform: translate(-35%, 0%);
+    }
+
+    #filter {
+        bottom: 200px;
+        transform: translate(-15%, 60%);
+        height: 40px;
+        padding: 0px 25px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .main-container img {
+        object-position: 75% 0%;
+    }
+
+    .table {
+        width: 85%;
+        display: block;
+        position: relative;
+        background: #F3F3F3;
+    }
+
+    tr:nth-of-type(even) {
+        background: #D9D9D9;
+    }
+
+    tr + tr {
+        margin-top: 0em;
+    }
+
+    thead {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: #D9D9D9;
+        padding-left: 10px;
+        border-bottom: 2px solid black;
+    }
+
+    th {
+        display: inline-table;
+        color: black;
+        font-weight: bold;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    td, th {
+        display: table-cell;
+        text-align: center;
+        width: 140px;
+    }
+
+    td {
+        background-color: transparent;
+        display: inline-table;
+        padding: 10px 10px 10px 30px;
+    }
+
+        td:before {
+            display: none;
+        }
+
+    label {
+        padding-left: 5px;
+        width: 60px;
+        font-size: 18px;
+    }
+
+    .end {
+        transform: translateX(-85%);
+    }
+
+    .input-fields-container {
+        width: 85%;
+    }
+
+    #startdate, #enddate, #merchant {
+        width: 185px;
+    }
+
+    #startdate {
+        transform: translateX(-38%);
+    }
+
+    #enddate {
+        transform: translateX(-65%);
+    }
+
+    #merchant {
+        transform: translate(-50%, 0%);
+    }
+
+    #filter {
+        transform: translate(-35%, 53%);
+        height: 45px;
+        padding: 0px 35px;
+    }
+
+        #filter:hover {
+            background-color: #b1d8f5;
+            cursor: pointer;
+        }
+}
+
+@media only screen and (min-width: 1366px) {
+    th {
+        font-size: 20px;
+    }
+
+    td, th {
+        width: 190px;
+    }
+
+    label {
+        padding-left: 15px;
+    }
+
+    #startdate, #enddate, #merchant {
+        width: 200px;
+    }
+
+    #startdate {
+        padding: 10px;
+        transform: translateX(-57%);
+    }
+
+    #enddate {
+        padding: 10px;
+        transform: translateX(-82%);
+    }
+
+    #merchant {
+        transform: translate(-51%, 0%);
+    }
+
+    #filter {
+        transform: translate(-40%, 53%);
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .main-container img {
+        object-position: 80% 0%;
+    }
+
+    .table {
+        width: 80%;
+        font-size: 18px;
+    }
+
+    .input-fields-container {
+        width: 80%;
+    }
+
+    #startdate {
+        transform: translateX(-56%);
+    }
+
+    #enddate {
+        transform: translateX(-81%);
+    }
+
+    #merchant {
+        transform: translate(-50%, 0%);
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .main-container img {
+        object-position: 70% 0%;
+    }
+
+    .table {
+        width: 75%;
+    }
+
+    th {
+        font-size: 22px;
+    }
+
+    td, th {
+        width: 208px;
+    }
+
+    label {
+        padding-left: 25px;
+    }
+
+    .end {
+        transform: translateX(-100%);
+    }
+
+    #startdate, #enddate, #merchant {
+        width: 215px;
+    }
+
+    .input-fields-container {
+        width: 75%;
+    }
+
+    #startdate {
+        transform: translateX(-54%);
+    }
+
+    #enddate {
+        transform: translateX(-82%);
+    }
+
+    #merchant {
+        transform: translate(-47%, 0%);
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .table {
+        width: 70%;
+        font-size: 19px;
+    }
+
+    td, th {
+        width: 217px;
+    }
+
+    label {
+        font-size: 19px;
+    }
+
+    input {
+        font-size: 18px;
+    }
+
+    #startdate, #enddate, #merchant {
+        top: 30px;
+        width: 225px;
+    }
+
+    .input-fields-container {
+        width: 70%;
+    }
+
+    #startdate {
+        transform: translateX(-55%);
+    }
+
+    #merchant {
+        transform: translate(-48%, 0%);
+    }
+
+    #filter {
+        transform: translate(-45%, 65%);
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    .table {
+        width: 65%;
+        font-size: 22px;
+    }
+
+    .table-wrapper {
+        max-height: 650px;
+    }
+
+    thead {
+        padding-left: 0px;
+    }
+
+    th {
+        font-size: 26px;
+        padding: 15px 0px 15px 0px;
+    }
+
+    td, th {
+        width: 275px;
+    }
+
+    td {
+        padding: 20px;
+    }
+
+    label {
+        padding-left: 50px;
+        font-size: 23px;
+    }
+
+    .end {
+        transform: translateX(-170%);
+    }
+
+    input {
+        font-size: 20px;
+    }
+
+    #startdate, #enddate, #merchant {
+        top: 32px;
+        width: 250px;
+    }
+
+    .input-fields-container {
+        width: 65%;
+    }
+
+    #startdate {
+        transform: translateX(-62%);
+    }
+
+    #enddate {
+        transform: translateX(-102%);
+    }
+
+    #merchant {
+        transform: translate(-60%, 0%);
+    }
+
+    #filter {
+        transform: translate(-60%, 70%);
+    }
+}

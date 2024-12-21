@@ -1,0 +1,1476 @@
+﻿/*=============== START OF MAIN CSS ===============*/
+
+/* START OF GENERAL CSS */
+.grid-container {
+    position: relative;
+    display: grid;
+    grid-template-areas:
+        'POPUP WELCOME-MSG'
+        'POPUP LOGIN-FORM';
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+    .grid-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/Content/LoginB/main-bg.jpg');
+        background-color: #a6c1d1;
+        opacity: 0.7; 
+        z-index: -1;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+/* END OF GENERAL CSS */
+
+
+/* START OF POPUP/SLIDE IN CSS */
+.container {
+    position: relative;
+    grid-area: POPUP;
+    height: 80%;
+    top: 90px;
+    border-radius: 40px;
+    width: 100%;
+    left: -116px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(63, 107, 133);
+    background: linear-gradient(145deg, rgba(63, 107, 133, 1) 30%, rgba(222, 230, 235, 0.4837962962962963) 60%, rgba(133, 164, 183, 1) 100%);
+    transform: translateX(-100%);
+    animation: slide-in 0.5s ease forwards;
+}
+
+.popup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main-popup {
+    position: absolute;
+    left: 30px;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(255, 255, 255);
+    opacity: 0.7;
+    border-radius: 40px;
+    z-index: 1;
+    padding: 30px 20px;
+    line-height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.logo-cont {
+    margin-bottom: 12px;
+    height: auto;
+    width: 100%;
+}
+
+.web-logo {
+    height: 128px;
+    width: 80%;
+    margin: -42px 0 0 78px;
+}
+
+.overlay-heading {
+    font-size: 50px;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    margin: 92px 0 62px;
+}
+
+.overlay-paragraph {
+    font-size: 25px;
+    font-weight: 100;
+    color: black;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+}
+/* END OF POPUP/SLIDE IN CSS */
+
+
+/* START OF WELCOME MESSAGE CSS */
+.welcome-msg-container {
+    position: relative;
+    right: 65px;
+    background-color: #FFF;
+    text-align: center;
+    padding: 20px;
+    grid-area: WELCOME-MSG;
+    height: 85%;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-heading {
+    font-size: 50px;
+    color: black;
+    font-weight: 600;
+    position: relative;
+    top: -15px;
+}
+
+.signin-heading {
+    font-size: 25px;
+    color: black;
+    font-weight: 200;
+    position: relative;
+    top: -20px;
+}
+/* END OF WELCOME MESSAGE CSS */
+
+
+/* START OF LOGIN FORM CSS */
+.login-form-container {
+    position: relative;
+    right: 65px;
+    background-color: #FFF;
+    text-align: center;
+    padding: 30px;
+    grid-area: LOGIN-FORM;
+    height: 100%;
+    border-radius: 40px;
+}
+
+.input-container {
+    height: 90px;
+    position: relative;
+    justify-content: center;
+    margin-top: 44px;
+}
+
+.input-container-2 {
+    margin-top: 35px;
+}
+
+input[type=text], input[type=password] {
+    position: relative;
+    width: 50%;
+    padding: 12px 7% 0px 20px;
+    margin: 25px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    right: -12px;
+    font-size: 24px;
+}
+
+#eye-container {
+    position: relative;
+    display: inline-block;
+}
+
+#eye, #eye-slash {
+    position: absolute;
+    top: 50%;
+    left: 74%;
+    transform: translate(-50%, -50%);
+    width: 35px;
+    height: 35px;
+}
+
+#eye-slash {
+    display: none;
+}
+
+.icon-cont {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 10%;
+    left: 220px;
+    transform: translateY(50%);
+}
+
+.icon-cont-2 {
+    left: 216px;
+    transform: translateY(45%);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: black;
+}
+
+.login-button {
+    position: relative;
+    right: 0px;
+    margin: 55px 0px 34px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    outline-color: #734E96;
+    width: 40%;
+    border: 2px solid white;
+    background-color: #3F6B85;
+    padding: 22px 60px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+    .login-button:hover {
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+    }
+
+.label-text {
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 0px;
+}
+
+.label-text-2 {
+    margin-left: 16px;
+    margin-bottom: 30px;
+}
+
+.error-message {
+    display: none;
+    color: red;
+    margin-top: 10px;
+}
+
+.invalid-input {
+    border: 1px solid red;
+}
+
+.custom-sweetalert {
+    top: 0% !important;
+    left: 0% !important;
+    width: 100vw !important;
+    height: auto !important;
+}
+/* END OF LOGIN FORM CSS */
+
+/*=============== END OF MAIN CSS ===============*/
+
+
+/*=============== MEDIA QUERIES ===============*/
+
+/* START OF MOBILE RESOLUTIONS  */
+@media only screen and (min-width: 320px) {
+    /* GENERAL CSS */
+    .grid-container {
+        position: relative;
+        display: block;
+        min-width: 320px;
+        height: 100%;
+    }
+
+    /* WELCOME MESSAGE CSS */
+    .welcome-msg-container {
+        position: relative;
+        right: 0;
+        height: 70%;
+        width: 100%;
+        grid-area: WELCOME-MSG;
+        margin: 20px 0 20px;
+    }
+
+    .welcome-heading {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    .signin-heading {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    /* LOGIN FORM CSS */
+    .login-form-container {
+        right: 0;
+        grid-area: LOGIN-FORM;
+        height: auto;
+    }
+
+    .input-container {
+        margin-top: 0px;
+    }
+
+    .input-container-2 {
+        margin-top: 0px;
+    }
+
+    input[type=text], input[type=password] {
+        width: 80%;
+        padding: 12px 16% 0px 20px;
+        font-size: 15px;
+    }
+
+    .icon-cont {
+        width: 25px;
+        height: 25px;
+        top: 35%;
+        left: 5%;
+        transform: translate(-50%);
+    }
+
+    .icon-cont-2 {
+        left: 10px;
+        transform: translate(-50%);
+    }
+
+    .login-button {
+        margin: 24px 0px 14px;
+        font-size: 15px;
+        width: 100%;
+        padding: 13px 84px;
+    }
+
+    .label-text {
+        font-size: 12px;
+        margin-top: 24px;
+        margin-left: 0px;
+    }
+
+    .label-text-2 {
+        margin-left: 0px;
+    }
+
+    #eye, #eye-slash {
+        top: 54%;
+        left: 88%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+    }
+
+    .custom-sweetalert {
+        top: -61% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    /* GENERAL CSS */
+    .grid-container {
+        position: relative;
+        display: block;
+        min-width: 375px;
+        height: 100%;
+    }
+
+    /* WELCOME MESSAGE CSS */
+    .welcome-msg-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 90%;
+        width: 100%;
+        grid-area: WELCOME-MSG;
+        margin: 20px 0 20px;
+    }
+
+    .welcome-heading {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    .signin-heading {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    /* LOGIN FORM CSS */
+    .login-form-container {
+        grid-area: LOGIN-FORM;
+        height: auto;
+    }
+
+    .input-container {
+        margin-top: 0px;
+    }
+
+    .input-container-2 {
+        margin-top: 0px;
+    }
+
+    input[type=text], input[type=password] {
+        width: 80%;
+        padding: 12px 15% 0px 20px;
+        font-size: 15px;
+    }
+
+    .icon-cont {
+        width: 25px;
+        height: 25px;
+        top: 35%;
+        left: 8%;
+        transform: translate(-50%);
+    }
+
+    .icon-cont-2 {
+        left: 7%;
+        transform: translate(-50%);
+    }
+
+    .login-button {
+        margin: 24px 0px 14px;
+        font-size: 15px;
+        width: 100%;
+        padding: 13px 84px;
+    }
+
+    .label-text {
+        font-size: 12px;
+        margin-top: 24px;
+        margin-left: 0px;
+    }
+
+    .label-text-2 {
+        margin-left: 0px;
+    }
+
+    #eye, #eye-slash {
+        top: 54%;
+        left: 88%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+    }
+
+    .custom-sweetalert {
+        top: -54% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    /* GENERAL CSS */
+    .grid-container {
+        position: relative;
+        display: block;
+        min-width: 425px;
+        height: 100%;
+    }
+
+    /* WELCOME MESSAGE CSS */
+    .welcome-msg-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 90%;
+        width: 100%;
+        margin: 20px 0 20px;
+    }
+
+    .welcome-heading {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    .signin-heading {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    /* LOGIN FORM CSS */
+    .login-form-container {
+        height: auto;
+    }
+
+    .input-container {
+        margin-top: 0px;
+    }
+
+    .input-container-2 {
+        margin-top: 0px;
+    }
+
+    input[type=text], input[type=password] {
+        width: 80%;
+        padding: 12px 13% 0px 20px;
+        font-size: 15px;
+    }
+
+    .icon-cont {
+        width: 25px;
+        height: 25px;
+        top: 35%;
+        left: 8%;
+        transform: translate(-50%);
+    }
+
+    .icon-cont-2 {
+        left: 7%;
+        transform: translate(-50%);
+    }
+
+    .login-button {
+        margin: 24px 0px 14px;
+        font-size: 15px;
+        width: 100%;
+        padding: 13px 84px;
+    }
+
+    .label-text {
+        font-size: 12px;
+        margin-top: 24px;
+        margin-left: 0px;
+    }
+
+    .label-text-2 {
+        margin-left: 0px;
+    }
+
+    #eye, #eye-slash {
+        top: 55%;
+        left: 87.5%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+    }
+
+    .custom-sweetalert {
+        top: -48% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+/* END OF MOBILE RESOLUTIONS */
+
+
+/* START OF TABLET RESOLUTIONS  */
+@media only screen and (min-width: 768px) {
+    /* GENERAL CSS */
+    .grid-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 768px;
+        height: 100%;
+    }
+
+    /* WELCOME MESSAGE CSS */
+    .welcome-msg-container {
+        display: flex;
+        flex-direction: column;
+        height: 90%;
+        width: 70%;
+    }
+
+    .welcome-heading {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
+    .signin-heading {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    /* LOGIN FORM CSS */
+    .login-form-container {
+        height: auto;
+        width: 70%;
+    }
+
+    .input-container {
+        margin-top: 0px;
+    }
+
+    .input-container-2 {
+        margin-top: 0px;
+    }
+
+    input[type=text], input[type=password] {
+        width: 70%;
+        padding: 12px 10% 0px 20px;
+        font-size: 18px;
+    }
+
+    .icon-cont {
+        width: 25px;
+        height: 25px;
+        top: 35%;
+        left: 14%;
+        transform: translate(-50%);
+    }
+
+    .icon-cont-2 {
+        left: 13%;
+        transform: translate(-50%);
+    }
+
+    .login-button {
+        margin: 24px 0px 14px;
+        font-size: 18px;
+        width: 70%;
+        padding: 13px 84px;
+    }
+
+    .label-text {
+        font-size: 15px;
+        margin-top: 24px;
+        margin-left: 0px;
+    }
+
+    .label-text-2 {
+        margin-left: 0px;
+    }
+
+    #eye, #eye-slash {
+        top: 56%;
+        left: 83%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /* GENERAL CSS */
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'POPUP WELCOME-MSG'
+            'POPUP LOGIN-FORM';
+    }
+
+    /* POPUP CSS */
+    .container {
+        grid-area: POPUP;
+        height: 70%;
+        top: 0%;
+        width: 125%;
+        left: -20%;
+    }
+
+    .main-popup {
+        left: 2%;
+        width: 90%;
+        height: 90%;
+    }
+
+    .popup-content p {
+        font-size: 15px;
+        line-height: 1.5rem;
+    }
+
+    .web-logo {
+        height: 85px;
+        width: 90%;
+        margin: -42px 0 0 24px;
+    }
+
+    .overlay-heading {
+        font-size: 40px;
+        margin: 92px 0 62px;
+    }
+
+    .overlay-paragraph {
+        font-size: 15px;
+        padding: 20px 10px 20px 10px;
+    }
+
+    /* WELCOME MESSAGE CSS */
+    .welcome-msg-container {
+        right: -20%;
+        grid-area: WELCOME-MSG;
+        height: 85%;
+    }
+
+    .welcome-heading {
+        font-size: 40px;
+    }
+
+    .signin-heading {
+        font-size: 18px;
+    }
+
+    /* LOGIN FORM CSS */
+    .login-form-container {
+        right: -20%;
+        grid-area: LOGIN-FORM;
+        height: 90%;
+    }
+
+    .input-container {
+        height: 90px;
+        margin-top: 10px;
+    }
+
+    .input-container-2 {
+        margin-top: 10px;
+    }
+
+    input[type=text], input[type=password] {
+        width: 50%;
+        padding: 12px 9% 0px 20px;
+        font-size: 18px;
+    }
+
+    .icon-cont {
+        width: 25px;
+        height: 25px;
+        top: 25%;
+        left: 19%;
+        transform: translateY(50%);
+    }
+
+    .icon-cont-2 {
+        left: 19%;
+        transform: translateY(45%);
+    }
+
+    .login-button {
+        right: 0px;
+        margin: 35px 0px 18px;
+        font-size: 18px;
+        width: 70%;
+        padding: 22px 60px;
+    }
+
+    .label-text {
+        font-size: 15px;
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+
+    .label-text-2 {
+        margin-left: 16px;
+        margin-bottom: 70px;
+    }
+
+    #eye, #eye-slash {
+        top: 57%;
+        left: 73.5%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+/* END OF TABLET RESOLUTIONS */
+
+
+/* START OF LAPTOP/DESKTOP RESOLUTIONS  */
+@media only screen and (min-width: 1366px) {
+    /* GENERAL CSS */
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'POPUP WELCOME-MSG'
+            'POPUP LOGIN-FORM';
+    }
+
+    /* POPUP CSS */
+    .container {
+        grid-area: POPUP;
+        height: 80%;
+        top: 0%;
+        width: 120%;
+        left: -20%;
+    }
+
+    .main-popup {
+        left: 2%;
+        width: 90%;
+        height: 90%;
+    }
+
+    .popup-content p {
+        font-size: 20px;
+        line-height: 2rem;
+    }
+
+    .web-logo {
+        height: 100px;
+        width: 90%;
+        margin: -42px 0 0 47px;
+    }
+
+    .overlay-heading {
+        font-size: 45px;
+        margin: 92px 0 62px 41px;
+    }
+
+    .overlay-paragraph {
+        font-size: 20px;
+        padding: 20px 10px 20px 40px;
+    }
+
+    /* WELCOME MESSAGE CSS */
+    .welcome-msg-container {
+        right: -20%;
+        grid-area: WELCOME-MSG;
+        height: 85%;
+    }
+
+    .welcome-heading {
+        font-size: 40px;
+    }
+
+    .signin-heading {
+        font-size: 18px;
+    }
+
+    /* LOGIN FORM CSS */
+    .login-form-container {
+        right: -20%;
+        grid-area: LOGIN-FORM;
+        height: 90%;
+    }
+
+    .input-container {
+        height: 90px;
+        margin-top: 10px;
+    }
+
+    .input-container-2 {
+        margin-top: 10px;
+    }
+
+    input[type=text], input[type=password] {
+        width: 50%;
+        padding: 12px 8.5% 0px 20px;
+        font-size: 18px;
+    }
+
+    .icon-cont {
+        width: 25px;
+        height: 25px;
+        top: 25%;
+        left: 20%;
+        transform: translateY(50%);
+    }
+
+    .icon-cont-2 {
+        left: 20%;
+        transform: translateY(45%);
+    }
+
+    .login-button {
+        right: 0px;
+        margin: 35px 0px 18px;
+        font-size: 18px;
+        width: 70%;
+        padding: 22px 60px;
+    }
+
+    .label-text {
+        font-size: 15px;
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+
+    .label-text-2 {
+        margin-left: 16px;
+        margin-bottom: 70px;
+    }
+
+    #eye, #eye-slash {
+        top: 57%;
+        left: 73.5%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    /* GENERAL CSS */
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'POPUP WELCOME-MSG'
+            'POPUP LOGIN-FORM';
+    }
+
+    /* POPUP CSS */
+    .container {
+        grid-area: POPUP;
+        height: 80%;
+        top: 0%;
+        width: 115%;
+        left: -20%;
+    }
+
+    .main-popup {
+        left: 2%;
+        width: 90%;
+        height: 90%;
+    }
+
+    .popup-content p {
+        font-size: 20px;
+        line-height: 2rem;
+    }
+
+    .web-logo {
+        height: 100px;
+        width: 90%;
+        margin: -42px 0 0 47px;
+    }
+
+    .overlay-heading {
+        font-size: 45px;
+        margin: 92px 0 62px 41px;
+    }
+
+    .overlay-paragraph {
+        font-size: 20px;
+        padding: 20px 10px 20px 40px;
+    }
+
+    /* WELCOME MESSAGE CSS */
+    .welcome-msg-container {
+        right: -20%;
+        grid-area: WELCOME-MSG;
+        height: 85%;
+    }
+
+    .welcome-heading {
+        font-size: 40px;
+    }
+
+    .signin-heading {
+        font-size: 18px;
+    }
+
+    /* LOGIN FORM CSS */
+    .login-form-container {
+        right: -20%;
+        grid-area: LOGIN-FORM;
+        height: 90%;
+    }
+
+    .input-container {
+        height: 90px;
+        margin-top: 10px;
+    }
+
+    .input-container-2 {
+        margin-top: 10px;
+    }
+
+    input[type=text], input[type=password] {
+        width: 50%;
+        padding: 12px 8.5% 0px 20px;
+        font-size: 18px;
+    }
+
+    .icon-cont {
+        width: 25px;
+        height: 25px;
+        top: 25%;
+        left: 20%;
+        transform: translateY(50%);
+    }
+
+    .icon-cont-2 {
+        left: 20%;
+        transform: translateY(45%);
+    }
+
+    .login-button {
+        right: 0px;
+        margin: 35px 0px 18px;
+        font-size: 18px;
+        width: 70%;
+        padding: 22px 60px;
+    }
+
+    .label-text {
+        font-size: 15px;
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+
+    .label-text-2 {
+        margin-left: 16px;
+        margin-bottom: 70px;
+    }
+
+    #eye, #eye-slash {
+        top: 57%;
+        left: 73.5%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    /* GENERAL CSS */
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'POPUP WELCOME-MSG'
+            'POPUP LOGIN-FORM';
+    }
+
+    /* POPUP CSS */
+    .container {
+        grid-area: POPUP;
+        height: 80%;
+        top: 0%;
+        width: 105%;
+        left: -20%;
+    }
+
+    .main-popup {
+        left: 2%;
+        width: 90%;
+        height: 90%;
+    }
+
+    .popup-content p {
+        font-size: 22px;
+        line-height: 2rem;
+    }
+
+    .web-logo {
+        height: 115px;
+        width: 85%;
+        margin: -42px 0 0 79px;
+    }
+
+    .overlay-heading {
+        font-size: 50px;
+        margin: 92px 0 62px 77px;
+    }
+
+    .overlay-paragraph {
+        font-size: 22px;
+        padding: 20px 10px 20px 72px;
+    }
+
+    /* WELCOME MESSAGE CSS */
+    .welcome-msg-container {
+        right: -15%;
+        grid-area: WELCOME-MSG;
+        height: 85%;
+    }
+
+    .welcome-heading {
+        font-size: 45px;
+    }
+
+    .signin-heading {
+        font-size: 22px;
+    }
+
+    /* LOGIN FORM CSS */
+    .login-form-container {
+        right: -15%;
+        grid-area: LOGIN-FORM;
+        height: 95%;
+    }
+
+    .input-container {
+        height: 90px;
+        margin-top: 10px;
+    }
+
+    .input-container-2 {
+        margin-top: 10px;
+    }
+
+    input[type=text], input[type=password] {
+        width: 50%;
+        padding: 12px 7.5% 0px 20px;
+        font-size: 22px;
+    }
+
+    .icon-cont {
+        width: 25px;
+        height: 25px;
+        top: 25%;
+        left: 22%;
+        transform: translateY(50%);
+    }
+
+    .icon-cont-2 {
+        left: 22%;
+        transform: translateY(45%);
+    }
+
+    .login-button {
+        right: 0px;
+        margin: 35px 0px 18px;
+        font-size: 22px;
+        width: 70%;
+        padding: 22px 60px;
+    }
+
+    .label-text {
+        font-size: 18px;
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+
+    .label-text-2 {
+        margin-left: 16px;
+        margin-bottom: 70px;
+    }
+
+    #eye, #eye-slash {
+        top: 57%;
+        left: 73.5%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    /* GENERAL CSS */
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'POPUP WELCOME-MSG'
+            'POPUP LOGIN-FORM';
+    }
+
+    /* POPUP CSS */
+    .container {
+        grid-area: POPUP;
+        height: 80%;
+        top: 0%;
+        width: 105%;
+        left: -20%;
+    }
+
+    .main-popup {
+        left: 2%;
+        width: 90%;
+        height: 90%;
+    }
+
+    .popup-content p {
+        font-size: 24px;
+        line-height: 2rem;
+    }
+
+    .web-logo {
+        height: 130px;
+        width: 85%;
+        margin: -65px 0 0 102px;
+    }
+
+    .overlay-heading {
+        font-size: 50px;
+        margin: 92px 0 62px 98px;
+    }
+
+    .overlay-paragraph {
+        font-size: 24px;
+        padding: 38px 10px 0px 102px;
+    }
+
+    /* WELCOME MESSAGE CSS */
+    .welcome-msg-container {
+        right: -15%;
+        grid-area: WELCOME-MSG;
+        height: 85%;
+    }
+
+    .welcome-heading {
+        font-size: 45px;
+    }
+
+    .signin-heading {
+        font-size: 22px;
+    }
+
+    /* LOGIN FORM CSS */
+    .login-form-container {
+        right: -15%;
+        grid-area: LOGIN-FORM;
+        height: 95%;
+    }
+
+    .input-container {
+        height: 90px;
+        margin-top: 40px;
+    }
+
+    .input-container-2 {
+        margin-top: 35px;
+    }
+
+    input[type=text], input[type=password] {
+        width: 50%;
+        padding: 12px 7.5% 0px 20px;
+        font-size: 22px;
+    }
+
+    .icon-cont {
+        width: 30px;
+        height: 30px;
+        top: 18%;
+        left: 21%;
+        transform: translateY(50%);
+    }
+
+    .icon-cont-2 {
+        left: 21%;
+        transform: translateY(45%);
+    }
+
+    .login-button {
+        right: 0px;
+        margin: 62px 0px 24px;
+        font-size: 22px;
+        width: 65%;
+        padding: 22px 60px;
+    }
+
+    .label-text {
+        font-size: 18px;
+        margin-top: 42px;
+        margin-left: 0px;
+    }
+
+    .label-text-2 {
+        margin-left: 16px;
+        margin-bottom: 70px;
+    }
+
+    #eye, #eye-slash {
+        top: 55%;
+        left: 74%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    /* GENERAL CSS */
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'POPUP WELCOME-MSG'
+            'POPUP LOGIN-FORM';
+    }
+
+    /* POPUP CSS */
+    .container {
+        grid-area: POPUP;
+        height: 80%;
+        top: 0%;
+        width: 90%;
+        left: -20%;
+    }
+
+    .main-popup {
+        left: 2%;
+        width: 90%;
+        height: 90%;
+    }
+
+    .popup-content p {
+        font-size: 28px;
+        line-height: 3rem;
+    }
+
+    .web-logo {
+        height: 156px;
+        width: 85%;
+        margin: -95px 0 0 135px;
+    }
+
+    .overlay-heading {
+        font-size: 60px;
+        margin: 147px 0 112px 154px;
+    }
+
+    .overlay-paragraph {
+        font-size: 28px;
+        padding: 38px 10px 0px 156px;
+    }
+
+    /* WELCOME MESSAGE CSS */
+    .welcome-msg-container {
+        right: -8%;
+        grid-area: WELCOME-MSG;
+        height: 85%;
+    }
+
+    .welcome-heading {
+        font-size: 60px;
+    }
+
+    .signin-heading {
+        font-size: 28px;
+    }
+
+    /* LOGIN FORM CSS */
+    .login-form-container {
+        right: -8%;
+        grid-area: LOGIN-FORM;
+        height: 95%;
+    }
+
+    .input-container {
+        height: 90px;
+        margin-top: 80px;
+    }
+
+    .input-container-2 {
+        margin-top: 60px;
+    }
+
+    input[type=text], input[type=password] {
+        width: 50%;
+        padding: 12px 7% 0px 20px;
+        font-size: 26px;
+    }
+
+    .icon-cont {
+        width: 40px;
+        height: 40px;
+        top: 2%;
+        left: 21%;
+        transform: translateY(50%);
+    }
+
+    .icon-cont-2 {
+        left: 21%;
+        transform: translateY(45%);
+    }
+
+    .login-button {
+        right: 0px;
+        margin: 84px 0px 54px;
+        font-size: 28px;
+        width: 65%;
+        padding: 32px 60px;
+    }
+
+    .label-text {
+        font-size: 24px;
+        margin-top: 42px;
+        margin-left: 0px;
+    }
+
+    .label-text-2 {
+        margin-left: 16px;
+        margin-bottom: 135px;
+    }
+
+    #eye, #eye-slash {
+        top: 51%;
+        left: 73.5%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+    }
+
+    .custom-sweetalert {
+        top: 0% !important;
+        left: 0% !important;
+        width: 100vw !important;
+        height: auto !important;
+    }
+}
+/* END OF LAPTOP/DESKTOP RESOLUTIONS */
+
+/*=============== MEDIA QUERIES ===============*/

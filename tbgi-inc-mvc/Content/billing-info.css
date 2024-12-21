@@ -1,0 +1,285 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.payment-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 15px;
+}
+label{
+    text-shadow: none;
+}
+.billing-info-container {
+    background-color: #d9d9d9;
+    border-radius: 17px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.payment-details-container, .billing-info-container {
+    /*box-shadow: 11px 9px 8px rgba(0,0,0,0.6);*/
+    border-bottom: 2.5px #70BCAB solid;
+    background-color: var(--light);
+}
+
+.payment-details-container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;  
+    border-radius: 17px;
+}
+
+.text-container {
+    display: inherit;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 5px 0 15px 0;
+    justify-content: start;
+}
+
+.pay-input-container {
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.label-col {
+    display: inline-block;
+    padding: 5px 5px 5px 0;
+}
+.required{
+    color:red;
+}
+label {
+    font-weight: 500;
+}
+
+.payment-box {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    resize: none;
+    outline: none;
+}
+
+    .payment-box:focus {
+        border: 1px solid #3D7ECE;
+    }
+
+.pay-input-row {
+    margin-bottom: 10px;
+}
+
+.date-divider {
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+#cvv,#monthWrapper,#yearWrapper {
+    width: 20%;
+}
+
+#monthWrapper, #yearWrapper {
+    display: inline-block;
+}
+
+.date-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+textarea {
+    height: 100px;
+}
+
+.button-container {
+    display: inherit;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.submit-btn,.cancel-btn {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 5px 16px;
+    font-size: 14px;
+    border: 1px solid black;
+}
+
+.submit-btn {
+    background-color: black;
+    color: white;
+    margin-right: 20px;
+    transition: 0.2s all;
+}
+
+    .submit-btn:hover {
+        cursor: pointer;
+        background-color: #f5f5f5;
+        color: black;
+        border: 1px solid black;
+    }
+
+.cancel-btn {
+    color: black;s
+    background-color: #f5f5f5;
+    border: 1px solid black;
+}
+.cancel-btn:hover{
+    cursor:pointer;
+}
+
+.payment-balance {
+    display: inline-grid;
+    background-color: #D9D9D9;
+    border-radius: 17px;
+    margin: 15px 0;
+    padding: 10px 25px;
+}
+
+    .payment-balance p:first-child {
+        font-size: 17px;
+        font-weight: normal;
+    }
+
+    .payment-balance p:nth-child(2) {
+        justify-self: end;
+        margin-top: 10px;
+        font-size: 22px;
+        font-weight: 500;
+    }
+@media only screen and (min-width: 625px){
+    .payment-container{
+        width: 35rem;
+    }
+}
+@media only screen and (min-width: 768px){
+    .billing-info-container,.payment-details-container{
+        margin:10px;
+    }
+    #cvv, #monthWrapper, #yearWrapper {
+        width: 15%;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .payment-container {
+        width: 41rem;
+    }
+    .billing-info-container, .payment-details-container {
+        padding-left: 33px;
+    }
+    .text-container{
+        font-size:28px;
+        margin-bottom: 15px;
+    }
+    .label-col, .input-col {
+        float: left;
+    }
+
+    .input-col {
+        width: 60%;
+        margin-left: 20px;
+    }
+
+    .payment-box {
+        font-size: 14px;
+    }
+
+    .label-col {
+        width: 30%;
+    }
+
+    label {
+        display: inline-block;
+        font-size: 20px;
+    }
+    #cvv{
+        width:12%;
+    }
+    #monthWrapper, #yearWrapper {
+        width: 10%;
+    }
+    #yearWrapper{
+        margin:0;
+    }
+
+    .pay-input-row::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .swal2-container.swal2-center > .swal2-popup {
+        position: relative;
+        z-index: 30000;
+    }
+}
+@media only screen and (min-width:1250px){
+    .payment-container {
+        width: 46rem;
+    }
+}
+@media only screen and (min-width: 1366px){
+    .swal2-container.swal2-center > .swal2-popup {
+        position: relative;
+        z-index: 30000;
+    }
+}
+
+@media only screen and (min-width: 1680px){
+    .swal2-container.swal2-center > .swal2-popup {
+        position: relative;
+        z-index: 30000;
+    }
+}
+
+@media only screen and (min-width:1920px){
+    #productsForm {
+        display: flex;
+        justify-content: center;
+    }
+    .billing-info-container{
+        width:40%;
+    }
+    .button-container {
+        margin-top: 92px;
+    }
+    .payment-container {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 2560px){
+    .text-container {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    label {
+        font-size: 22px;
+    }
+    .payment-box {
+        font-size: 17px;
+    }
+    .submit-btn,.cancel-btn {
+        font-size: 18px;
+    }
+    .swal2-container.swal2-center > .swal2-popup {
+        position: relative;
+        z-index: 30000;
+        width: 30%;
+        height: 75%;
+        font-size: 25px;
+    }
+}

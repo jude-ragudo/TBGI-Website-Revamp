@@ -1,0 +1,2244 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.islandContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 15em;
+}
+
+.islandContainer::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(180deg, transparent 10%, black 90%);
+
+}
+
+.heroBackground{
+    width:100%;
+    height:100%;
+}
+
+.islandTextOverlay {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    text-align: center;
+    justify-content: center;
+    color: #ffffff;
+    z-index: 1;
+    margin: 50px;
+}
+
+.islandTextOverlay h1 {
+    line-height: 1.5em;
+    letter-spacing: 0.08em;
+    font-size: 18px;
+    text-shadow: #c8c8c8 1px 1px 0px, #000000 0px 2px 0px, #000000 0px 3px 0px, rgba(0, 0, 0, 0.498) 0px 4px 0px, #000000 0px 0px 0px, rgba(0, 0, 0, 0.498039) 0px 5px 10px;
+
+}
+
+.islandTextOverlay h3 {
+    color: #cccccc;
+    font-size: 10px;
+    margin-top: 0.2rem;
+
+}
+
+.islandTextOverlay button {
+    color: #000000;
+    background-color: white;
+    width: 5rem;
+    margin-top: 10px;
+    height: 1.2rem;
+    font-size: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all;
+    border: none;
+}
+
+.islandTextOverlay button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #607980;
+}
+/* End of Hero Section */
+
+/* Access Section */
+.accessContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    margin: 20px;
+}
+
+.accessTextContainer {
+    letter-spacing: 0.2em;
+    line-height: 0.7em;
+}
+
+.accessTextContainer p:first-child {
+    font-size: 12px;
+    font-weight: 700;
+    color: #23403B;
+}
+
+.accessTextContainer p:nth-child(3) {
+    font-size: 10px;
+    color: #23403B;
+}
+
+.accessContainer button {
+    color: #000000;
+    background-color: white;
+    width: 8rem;
+    height: 1.3rem;
+    font-size: 10px;
+    margin-top: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all;
+    border: black solid 1px;
+}
+
+.accessContainer button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #607980;
+}
+
+.accessPlansContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.APcolumn img {
+    height: fit-content;
+    width: 100%;
+}
+
+#residentialPlan,
+#enterprisePlan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 30px;
+}
+
+#residentialPlan p,
+#enterprisePlan p {
+    font-size: 12px;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    color: #23403b;
+}
+
+#residentialPlan p:first-child,
+#enterprisePlan p:first-child {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#residentialPlan button,
+#enterprisePlan button {
+    color: #000000;
+    background-color: white;
+    width: 6rem;
+    height: 1.5rem;
+    margin: 0 auto;
+    font-size: 10px;
+    transition: 0.3s all;
+    border: black solid 1px;
+}
+
+#residentialPlan button:hover,
+#enterprisePlan button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #f27979;
+}
+/* End of Access Section */
+
+/* Vision Section */
+#visionContainer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-vision {
+    width: 100%;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: white;
+    z-index: 1;
+}
+
+.swiper-pagination {
+    --swiper-pagination-color: white;
+    --swiper-pagination-bullet-inactive-color: gray;
+}
+
+.swiper-vision [class ^="swiper-button-"]::after {
+    font-size: 15px;
+    color: #f9f9f9;
+}
+
+.line {
+    position: absolute;
+    display: none;
+    height: 12em;
+    width: 0.21em;
+    top: 7em;
+    border-radius: 1.25em;
+    background-color: white;
+    transition: transform 3s ease;
+}
+
+#visionTextContainer {
+    position: relative;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+
+#visionTextContainer p {
+    padding-left: 20px;
+}
+
+#visionTextContainer p:nth-child(2) {
+    letter-spacing: 0.16em;
+    line-height: 3em;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+#visionTextContainer p:nth-child(3) {
+    letter-spacing: 0.08em;
+    line-height: 1.8em;
+    font-size: 1.2em;
+}
+
+#visionTextContainer p:nth-child(4) {
+    letter-spacing: 0.04em;
+    font-size: 14px;
+}
+.sliderTextContainer {
+    color: white;
+    padding: 40px;
+}
+
+.sliderTextContainer p:first-child {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.sliderTextContainer p:nth-child(2) {
+    font-size: .8em;
+    font-weight: 300;
+    margin-top: 1em;
+    letter-spacing: 0.05em;
+    line-height: 1.25em;
+}
+
+.swiper-slide {
+    background-color:black;
+    height:100%;
+}
+
+#slide1 img, #slide3 video, #slide2 img {
+    width: 100%;
+}
+
+.swiper-vision-button-next,
+.swiper-vision-button-prev {
+    color: white;
+}
+/* End of Vision Section */
+
+/* Services Section */
+.servicesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.servicesTabs {
+    width: 100%;
+}
+
+.servicesLine {
+    position: absolute;
+    height: 8em;
+    background-color: black;
+    background-color: #23403B;
+    transition: transform 3s ease;
+}
+
+.servicesTextWrapper {
+    position: relative;
+    color: #23403B;
+    margin: 30px;
+}
+
+.servicesTextWrapper p {
+    font-size: 1.2em;
+}
+
+.servicesTextWrapper p:first-child {
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    line-height: 3em;
+}
+
+.servicesTextWrapper p:nth-child(2) {
+    line-height: 1.5em;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+}
+/* Style the tab */
+.tab {
+    overflow-x: scroll;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+    /* Style the buttons that are used to open the tab content */
+    .tab button {
+        background-color: transparent;
+        display: inline-block;
+        border: none;
+        border-bottom: 3px solid gray;
+        outline: none;
+        cursor: pointer;
+        padding: 11px 8px;
+        font-weight: 400;
+        font-family: avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light, sans-serif;
+        font-size: 13px;
+    }
+/* Change background color of buttons on hover */
+.tab button:hover {
+    border-bottom: 3px solid black;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: transparent;
+    border-bottom: 3px solid black;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #f3f3f3;
+    flex-direction: column-reverse;
+}
+
+.dataPlansText p:first-child {
+    font-family: helvetica-w01-bold, helvetica-w02-bold, helvetica-lt-w10-bold, sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1em;
+    letter-spacing: 0.01em;
+}
+
+.dataPlansText p:nth-child(2) {
+    font-size: 14px;
+    padding-top: 15px;
+}
+
+.dataPlansTextWrapper {
+    padding-left: 1em;
+    margin: 20px 20px 20px 8px;
+
+}
+
+/* END SERVICES */
+
+/* START PRODUCTS */
+
+.productsBackground {
+    background-color: #f3f3f3;
+    margin: 0px;
+}
+
+.productsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.invisibleSpace {
+    display: none;
+}
+
+.invisibleSpace2 {
+    display: none;
+}
+
+.inquire-btn {
+    display: inline-block;
+    padding: 10px 5px;
+    border-radius: 20px;
+    background-color: #345351;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: 2px solid #345351;
+    letter-spacing: 0.1em;
+    margin: 0px 4px 0px 0px;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    max-width: 100%;
+    min-width: 1.8em;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    transition: inherit;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+    .inquire-btn:hover {
+        background-color: #fff;
+        color: #345351;
+        border: 2px solid #345351;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+.inquireButtons {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding-bottom: 5px;
+    padding-top: 15px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 15px;
+}
+
+    .item img {
+        display: flex;
+        width: 140px;
+        transition: transform 0.3s ease;
+        border-radius: 50%;
+    }
+
+    .item:hover img {
+        transform: scale(0.9);
+    }
+
+    .item h3 {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        text-align: center;
+        font-family: futura-lt-w01-light,futura-lt-w05-light,sans-serif;
+        letter-spacing: 0.15em;
+        color: #345351;
+        text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px, rgba(0, 0, 0, 0.6) -1px -1px 1px;
+        line-height: 22px;
+    }
+
+    .item p {
+        margin-top: 10px;
+        margin: 0px;
+        font-style: italic;
+        text-align: center;
+        font-size: 12px;
+        font-family: montserrat;
+        line-height: 17px;
+    }
+
+.inquireButtonsDesktop {
+    display: none;
+}
+
+/* END PRODUCTS */
+/* START growing section */
+.growingContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.textCol {
+    background-color: white;
+    color: #23403b;
+    width: 100%;
+}
+
+    .textCol h1 {
+        font-size: 1.5em;
+        letter-spacing: 0.08em;
+        line-height: 1.5em;
+        font-weight: 600;
+    }
+
+    .textCol p {
+        letter-spacing: 0.05em;
+        line-height: 1.5em;
+        font-size: 0.9em;
+    }
+
+#textWrapper {
+    margin: 30px;
+    text-align: right;
+    margin-left: 5em;
+}
+
+.map {
+    object-fit: cover;
+}
+/* End of Growing Section*/
+
+/* Swiper 2 Section */
+.swiper-services {
+    width: 100%;
+    height: 10em;
+}
+
+.swiper-services-slide {
+    font-family: avenir-lt-w01_85-heavy1475544,avenir-lt-w05_85-heavy,sans-serif;
+    display: flex;
+    position: relative;
+}
+
+.swiper-services-slide img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: 50% 50%;
+}
+
+.servicesTextContainer {
+    position: absolute;
+    display: flex;
+    font-weight: 400;
+    top: 20%;
+    left: 8%;
+    margin: 20px;
+    text-shadow: 2px 2px black;
+    letter-spacing: -0.05em;
+    font-size: 1.2em;
+    color: white;
+}
+
+.swiper-services [class ^="swiper-button"]::after {
+    font-size: 20px;
+}
+
+.swiper-services [class ^="swiper-button-prev"]::after {
+    padding-left: 0.1em;
+    color: #f9f9f9;
+}
+
+.swiper-services [class ^="swiper-button-next"]::after {
+    padding-right: 0.1em;
+    color: #f9f9f9;
+}
+/* End of Swiper 2 Section */
+
+/* START real time */
+.rtcol {
+    margin: 20px;
+}
+
+    .rtcol p {
+        margin-bottom: 1.2em;
+    }
+
+.rtcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif {
+    display: none;
+}
+
+.btn2 {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.btn2:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.rtcol h1 {
+    font-size: 24px;
+    letter-spacing: 0.08em;
+    font-weight: bold;
+    color: #23403b;
+}
+
+.rtcol p {
+    font-size: 16px;
+    padding: 0;
+    color: #23403b;
+}
+
+/* Start Why tbgi? section */
+.parallax {
+    /* The image used */
+    background-image: url("/Content/Home/TBGI_BG.jpg");
+    /* Set a specific height */
+    min-height: 600px;
+    /* Create the parallax scrolling effect */
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.-readMore2 {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 10px;
+    margin-left: 30px;
+    font-size: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.-readMore2:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+#tgbiTextContainer {
+    position: relative;
+    padding-top: 1.3em;
+    background-color: black;
+    color: white;
+    width: 80%;
+    height: 32em;
+    border-radius: 20px;
+}
+
+#tgbiWrapper {
+    border-left: 1px solid white;
+    padding-left: 1em;
+    margin: 20px;
+    text-align: justify;
+}
+
+#tgbiWrapper p:first-child {
+    letter-spacing: 0.16em;
+    font-size: 12px;
+}
+
+#tgbiWrapper p:nth-child(2) {
+    text-decoration: underline;
+    letter-spacing: 0.08em;
+    line-height: 1.8em;
+    font-size: 16px;
+}
+
+#tgbiWrapper p:nth-child(4) {
+    letter-spacing: 0.06em;
+    line-height: 1.2em;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.-tgbiline {
+    top: 7em;
+    left: 0.02em;
+    height: 8em;
+    width: 0.1em;
+    border-radius: 0;
+    transition: transform 3s ease;
+}
+/* End why TBGI? section*/
+/* Start apart section */
+.whatSetsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+    .whatSetsContainer img {
+        display: none;
+        width: 50%;
+        height: 33.5em;
+        object-fit: cover;
+    }
+
+.item1 {
+    grid-area: header;
+    font-size: 1.1em;
+    letter-spacing: 0.16em;
+    height: 1px;
+}
+
+.item2 {
+    grid-area: section1;
+}
+
+.item3 {
+    grid-area: section2;
+}
+
+.item4 {
+    grid-area: section3;
+}
+
+.item5 {
+    grid-area: section4;
+}
+
+.grid-container {
+    display: grid;
+    height: 20em;
+    margin: 30px;
+    column-gap: 10px;
+    grid-template-areas:
+        'header header header header header header'
+        'section1 . . section2 . .'
+        'section3 . . section4 . .';
+}
+
+.item2, .item3, .item4, .item5 {
+    font-size: 0.7em;
+    padding-bottom: 40px;
+    letter-spacing: 0.16em;
+    justify-self: end;
+    align-self: end;
+}
+
+.hLine {
+    height: 1px;
+    background-color: black;
+}
+
+/* Animations */
+.move {
+    transform: translateY(-50%);
+}
+
+.move2 {
+    transform: translateY(-50%);
+}
+
+.move3 {
+    transform: translateY(-60%);
+}
+
+@media only screen and (min-width: 375px) {
+    /* Hero Section */
+    .islandTextOverlay h1 {
+        font-size: 22px;
+    }
+
+    .islandTextOverlay h3 {
+        color: #cccccc;
+        font-size: 12px;
+        margin-top: 0.2rem;
+    }
+
+    .islandTextOverlay button {
+        width: 5.8rem;
+        height: 1.3rem;
+    }
+    /* End of Hero Section */
+    /* Access section */
+    .accessTextContainer p:first-child {
+        font-size: 14px;
+        font-weight: 700;
+        color: #23403B;
+    }
+
+    .accessTextContainer p:nth-child(3) {
+        font-size: 12px;
+        color: #23403B;
+    }
+
+    .accessContainer button {
+        width: 10rem;
+        height: 1.5rem;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    #residentialPlan,
+    #enterprisePlan {
+        margin: 35px;
+    }
+
+    #residentialPlan p,
+    #enterprisePlan p {
+        font-size: 16px;
+    }
+
+    #residentialPlan p:first-child,
+    #enterprisePlan p:first-child {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    #residentialPlan button,
+    #enterprisePlan button {
+        width: 6.5rem;
+        height: 1.8rem;
+        font-size: 12px;
+    }
+    /* End of Access Section */
+    /* Start Growing Section */
+    .textCol h1 {
+        font-size: 1.6em;
+    }
+
+    .textCol p {
+        letter-spacing: 0.05em;
+        line-height: 1.5em;
+        font-size: 1em;
+    }
+    /* End of Growing Section */
+    /* Start of Swiper 2 Section */
+    .swiper-services {
+        width: 100%;
+        height: 12.5em;
+    }
+
+    .swiper-services-slide img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        object-position: 50% 50%;
+    }
+
+    .servicesTextContainer {
+        font-size: 1.5em;
+    }
+    /* End of Swiper 2 Section */
+    /* Start of RT Payment Section */
+    .rtcol {
+        margin: 30px;
+    }
+    /* End of RT Payment Section */
+    /*Start Products Section*/
+    .item h3 {
+        font-size: 18px;
+    }
+
+    .item p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .item img {
+        width: 170px;
+    }
+
+    .inquire-btn {
+        padding: 10px 20px;
+        font-size: 15px;
+        border-radius: 30px;
+    }
+    /*End of Products Section*/
+    /* Start of What Sets Section */
+    .item1 {
+        grid-area: header;
+        font-size: 1.3em;
+        letter-spacing: 0.16em;
+        height: 1px;
+    }
+
+    .item2, .item3, .item4, .item5 {
+        font-size: 0.8em;
+    }
+    /* End of What sets Section */
+    /* Start Why TBGI */
+    #tgbiTextContainer {
+        width: 75%;
+    }
+    /* End  */
+    /* Start of what sets section*/
+    .item2, .item3, .item4, .item5 {
+        margin-top: 40px;
+    }
+    /* End of what sets section*/
+}
+
+@media only screen and (min-width: 425px) {
+    /* Hero Section */
+    .islandTextOverlay {
+        margin: 55px;
+    }
+
+    .islandTextOverlay h1 {
+        font-size: 24px;
+    }
+
+    .islandTextOverlay h3 {
+        font-size: 14px;
+    }
+
+    .islandTextOverlay button {
+        width: 6.5rem;
+        height: 1.5rem;
+        font-size: 11px;
+    }
+    /* End of Hero Section */
+    /*Vision Section*/
+    .swiper-vision [class ^="swiper-button-"]::after {
+        font-size: 23px;
+    }
+    /*End of Vision Section*/
+    /*Services Section*/
+    .tab button {
+        padding: 12px 8px;
+        font-size: 15px;
+    }
+    /*End of services section*/
+    /*Products Section*/
+    .item h3 {
+        font-size: 20px;
+    }
+
+    .item p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .item img {
+        width: 200px;
+    }
+    /*End of Products Section*/
+    /* Start Why TBGI */
+    #tgbiTextContainer {
+        width: 65%;
+    }
+
+    #tgbiTextContainer p:nth-child(2) {
+        font-size: 18px;
+    }
+    /* End  */
+}
+@media only screen and (min-width:525px){
+    /*Access plans section*/
+    .accessContainer {
+        margin: 35px;
+    }
+    .APcolumn img{
+        height:100%;
+        object-fit:cover;
+    }
+    .accessPlansContainer .APcolumn:nth-child(1), .accessPlansContainer .APcolumn:nth-child(3) {
+        height: 300px;
+        overflow:hidden;
+    }
+    #residentialPlan, #enterprisePlan {
+        margin: 50px;
+    }
+    /*End of Access Plans*/
+/*Services Section*/
+    .tabcontent img {
+        height: 250px;
+        object-fit: cover;
+    }
+    .dataPlansText p:first-child {
+        font-size: 1.7em;
+    }
+/*end of services section*/
+}
+
+@media only screen and (min-width: 675px){
+    /*Hero Section*/
+    .islandTextOverlay {
+        margin: 166px;
+    }
+        .islandTextOverlay h1 {
+            font-size: 26px;
+        }
+        .islandTextOverlay h3 {
+            font-size: 15px;
+        }
+        .islandTextOverlay button {
+            width: 6.7rem;
+            height: 1.6rem;
+            font-size: 12px;
+        }
+    /*End of Hero section*/
+    /*Access plans section*/
+    .accessContainer {
+        height: 125px;
+    }
+    .accessTextContainer p{
+        line-height: 20px;
+    }
+    .accessTextContainer p:first-child {
+        font-size: 18px;
+    }
+    .accessTextContainer p:nth-child(3) {
+        font-size: 14px;
+        color: #23403B;
+    }
+    #residentialPlan, #enterprisePlan {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+        #residentialPlan p:first-child, #enterprisePlan p:first-child {
+            font-size: 24px;
+            font-weight: 500;
+        }
+        #residentialPlan button, #enterprisePlan button {
+            width: 7rem;
+            height: 1.8rem;
+            font-size: 14px;
+        }
+    /*End of Access plans*/
+    /*Vision Section*/
+    #visionTextContainer p:nth-child(2) {
+        font-size: 1.6em;
+    }
+    #visionTextContainer p:nth-child(3) {
+        font-size: 1.6em;
+    }
+    #visionTextContainer p:nth-child(4) {
+        font-size: 17px;
+    }
+    .sliderTextContainer p:first-child {
+        font-size: 1.4em;
+        font-weight: 400;
+    }
+    .sliderTextContainer p:nth-child(2) {
+        font-size: 1em;
+    }
+    /*End of Vision section*/
+    /*Services Section*/
+    .servicesTextWrapper p {
+        font-size: 1.6em;
+    }
+    /*End of services section*/
+    /*Why TBGI?*/
+    #tgbiTextContainer {
+        width: 300px;
+    }
+    /*End of Why TBGI?*/
+}
+@media only screen and (min-width: 768px) {
+    /* Hero Section */
+    .islandContainer {
+        height: 18em;
+    }
+
+    .islandTextOverlay {
+        margin: 190px;
+    }
+
+    .islandTextOverlay h1 {
+        font-size: 30px;
+    }
+
+    .islandTextOverlay h3 {
+        font-size: 18px;
+    }
+
+    .islandTextOverlay button {
+        width: 8.3rem;
+        height: 2rem;
+        font-size: 15px;
+    }
+    /* End of Hero Section */
+   
+    /* Start of Access Section */
+    .accessContainer {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        margin: 25px 50px;
+    }
+
+    .accessTextContainer p:first-child {
+        font-size: 17px;
+    }
+
+    .accessTextContainer p:nth-child(3) {
+        font-size: 15px;
+        line-height: 0.9rem;
+    }
+
+    .accessContainer button {
+        width: 16rem;
+        height: 2.2rem;
+        font-size: 14px;
+    }
+
+    .accessPlansContainer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .APcolumn {
+        width: 25%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+        .APcolumn img {
+            height: 100%;
+            width: fit-content;
+        }
+
+    #residentialPlan,
+    #enterprisePlan {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        margin: 20px;
+    }
+
+    #residentialPlan p,
+    #enterprisePlan p {
+        font-size: 14px;
+        margin-bottom: 1rem;
+        font-weight: 400;
+        color: #23403b;
+    }
+
+    #residentialPlan p:first-child,
+    #enterprisePlan p:first-child {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    /* End of Access Section */
+    /* Start of Vision Section */
+    #visionContainer {
+        flex-direction: row;
+    }
+
+    #visionTextContainer {
+        width: 30%;
+        margin: 40px;
+    }
+
+    .line {
+        display: initial;
+        top: 9.5em;
+    }
+
+    #visionTextContainer p:nth-child(2) {
+        font-size: 1.2em;
+    }
+
+    #visionTextContainer p:nth-child(3) {
+        font-size: 1.2em;
+    }
+
+    #visionTextContainer p:nth-child(4) {
+        letter-spacing: 0.04em;
+        font-size: 16px;
+    }
+    .sliderTextContainer p:first-child {
+        font-size: 1.2em;
+        font-weight: 400;
+    }
+    .sliderTextContainer p:nth-child(2) {
+        font-size: 0.8em;
+    }
+    .swiper-vision {
+        width: 55%;
+        height: 15em;
+        margin: 20px;
+        top: 20%;
+    }
+    .sliderTextContainer{
+        padding:0;
+        text-shadow: 2px 2px black;
+    }
+
+    #slide1 .sliderTextContainer{
+        position:absolute;
+        margin:50px;
+
+    }
+
+    #slide2, #slide3{
+        display:flex;
+        justify-content:center;
+        align-items: center;
+    }
+    #slide1 img{
+        height:100%;
+    }
+    #slide2 img, #slide3 video{
+        width:45%;
+    }
+    #slide2 .sliderTextContainer, #slide3 .sliderTextContainer{
+        margin: 40px;
+    }
+    /* End of Vision Section */
+    /* Start of Services Section */
+    .servicesTextWrapper p {
+        font-size: 1.3em;
+    }
+    .servicesContainer {
+        flex-direction: row;
+    }
+
+    .servicesTextWrapper {
+        margin: 15px;
+        padding-top: 30px;
+    }
+
+        .servicesTextWrapper p {
+            padding-left: 20px;
+        }
+
+    .servicesTabs {
+        width: 60%;
+        margin: 30px;
+    }
+
+    .tabcontent {
+        height: 15em;
+        flex-direction: row;
+    }
+        .tabcontent img {
+            height: initial;
+            object-fit: initial;
+        }
+
+    .dataPlansText p:first-child {
+        font-size: 1.5em;
+    }
+
+    .dataPlansText p:nth-child(2) {
+        font-size: 12px;
+    }
+
+    .tab button {
+        cursor: pointer;
+        padding: 10px 10px;
+    }
+    /* End of Services Section */
+    /* Products Section */
+    .productsContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0px;
+    }
+
+    .item {
+        flex-basis: 50%;
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 50px;
+    }
+
+    .invisibleSpace {
+        display: flex;
+        padding-top: 80px;
+    }
+
+    .invisibleSpace2 {
+        display: flex;
+        padding-top: 50px;
+    }
+
+    .item h3 {
+        font-size: 20px;
+    }
+
+    .item p {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .item img {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .inquire-btn {
+        font-size: 15px;
+        border-radius: 60px;
+        align-self: flex-end;
+    }
+
+    .inquireButtons {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: flex-end; /* Center vertically */
+        padding-bottom: 5px;
+        padding-top: 45px;
+    }
+
+    .inquireButtonsDesktop {
+        display: none;
+    }
+    /* End of Products Section */
+    /* Growing Section */
+    .growingContainer {
+        flex-direction: row;
+        overflow: hidden;
+        height: 23em;
+    }
+
+    .textCol p {
+        padding-top: 20px;
+    }
+    /* end of growing section */
+    /* Swiper 2 Section */
+    .swiper-services {
+        height: 15em;
+    }
+
+    .servicesTextContainer {
+        font-size: 2.1em;
+    }
+    /* end of swiper 2 section */
+    /* RT Payment section */
+    .rtcontainer {
+        flex-direction: row;
+    }
+
+    .gif {
+        display: initial;
+        width: 50%;
+    }
+
+    .rtcol {
+        margin: 20px;
+    }
+
+        .rtcol h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+    /* End of RT Payment section */
+    /* Why TBGI? section */
+    .parallax {
+        min-height: 720px;
+    }
+
+    #tgbiTextContainer {
+        width: 350px;
+        height: 39em;
+    }
+
+    #tgbiWrapper {
+        margin: 26px;
+    }
+    #tgbiWrapper p:first-child {
+        margin-bottom: 0.6em;
+        font-size: 16px;
+    }
+
+    #tgbiWrapper p:nth-child(2) {
+        line-height: 1.8em;
+        font-size: 24px;
+    }
+
+    #tgbiWrapper p:nth-child(4) {
+        line-height: 1.4em;
+        font-size: 16px;
+    }
+
+    .-tgbiline {
+        top: 9em;
+        left: 1.67em;
+        height: 8em;
+        width: 0.1em;
+    }
+
+    .-readMore2 {
+        padding: 10px 14px;
+        font-size: 15px;
+    }
+    /* End of why TBGI? Section */
+    /* Start of What sets section */
+    .whatSetsContainer {
+        flex-direction: row;
+    }
+
+    .whatSetsContainer img {
+        display: inherit;
+        width: 50%;
+        height: 100%;
+    }
+
+    .item2, .item3, .item4, .item5 {
+        font-size: 0.8em;
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    /*Hero section*/
+    .islandContainer {
+        height: 25em;
+    }
+    .islandTextOverlay h1 {
+        font-size: 42px;
+    }
+    .islandTextOverlay h3 {
+        font-size: 20px;
+    }
+    .islandTextOverlay button {
+        width: 9.3rem;
+        height: 2.5rem;
+        font-size: 17px;
+    }
+    /*End of Hero Section*/
+    /*Acess Section*/
+    .accessContainer {
+        margin: 35px 60px;
+    }
+    .accessTextContainer p:first-child {
+        font-size: 20px;
+    }
+    .accessTextContainer p:nth-child(3) {
+        font-size: 16px;
+        line-height: 1.2rem;
+    }
+    .accessContainer button {
+        width: 17rem;
+        height: 2.7rem;
+        font-size: 17px;
+    }
+    .accessPlansContainer .APcolumn:nth-child(1), .accessPlansContainer .APcolumn:nth-child(3) {
+        height: initial;
+        overflow: hidden;
+    }
+
+    #residentialPlan p:first-child, #enterprisePlan p:first-child {
+        font-size: 21px;
+    }
+    #residentialPlan p, #enterprisePlan p {
+        font-size: 15px;
+    }
+    #residentialPlan button, #enterprisePlan button {
+        width: 7.5rem;
+        height: 2rem;
+        font-size: 14px;
+    }
+    /*End of Access Section*/
+    /*Vision Section*/
+    #visionTextContainer {
+        margin: 35px;
+        padding: 30px;
+    }
+    #visionContainer {
+        padding: 10px;
+    }
+    
+    #slide1 .sliderTextContainer {
+        width: 40%;
+    }
+    #slide2 img, #slide3 video {
+        width: 60%;
+    }
+    #slide2 .sliderTextContainer, #slide3 .sliderTextContainer {
+        margin: 40px;
+    }
+    /*End of Vision Section*/
+    /*Services Section*/
+    .servicesText {
+        margin: 30px;
+    }
+    .servicesTextWrapper {
+        padding-top: 8px;
+    }
+    .servicesTextWrapper p {
+        font-size: 1.5em;
+    }
+
+    .tabcontent {
+        height: 19em;
+    }
+    .dataPlansText p:first-child {
+        font-size: 1.7em;
+    }
+    .dataPlansText p:nth-child(2) {
+        font-size: 14px;
+    }
+    .tab button {
+        cursor: pointer;
+        padding: 10px 14px;
+        font-size: 18px;
+    }
+    /*End of Services Section*/
+    /*Products Section*/
+    .productsContainer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .item {
+        flex-basis: 25%;
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .invisibleSpace {
+        display: none;
+    }
+
+    .invisibleSpace2 {
+        display: none;
+    }
+
+    .item h3 {
+        font-size: 16px;
+    }
+
+    .item p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .item img {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .inquire-btn {
+        font-size: 15px;
+        border-radius: 60px;
+    }
+
+    .inquireButtons {
+        display: none;
+    }
+
+    .inquireButtonsDesktop {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        padding-bottom: 50px;
+    }
+
+    /*End of Products Section*/
+    /*Growing Section*/
+    .textCol h1 {
+        font-size: 2em;
+    }
+    .textCol p {
+        padding-top: 0px;
+        font-size: 1.5em;
+    }
+    /*End of Growing Section*/
+    /*Swiper2 Section*/
+    .swiper-services {
+        height: 22em;
+    }
+    .servicesTextContainer {
+        font-size: 3.1em;
+        margin: 45px;
+    }
+    .swiper-services [class ^="swiper-button"]::after {
+        font-size: 34px;
+    }
+    .swiper-services [class ^="swiper-button-prev"]::after {
+        padding-left: 2.1em;
+    }
+    .swiper-services [class ^="swiper-button-next"]::after {
+        padding-right: 2.1em;
+    }
+    /*End of Swiper2 Section*/
+    /*RT payment section*/
+    .rtcol h1 {
+        font-size: 40px;
+    }
+    .rtcol p {
+        font-size: 22px;
+    }
+    .btn2 {
+        font-size: 20px;
+    }
+    /*End of RT payment section*/
+    /*Why TBGI section*/
+    .parallax {
+        /* Set a specific height */
+        min-height: 800px;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+    }
+    #tgbiTextContainer {
+        width: 400px;
+        height: 43em;
+    }
+    #tgbiWrapper p:nth-child(2) {
+        font-size: 27px;
+    }
+    #tgbiWrapper p:nth-child(4) {
+        font-size: 18px;
+    }
+    /*End of Why TBGI section*/
+    /*What sets section*/
+    .item1 {
+        font-size: 1.7em;
+    }
+    .item2, .item3, .item4, .item5 {
+        font-size: 1.15em;
+        margin-top: 50px;
+    }
+    /*End of What sets section*/
+}
+@media only screen and (min-width: 1200px){
+    /*Hero Section*/
+    .islandTextOverlay {
+        margin: 303px;
+    }
+    /*End hero section*/
+    /*Access Section*/
+    .accessContainer {
+        margin: 35px 90px;
+    }
+    .accessPlansContainer {
+        height: 24rem;
+    }
+/*End of access section*/
+/*Vision section*/
+    .sliderTextContainer p:nth-child(1) {
+        font-size: 1.4em;
+    }
+
+    .sliderTextContainer p:nth-child(2) {
+        font-size: 0.9em;
+    }
+/*End of vision section*/
+/*Services Section*/
+    .servicesContainer {
+        justify-content:space-evenly;
+    }
+/*Growing Section*/
+    .textCol{
+        width:40%;
+    }
+    .map{
+        width:60%;
+    }
+/*End of growing section*/
+}
+@media only screen and (min-width: 1366px) {
+    /*Hero Section*/
+    .islandContainer {
+        height: 33em;
+    }
+
+    .islandTextOverlay {
+        margin: 325px;
+    }
+
+    .islandTextOverlay h1 {
+        font-size: 58px;
+    }
+
+    .islandTextOverlay h3 {
+        font-size: 27px;
+    }
+
+    .islandTextOverlay button {
+        width: 12.3rem;
+        height: 3rem;
+        font-size: 22px;
+    }
+    /*End of Hero Section*/
+    /*Access Section*/
+    .accessTextContainer p:first-child {
+        font-size: 32px;
+    }
+
+    .accessTextContainer p:nth-child(3) {
+        font-size: 22px;
+        line-height: 1.2em;
+    }
+    .accessContainer {
+        margin: 45px 90px;
+    }
+    .accessContainer button {
+        width: 22rem;
+        height: 3.7rem;
+        font-size: 22px;
+    }
+
+    .accessPlansContainer {
+        height: 22rem;
+    }
+
+    #residentialPlan p:first-child, #enterprisePlan p:first-child {
+        font-size: 32px;
+    }
+
+    #residentialPlan p, #enterprisePlan p {
+        font-size: 19px;
+    }
+
+    #residentialPlan button, #enterprisePlan button {
+        width: 9.5rem;
+        height: 2.5rem;
+        font-size: 21px;
+    }
+    /*End of Access Section*/
+    /*Vision Section*/
+    #visionContainer {
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #visionTextContainer p:nth-child(2) {
+        font-size: 1.8em;
+    }
+
+    #visionTextContainer p:nth-child(3) {
+        font-size: 1.8em;
+        line-height: 1.4em;
+    }
+
+    #visionTextContainer p:nth-child(4) {
+        letter-spacing: 0.04em;
+        font-size: 20px;
+    }
+
+    #visionTextContainer {
+        padding: 30px 33px 30px 40px;
+    }
+
+    .line {
+        top: 13em;
+    }
+
+    .swiper-vision {
+        width: 55%;
+        height: 21em;
+    }
+    .sliderTextContainer p:first-child {
+        font-size: 2em;
+    }
+    .sliderTextContainer p:nth-child(2) {
+        font-size: 1.1em;
+    }
+    /*End of Vision Section*/
+    /*Services Section*/
+/*Hide Scrollbar*/
+    .tab { 
+        overflow-x: hidden;
+    }
+    .servicesTabs {
+        width: 50%;
+        padding: 20px;
+    }
+    .servicesText {
+        width: 25%;
+    }
+    .servicesLine {
+        top: 7em;
+    }
+    /*end of Services Section*/
+    /*Products Sectioon*/
+    .productsContainer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0px;
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+
+    .item {
+        flex-basis: 25%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .item h3 {
+        font-size: 16px;
+    }
+
+    .item p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .item img {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .inquire-btn {
+        font-size: 15px;
+        border-radius: 60px;
+    }
+
+    .inquireButtons {
+        display: none;
+    }
+
+    .inquireButtonsDesktop {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        padding-bottom: 50px;
+    }
+
+    /*End of Products Section*/
+    /*Growing Section*/
+    .growingContainer{
+        height:25em;
+    }
+    .textCol h1 {
+        font-size: 1.8em;
+    }
+    /*end of growing section*/
+    /*swiper2*/
+    .swiper-services {
+        height: 25em;
+    }
+    .servicesTextContainer {
+        font-size: 4.1em;
+    }
+    /*end of swiper2*/
+    /*RT Payment Section*/
+    .gif {
+        width: 35%;
+    }
+    /*End of RT payment*/
+    /*Why TBGI*/
+    #tgbiTextContainer {
+        height: 43em;
+    }
+    /*end of TBGI*/
+    /*What sets section*/
+    .whatSetsContainer {
+        height: 30em;
+    }
+    .grid-container{
+        width:50%;
+    }
+    /**/
+}
+
+@media only screen and (min-width:1440px) {
+    /*Access Section*/
+    .accessTextContainer p:first-child {
+        line-height: 1em;
+    }
+    .accessPlansContainer {
+        height: 25rem;
+    }
+    /*End of access section*/
+    /*Vision Section*/
+    #visionTextContainer p:nth-child(4) {
+        font-size: 16.5px;
+    }
+    #visionTextContainer {
+        padding: 30px 59px 30px 40px;
+    }
+    /*end of vision section*/
+    /*Services Section*/
+    .dataPlansText p:first-child {
+        font-size: 2.5em;
+    }
+
+    .dataPlansText p:nth-child(2) {
+        font-size: 16px;
+    }
+    /*end of services section*/
+    /*Products Section*/
+    .productsContainer {
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+    /*End of products section*/
+    /*What sets section*/
+    .grid-container {
+        padding: 20px;
+    }
+    /*end of what sets container*/
+}
+@media only screen and (min-width: 1533px){
+    .accessContainer {
+        margin: 45px 107px;
+    }
+}
+@media only screen and (min-width: 1600px){
+    .accessContainer {
+        margin: 45px 150px;
+    }
+}
+@media only screen and (min-width: 1680px){
+    /*Hero Section*/
+    .islandTextOverlay {
+        margin: 489px;
+    }
+    /*End of hero section*/
+    /*Access section*/
+    .accessContainer {
+        justify-content: space-evenly;
+    }
+    /*end of access section*/
+    /*vision section*/
+    .swiper-vision {
+        width: 55%;
+        height: 24em;
+    }
+    /*end of vision section*/
+    /*services section*/
+    .servicesText {
+        padding: 41px;
+    }
+
+    /*end of services section*/
+    /*why tbgi section*/
+    #tgbiTextContainer {
+        height: 43em;
+    }
+    /*end of why tbgi section*/
+    /*what sets section*/
+    .item1 {
+        font-size: 2.3em;
+    }
+    .item2, .item3, .item4, .item5 {
+        font-size: 1.3em;
+        margin-top: 63px;
+    }
+    /*end of what sets section*/
+}
+
+@media only screen and (min-width:1920px) {
+    /*Hero section*/
+    .islandTextOverlay {
+        margin: 578px;
+    }
+    /*end of hero section*/
+    /*Access section*/
+    .accessContainer {
+        justify-content: space-evenly;
+    }
+
+    .accessPlansContainer {
+        height: 26rem;
+    }
+    /*End of access section*/
+    /*vision section*/
+    #visionTextContainer {
+        padding: 30px 110px 30px 110px;
+    }
+
+    #visionTextContainer p:nth-child(2) {
+        font-size: 2.3em;
+    }
+
+    #visionTextContainer p:nth-child(3) {
+        font-size: 2.3em;
+        line-height: 1.2em;
+    }
+
+    #visionTextContainer p:nth-child(4) {
+        font-size: 19.5px;
+    }
+
+    .line {
+        top: 14em;
+    }
+    /*end of vision section*/
+    /*services section*/
+    .servicesContainer {
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .servicesText {
+        padding: 0px;
+    }
+    .servicesTextWrapper p {
+        font-size: 2.3em;
+    }
+
+    .servicesLine {
+        top: 9em;
+    }
+
+    .servicesTabs {
+        width: 45%;
+        padding: 20px;
+    }
+
+    .dataPlansText p:nth-child(2) {
+        font-size: 18px;
+    }
+    .tabcontent {
+        height: 21em;
+    }
+    /*end of services section*/
+    /*Swiper2 section*/
+    .swiper-services {
+        height: 27em;
+    }
+    /*end of swiper2 section*/
+    /*RT payment section*/
+    .gif {
+        width: 34em;
+    }
+
+    .rtcol h1 {
+        font-size: 48px;
+    }
+    /*end of RT payment */
+    /*Why TBGI section*/
+    #tgbiTextContainer {
+        width:425px;
+    }
+    /*end f why tbgi section*/
+    /*what sets section*/
+    .grid-container {
+        padding: 36px;
+        column-gap: 37px;
+    }
+    /*end of what sets section*/
+}
+
+@media only screen and (min-width:2560px){
+    /*Hero Section*/
+    .islandContainer {
+        height: 42em;
+    }
+    .islandTextOverlay {
+        margin: 774px;
+    }
+    .islandTextOverlay h1 {
+        font-size: 74px;
+    }
+    .islandTextOverlay h3 {
+        font-size: 35px;
+    }
+    /*end of hero section*/
+    /*Access Section*/
+    .accessPlansContainer {
+        height: 34rem;  
+    }
+    /*end of access section*/
+    /*vision section*/
+    #visionTextContainer {
+        padding: 30px 110px 30px 200px;
+    }
+    #visionTextContainer p:nth-child(2) {
+        font-size: 3em;
+    }
+    #visionTextContainer p:nth-child(3) {
+        font-size: 3.1em;
+        line-height: 1.2em;
+    }
+    #visionTextContainer p:nth-child(4) {
+        font-size: 22.5px;
+    }
+    .swiper-vision {
+        width: 45%;
+        height: 26em;
+    }
+    #residentialPlan p:first-child, #enterprisePlan p:first-child {
+        font-size: 40px;
+    }
+    #residentialPlan p, #enterprisePlan p {
+        font-size: 24px;
+    }
+    #slide2 img {
+        width: 93em;
+    }
+    .sliderTextContainer p:first-child {
+        font-size: 3.5em;
+    }
+    .sliderTextContainer p:nth-child(2) {
+        font-size: 1.5em;
+    }
+    .swiper-vision [class ^="swiper-button-"]::after {
+        font-size: 47px;
+    }
+    #slide1 .sliderTextContainer {
+        position: absolute;
+        margin: 78px;
+    }
+    /*end of vision section*/
+    /*Services section*/
+    .swiper-serivces{
+
+    }
+    .servicesContainer{
+        align-items:center;
+    }
+    .servicesLine {
+        top: 12em;
+    }
+    .servicesTextWrapper p {
+        font-size: 3em;
+    }
+    .servicesTextWrapper p:nth-child(2){
+        font-size:2.1em;
+    }
+    .servicesText {
+        width: 25%;
+        padding: 67px;
+        padding-top: 0px;
+        margin-top: 0;
+    }
+    .tabcontent {
+        height: 28em;
+    }
+    .tab button {
+        font-size: 23px;
+    }
+    .dataPlansText p:first-child {
+        font-size: 4.5em;
+    }
+    .dataPlansText p:nth-child(2) {
+        font-size: 23px;
+        padding-top: 50px;
+    }
+    /*end of services section*/
+    /*Products section*/
+    .productsContainer {
+        margin-left: 400px;
+        margin-right: 400px;
+    }
+
+    .item img {
+        width: 300px;
+    }
+
+    .item h3 {
+        font-size: 35px;
+    }
+
+    .item p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    /*end of products section*/
+
+    /*growing section*/
+    .growingContainer {
+        height: 30em;
+    }
+    .textCol h1 {
+        font-size: 2.6em;
+    }
+    .textCol p {
+        font-size: 2em;
+    }
+    #textWrapper {
+        margin: 42px;
+        text-align: right;
+    }
+    /*end of growing section*/
+    /*swiper2 section*/
+    .swiper-services {
+        height: 36em;
+    }
+    .servicesTextContainer {
+        font-size: 6.1em;
+    }
+    .swiper-services [class ^="swiper-button"]::after {
+        font-size: 60px;
+    }
+    /*end of swiper2*/
+    /*RT payment section*/
+    .gif {
+        width: 44em;
+    }
+    .rtcol {
+        width: 31%;
+    }
+    .rtcol h1 {
+        font-size: 68px;
+    }
+    .rtcol p {
+        font-size: 27px;
+    }
+    /*end of rt payment section*/
+    /*why tgbi section*/
+    .parallax {
+        min-height: 1000px;
+    }
+    #tgbiTextContainer {
+        height: 55em;
+    }
+    #tgbiWrapper p:first-child {
+        margin-bottom: 0.6em;
+        font-size: 22px;
+    }
+    #tgbiWrapper p:nth-child(2) {
+        font-size: 35px;
+    }
+    #tgbiWrapper p:nth-child(4) {
+        font-size: 25px;
+    }
+    .btn2 {
+        font-size: 24px;
+    }
+    /*end of why tgbi section*/
+    /*what sets section*/
+    .whatSetsContainer {
+        height: 40em;
+    }
+    .item1 {
+        font-size: 2.5em;
+    }
+    .item2, .item3, .item4, .item5 {
+        font-size: 1.8em;
+    }
+    /*end of whytbgi*/
+}
